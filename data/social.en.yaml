@@ -1,0 +1,45 @@
+# Social Media Links - English
+# Configure social media presence for the dojo
+
+social_media:
+  facebook:
+    url: "https://www.facebook.com/sakuragojuryu"
+    username: "@sakuragojuryu"
+    display_name: "Sakura Goju-Ryu Dojo"
+    enabled: true
+    
+  instagram:
+    url: "https://www.instagram.com/sakuragojuryu"
+    username: "@sakuragojuryu"
+    display_name: "Sakura Goju-Ryu"
+    enabled: true
+    
+  youtube:
+    url: "https://www.youtube.com/c/SakuraGojuRyu"
+    username: "@SakuraGojuRyu"
+    display_name: "Sakura Goju-Ryu Dojo"
+    enabled: true
+    
+  twitter:
+    url: "https://twitter.com/sakuragojuryu"
+    username: "@sakuragojuryu"
+    display_name: "Sakura Goju-Ryu"
+    enabled: false  # Set to true to enable Twitter/X links
+    
+  tiktok:
+    url: "https://www.tiktok.com/@sakuragojuryu"
+    username: "@sakuragojuryu"
+    display_name: "Sakura Goju-Ryu"
+    enabled: false  # Set to true to enable TikTok links
+
+# Contact preferences
+contact_social:
+  primary_platform: "facebook"  # Which platform to highlight for contact
+  show_in_header: true
+  show_in_footer: true
+  
+# Display settings
+display:
+  show_usernames: true     # Show @username along with icons
+  show_icons_only: false   # Set to true to show only icons without text
+  icon_size: "medium"      # small, medium, large

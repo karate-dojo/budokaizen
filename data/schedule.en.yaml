@@ -1,0 +1,87 @@
+# Class Schedule - English
+# Weekly class schedule organized by day
+
+schedule:
+  - day: "Monday"
+    classes:
+      - time: "6:00 PM - 7:00 PM"
+        type: "Beginner Adult Karate"
+        instructor: "Sempai Johnson"
+        description: "Basic techniques, kata, and conditioning"
+        
+      - time: "7:15 PM - 8:30 PM"
+        type: "Advanced Adult Karate"
+        instructor: "Sensei Yamamoto"
+        description: "Advanced kata, kumite, and self-defense"
+        
+  - day: "Tuesday"
+    classes:
+      - time: "6:00 PM - 7:00 PM"
+        type: "Youth Karate (Ages 8-14)"
+        instructor: "Sensei Rodriguez"
+        description: "Age-appropriate karate training with focus on discipline"
+        
+      - time: "7:15 PM - 8:15 PM"
+        type: "Adult Conditioning"
+        instructor: "Sensei Chen"
+        description: "Strength and flexibility training for martial artists"
+        
+  - day: "Wednesday"
+    classes:
+      - time: "6:00 PM - 7:00 PM"
+        type: "Intermediate Adult Karate"
+        instructor: "Sensei Rodriguez"
+        description: "Intermediate techniques and sparring preparation"
+        
+      - time: "7:15 PM - 8:30 PM"
+        type: "Traditional Kata Class"
+        instructor: "Sensei Yamamoto"
+        description: "Deep study of classical Goju-Ryu kata"
+        
+  - day: "Thursday"
+    classes:
+      - time: "6:00 PM - 7:00 PM"
+        type: "Youth Karate (Ages 8-14)"
+        instructor: "Sensei Rodriguez"
+        description: "Age-appropriate karate training with focus on discipline"
+        
+      - time: "7:15 PM - 8:15 PM"
+        type: "Kumite (Sparring) Class"
+        instructor: "Sensei Chen"
+        description: "Controlled sparring and competition preparation"
+        
+  - day: "Friday"
+    classes:
+      - time: "6:00 PM - 7:00 PM"
+        type: "Open Training"
+        instructor: "All Instructors"
+        description: "Individual practice with instructor guidance"
+        
+      - time: "7:15 PM - 8:30 PM"
+        type: "Black Belt Class"
+        instructor: "Sensei Yamamoto"
+        description: "Advanced training for black belt students only"
+        
+  - day: "Saturday"
+    classes:
+      - time: "10:00 AM - 11:00 AM"
+        type: "Little Dragons (Ages 4-7)"
+        instructor: "Sempai Johnson"
+        description: "Introduction to martial arts for young children"
+        
+      - time: "11:15 AM - 12:15 PM"
+        type: "Family Class"
+        instructor: "Sensei Rodriguez"
+        description: "Parents and children train together"
+        
+      - time: "12:30 PM - 2:00 PM"
+        type: "Workshop/Seminar"
+        instructor: "Visiting Sensei"
+        description: "Monthly special workshops (check calendar)"
+        
+  - day: "Sunday"
+    classes:
+      - time: "Closed"
+        type: "Rest Day"
+        instructor: ""
+        description: "Dojo closed for rest and recovery"

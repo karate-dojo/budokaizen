@@ -1,0 +1,24 @@
+# Dojo Configuration - English
+# This file contains the basic information about the dojo
+
+dojo_name: "Sakura Goju-Ryu Dojo"
+address: |
+  123 Karate Way
+  San Francisco, CA 94102
+  United States
+email: "info@sakuragojuryu.com"
+phone: "+1 (415) 555-0123"
+map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-122.4194%2C37.7749%2C-122.4094%2C37.7849&layer=mapnik&marker=37.7799%2C-122.4144"
+
+# Additional contact information
+website: "https://www.sakuragojuryu.com"
+hours: |
+  Monday - Friday: 6:00 PM - 9:00 PM
+  Saturday: 10:00 AM - 2:00 PM
+  Sunday: Closed
+
+# Dojo description
+description: |
+  A traditional Goju-Ryu karate dojo dedicated to preserving authentic 
+  Okinawan martial arts. We are proud members of the International 
+  Okinawan Goju-Ryu Karate-do Federation (IOGKF).
