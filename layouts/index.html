@@ -1,0 +1,131 @@
+{{ define "main" }}
+  {{/* Get dojo data from YAML */}}
+  {{ $dojo := .Site.Data.dojo }}
+  
+  {{/* Hero Section with Dojo Name and Logo */}}
+  <div class="cover bg-center" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
+    <div class="bg-black-60">
+      <div class="tc-l pv6 ph3 ph4-ns">
+        {{/* Association Logo */}}
+        {{ if fileExists "static/images/logo.svg" }}
+          <div class="mb4">
+            <img src="/images/logo.svg" alt="IOGKF Logo" class="center db" style="max-height: 120px; max-width: 300px;">
+          </div>
+        {{ end }}
+        
+        {{/* Dojo Name from YAML data */}}
+        {{ if $dojo.dojo_name }}
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">{{ $dojo.dojo_name }}</div>
+        {{ else }}
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Site.Title }}</div>
+        {{ end }}
+        
+        {{/* Welcome message */}}
+        <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+          {{ if $dojo.description }}
+            {{ $dojo.description }}
+          {{ else }}
+            Welcome to our traditional Goju-Ryu Karate dojo, proudly affiliated with the International Okinawan Goju-Ryu Karate-do Federation (IOGKF).
+          {{ end }}
+        </div>
+        
+        {{/* Call-to-Action Buttons */}}
+        <div class="mt4">
+          <a href="/contact" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-blue mr3">Contact Us</a>
+          <a href="/schedule" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-green">View Schedule</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{/* Content Section */}}
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    {{ .Content }}
+    
+    {{/* Quick Info Section */}}
+    {{ if $dojo }}
+      <div class="mt5 pt4 bt b--light-gray">
+        <div class="cf">
+          {{/* Contact Info */}}
+          <div class="fl w-100 w-50-ns pr3-ns">
+            <h3 class="f3 fw6 mb3">Visit Our Dojo</h3>
+            {{ if $dojo.address }}
+              <div class="mb3">
+                <h4 class="f5 fw6 mb1">Address</h4>
+                <p class="f6 ma0 lh-copy">{{ $dojo.address | markdownify }}</p>
+              </div>
+            {{ end }}
+            
+            {{ if $dojo.phone }}
+              <div class="mb3">
+                <h4 class="f5 fw6 mb1">Phone</h4>
+                <p class="f6 ma0"><a href="tel:{{ $dojo.phone }}" class="link blue">{{ $dojo.phone }}</a></p>
+              </div>
+            {{ end }}
+            
+            {{ if $dojo.email }}
+              <div class="mb3">
+                <h4 class="f5 fw6 mb1">Email</h4>
+                <p class="f6 ma0"><a href="mailto:{{ $dojo.email }}" class="link blue">{{ $dojo.email }}</a></p>
+              </div>
+            {{ end }}
+          </div>
+          
+          {{/* Training Hours */}}
+          <div class="fl w-100 w-50-ns pl3-ns">
+            <h3 class="f3 fw6 mb3">Training Hours</h3>
+            {{ if $dojo.hours }}
+              <div class="f6 lh-copy">
+                {{ $dojo.hours | markdownify }}
+              </div>
+            {{ else }}
+              <p class="f6 lh-copy">
+                Please check our <a href="/schedule" class="link blue">schedule page</a> for current class times.
+              </p>
+            {{ end }}
+            
+            <div class="mt3">
+              <a href="/schedule" class="f6 link dim br3 ph3 pv2 dib white bg-blue">Full Schedule</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </article>
+
+  {{/* Recent Posts Section (if enabled) */}}
+  {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
+  {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
+  {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
+  {{ $section_count := len $section }}
+
+  {{ if and ($show_recent_posts) (compare.Ge $section_count 1) }}
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+      {{ $n_posts := $.Param "recent_posts_number" | compare.Default 3 }}
+
+      <section class="w-100 mw8">
+        <h2 class="f3 fw6 mb4">Latest News</h2>
+        {{/* Range through the first $n_posts items of the section */}}
+        {{ range (collections.First $n_posts $section) }}
+          <div class="w-100 mb4 relative">
+            {{ .Render "summary-with-image" }}
+          </div>
+        {{ end }}
+      </section>
+
+      {{ if compare.Ge $section_count (math.Add $n_posts 1) }}
+        <section class="w-100">
+          <h3 class="f4">{{ lang.Translate "more" | compare.Default "More" }}</h3>
+          {{/* Now, range through the next four after the initial $n_posts items */}}
+          {{ range (collections.First 4 (collections.After $n_posts $section))  }}
+            <h4 class="f5 fw4 mb4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml3" "mr3" }}">
+              <a href="{{ .RelPermalink }}" class="link black dim">
+                {{ .Title }}
+              </a>
+            </h4>
+          {{ end }}
+        </section>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
