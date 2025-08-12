@@ -1,0 +1,18 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Sample Dojo"
+theme = "ananke"
+
+# Pagination configuration
+[pagination]
+  pagerSize = 3
+
+[params]
+  # Site description for meta tags
+  description = "A Goju-Ryu Karate dojo website"
+  
+  # Featured image for social sharing
+  featured_image = "/images/logo.png"
+  
+  # Recent posts on homepage
+  recent_posts_number = 3

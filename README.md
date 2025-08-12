@@ -15,6 +15,8 @@ This template is designed to help IOGKF dojos around the world create beautiful,
 ## Prerequisites
 
 - **Hugo Extended v0.100.0 or later** - [Installation Guide](https://gohugo.io/installation/)
+  - **Important:** Must be the Extended version for SCSS/SASS support
+  - Verify installation: `hugo version` (should show "extended")
 - **Git** - for version control and theme management
 - Basic text editing skills for YAML configuration
 
