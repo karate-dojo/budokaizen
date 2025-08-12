@@ -2,10 +2,33 @@ baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Sample Dojo"
 theme = "ananke"
+defaultContentLanguage = "en"
 
 # Pagination configuration
 [pagination]
   pagerSize = 3
+
+# Languages configuration
+[languages]
+  [languages.en]
+    title = "Sample Dojo"
+    weight = 1
+    contentDir = "content"
+    languageName = "English"
+    
+  # Prepare structure for additional languages (example: Portuguese)
+  # [languages.pt]
+  #   title = "Dojo de Exemplo"
+  #   weight = 2
+  #   contentDir = "content"
+  #   languageName = "Português"
+
+# Language menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "language"
+    name = "Language"
+    weight = 100
 
 [params]
   # Site description for meta tags
