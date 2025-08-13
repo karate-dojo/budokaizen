@@ -1,6 +1,6 @@
 {{ define "main" }}
-  {{/* Get dojo data from YAML */}}
-  {{ $dojo := .Site.Data.dojo }}
+  {{/* Get dojo data from language-specific YAML */}}
+  {{ $dojo := index .Site.Data .Site.Language.Lang "dojo" }}
   
   {{/* Hero Section with Dojo Name and Logo */}}
   <div class="cover bg-center" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">

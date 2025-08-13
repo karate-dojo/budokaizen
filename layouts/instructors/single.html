@@ -2,8 +2,8 @@
 <article class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy mid-gray">
     {{ .Content }}
 
-    {{/* Load instructor data from YAML */}}
-    {{ $instructors := .Site.Data.instructors.instructors }}
+    {{/* Load instructor data from language-specific YAML */}}
+    {{ $instructors := index .Site.Data .Site.Language.Lang "instructors" "instructors" }}
 
     {{ if $instructors }}
     <div class="mt5 pt4 bt b--light-gray">

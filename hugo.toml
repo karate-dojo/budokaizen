@@ -16,12 +16,11 @@ defaultContentLanguage = "en"
     contentDir = "content"
     languageName = "English"
     
-  # Prepare structure for additional languages (example: Portuguese)
-  # [languages.pt]
-  #   title = "Dojo de Exemplo"
-  #   weight = 2
-  #   contentDir = "content"
-  #   languageName = "Português"
+  [languages.pt]
+    title = "Dojo de Exemplo"
+    weight = 2
+    contentDir = "content"
+    languageName = "Português"
 
 # Language menu configuration
 [menu]

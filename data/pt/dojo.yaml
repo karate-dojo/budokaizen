@@ -1,0 +1,24 @@
+# Configuração do Dojo
+# Este arquivo contém as informações básicas sobre o dojo
+
+dojo_name: "Dojo Sakura Goju-Ryu"
+address: |
+  Rua do Karatê, 123
+  São Paulo, SP 01234-567
+  Brasil
+email: "info@sakuragojuryu.com.br"
+phone: "+55 (11) 5555-0123"
+map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-46.6341%2C-23.5489%2C-46.6241%2C-23.5389&layer=mapnik&marker=-23.5439%2C-46.6291"
+
+# Informações de contato adicionais
+website: "https://www.sakuragojuryu.com.br"
+hours: |
+  Segunda a Sexta: 18:00 - 21:00
+  Sábado: 10:00 - 14:00
+  Domingo: Fechado
+
+# Descrição do dojo
+description: |
+  Um dojo tradicional de karatê Goju-Ryu dedicado a preservar as 
+  autênticas artes marciais de Okinawa. Somos membros orgulhosos da 
+  Federação Internacional de Karatê-do Goju-Ryu de Okinawa (IOGKF).

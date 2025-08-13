@@ -1,0 +1,87 @@
+# Horário das Aulas
+# Horário semanal das aulas organizadas por dia
+
+schedule:
+  - day: "Segunda-feira"
+    classes:
+      - time: "18:00 - 19:00"
+        type: "Karatê Adulto Iniciante"
+        instructor: "Sempai Johnson"
+        description: "Técnicas básicas, kata e condicionamento"
+        
+      - time: "19:15 - 20:30"
+        type: "Karatê Adulto Avançado"
+        instructor: "Sensei Yamamoto"
+        description: "Kata avançado, kumite e defesa pessoal"
+        
+  - day: "Terça-feira"
+    classes:
+      - time: "18:00 - 19:00"
+        type: "Karatê Juvenil (8-14 anos)"
+        instructor: "Sensei Rodriguez"
+        description: "Treinamento de karatê adequado para a idade com foco em disciplina"
+        
+      - time: "19:15 - 20:15"
+        type: "Condicionamento Adulto"
+        instructor: "Sensei Chen"
+        description: "Treinamento de força e flexibilidade para artistas marciais"
+        
+  - day: "Quarta-feira"
+    classes:
+      - time: "18:00 - 19:00"
+        type: "Karatê Adulto Intermediário"
+        instructor: "Sensei Rodriguez"
+        description: "Técnicas intermediárias e preparação para kumite"
+        
+      - time: "19:15 - 20:30"
+        type: "Aula de Kata Tradicional"
+        instructor: "Sensei Yamamoto"
+        description: "Estudo profundo dos kata clássicos do Goju-Ryu"
+        
+  - day: "Quinta-feira"
+    classes:
+      - time: "18:00 - 19:00"
+        type: "Karatê Juvenil (8-14 anos)"
+        instructor: "Sensei Rodriguez"
+        description: "Treinamento de karatê adequado para a idade com foco em disciplina"
+        
+      - time: "19:15 - 20:15"
+        type: "Aula de Kumite (Luta)"
+        instructor: "Sensei Chen"
+        description: "Luta controlada e preparação para competições"
+        
+  - day: "Sexta-feira"
+    classes:
+      - time: "18:00 - 19:00"
+        type: "Treino Livre"
+        instructor: "Todos os Instrutores"
+        description: "Prática individual com orientação dos instrutores"
+        
+      - time: "19:15 - 20:30"
+        type: "Aula de Faixa Preta"
+        instructor: "Sensei Yamamoto"
+        description: "Treinamento avançado somente para faixas pretas"
+        
+  - day: "Sábado"
+    classes:
+      - time: "10:00 - 11:00"
+        type: "Pequenos Dragões (4-7 anos)"
+        instructor: "Sempai Johnson"
+        description: "Introdução às artes marciais para crianças pequenas"
+        
+      - time: "11:15 - 12:15"
+        type: "Aula Familiar"
+        instructor: "Sensei Rodriguez"
+        description: "Pais e filhos treinam juntos"
+        
+      - time: "12:30 - 14:00"
+        type: "Workshop/Seminário"
+        instructor: "Sensei Visitante"
+        description: "Workshops especiais mensais (consulte calendário)"
+        
+  - day: "Domingo"
+    classes:
+      - time: "Fechado"
+        type: "Dia de Descanso"
+        instructor: ""
+        description: "Dojo fechado para descanso e recuperação"
