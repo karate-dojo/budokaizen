@@ -8,6 +8,12 @@ address: |
   United States
 email: "info@sakuragojuryu.com"
 phone: "+1 (415) 555-0123"
+# OpenStreetMap embed URL - To get this URL:
+# 1. Go to https://www.openstreetmap.org
+# 2. Search for your address
+# 3. Click "Share" on the right sidebar
+# 4. Click "Embed" tab and copy the iframe src URL
+# Example format: https://www.openstreetmap.org/export/embed.html?bbox=...&marker=...
 map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-122.4194%2C37.7749%2C-122.4094%2C37.7849&layer=mapnik&marker=37.7799%2C-122.4144"
 
 # Additional contact information
