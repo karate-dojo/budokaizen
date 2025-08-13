@@ -25,3 +25,15 @@ instructors:
     title: "Junior Instructor"
     specialization: "Beginner Classes, Forms"
     bio: "Sempai Johnson assists with beginner classes and helps new students learn the fundamentals of Goju-Ryu."
+    
+  - name: "Sensei John Doe"
+    dan: "3rd Dan"
+    title: "Instructor"
+    specialization: "Traditional Weapons, Kata"
+    bio: "Sensei Doe brings expertise in traditional Okinawan weapons and has deep knowledge of classical kata applications."
+    
+  - name: "Sempai Jane Doe"
+    dan: "1st Dan"
+    title: "Assistant Instructor"
+    specialization: "Flexibility Training, Meditation"
+    bio: "Sempai Doe focuses on the mental and spiritual aspects of Goju-Ryu, emphasizing proper breathing and meditation techniques."
