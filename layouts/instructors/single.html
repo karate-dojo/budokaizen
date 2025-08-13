@@ -1,88 +1,88 @@
 {{ define "main" }}
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy mid-gray">
+<article class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy mid-gray">
     {{ .Content }}
-    
+
     {{/* Load instructor data from YAML */}}
     {{ $instructors := .Site.Data.instructors.instructors }}
-    
+
     {{ if $instructors }}
-      <div class="mt5 pt4 bt b--light-gray">
+    <div class="mt5 pt4 bt b--light-gray">
         <div class="cf">
-          {{ range $index, $instructor := $instructors }}
+            {{ range $index, $instructor := $instructors }}
             <div class="fl w-100 w-50-ns {{ if eq (mod $index 2) 0 }}pr3-ns{{ else }}pl3-ns{{ end }} mb4">
-              <div class="bg-white ba b--light-gray br3 pa4 shadow-4">
-                {{/* Instructor Name and Title */}}
-                <div class="mb3">
-                  <h3 class="f3 fw6 mb1 dark-blue">{{ $instructor.name }}</h3>
-                  {{ if $instructor.dan }}
-                    <div class="f4 fw5 mb1 blue">{{ $instructor.dan }}</div>
-                  {{ end }}
-                  {{ if $instructor.title }}
-                    <div class="f5 fw4 gray mb2">{{ $instructor.title }}</div>
-                  {{ end }}
+                <div class="bg-white ba b--light-gray br3 pa4 shadow-4">
+                    {{/* Instructor Name and Title */}}
+                    <div class="mb3">
+                        <h3 class="f3 fw6 mb1 dark-blue">{{ $instructor.name }}</h3>
+                        {{ if $instructor.dan }}
+                        <div class="f4 fw5 mb1 blue">{{ $instructor.dan }}</div>
+                        {{ end }}
+                        {{ if $instructor.title }}
+                        <div class="f5 fw4 gray mb2">{{ $instructor.title }}</div>
+                        {{ end }}
+                    </div>
+
+                    {{/* Specialization */}}
+                    {{ if $instructor.specialization }}
+                    <div class="mb3">
+                        <h4 class="f5 fw6 mb1 dark-gray">Specialization</h4>
+                        <p class="f6 ma0 lh-copy">{{ $instructor.specialization }}</p>
+                    </div>
+                    {{ end }}
+
+                    {{/* Biography */}}
+                    {{ if $instructor.bio }}
+                    <div class="mb2">
+                        <h4 class="f5 fw6 mb1 dark-gray">About</h4>
+                        <p class="f6 ma0 lh-copy">{{ $instructor.bio }}</p>
+                    </div>
+                    {{ end }}
+
+                    {{/* Visual separator between instructors */}}
+                    {{ if $instructor.dan }}
+                    <div class="mt3 pt2 bt b--light-gray">
+                        <div class="f7 ttu tracked gray">{{ $instructor.dan | upper }} INSTRUCTOR</div>
+                    </div>
+                    {{ end }}
                 </div>
-                
-                {{/* Specialization */}}
-                {{ if $instructor.specialization }}
-                  <div class="mb3">
-                    <h4 class="f5 fw6 mb1 dark-gray">Specialization</h4>
-                    <p class="f6 ma0 lh-copy">{{ $instructor.specialization }}</p>
-                  </div>
-                {{ end }}
-                
-                {{/* Biography */}}
-                {{ if $instructor.bio }}
-                  <div class="mb2">
-                    <h4 class="f5 fw6 mb1 dark-gray">About</h4>
-                    <p class="f6 ma0 lh-copy">{{ $instructor.bio }}</p>
-                  </div>
-                {{ end }}
-                
-                {{/* Visual separator between instructors */}}
-                {{ if $instructor.dan }}
-                  <div class="mt3 pt2 bt b--light-gray">
-                    <div class="f7 ttu tracked gray">{{ $instructor.dan | upper }} INSTRUCTOR</div>
-                  </div>
-                {{ end }}
-              </div>
             </div>
-            
+
             {{/* Clear float every two instructors for proper layout */}}
             {{ if eq (mod (add $index 1) 2) 0 }}
-              <div class="cf"></div>
+            <div class="cf"></div>
             {{ end }}
-          {{ end }}
+            {{ end }}
         </div>
-      </div>
+    </div>
     {{ else }}
-      {{/* Fallback content if no instructors are configured */}}
-      <div class="mt5 pt4 bt b--light-gray tc">
+    {{/* Fallback content if no instructors are configured */}}
+    <div class="mt5 pt4 bt b--light-gray tc">
         <div class="bg-light-gray br3 pa4 mb4">
-          <h3 class="f3 fw6 mb3 gray">Instructors Information Coming Soon</h3>
-          <p class="f5 lh-copy mb3">
-            We are in the process of updating our instructor profiles. 
-            Please check back soon or <a href="/contact" class="link blue">contact us</a> 
-            for more information about our qualified teaching staff.
-          </p>
-          <p class="f6 gray">
-            All our instructors are certified under IOGKF standards and bring years of experience 
-            in traditional Goju-Ryu Karate.
-          </p>
+            <h3 class="f3 fw6 mb3 gray">Instructors Information Coming Soon</h3>
+            <p class="f5 lh-copy mb3">
+                We are in the process of updating our instructor profiles.
+                Please check back soon or <a href="/contact" class="link blue">contact us</a>
+                for more information about our qualified teaching staff.
+            </p>
+            <p class="f6 gray">
+                All our instructors are certified under IOGKF standards and bring years of experience
+                in traditional Goju-Ryu Karate.
+            </p>
         </div>
-      </div>
+    </div>
     {{ end }}
-    
+
     {{/* Call to action section */}}
     <div class="mt5 pt4 bt b--light-gray tc">
-      <h3 class="f3 fw6 mb3">Ready to Start Your Training?</h3>
-      <p class="f5 lh-copy mb4 measure center">
-        Our experienced instructors are ready to guide you on your martial arts journey. 
-        Whether you're a complete beginner or looking to advance your skills, we have the right program for you.
-      </p>
-      <div class="mb4">
-        <a href="/contact" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-blue mr3">Contact Us</a>
-        <a href="/schedule" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-green">View Schedule</a>
-      </div>
+        <h3 class="f3 fw6 mb3">Ready to Start Your Training?</h3>
+        <p class="f5 lh-copy mb4 measure center">
+            Our experienced instructors are ready to guide you on your martial arts journey.
+            Whether you're a complete beginner or looking to advance your skills, we have the right program for you.
+        </p>
+        <div class="mb4">
+            <a href="/contact" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-blue mr3">Contact Us</a>
+            <a href="/schedule" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-green">View Schedule</a>
+        </div>
     </div>
-  </article>
+</article>
 {{ end }}
