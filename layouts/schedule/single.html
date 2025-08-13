@@ -1,0 +1,122 @@
+{{ define "main" }}
+<div class="pa3 pa4-ns">
+  <div class="measure-wide center">
+    <!-- Page title and content -->
+    <header class="mb4">
+      <h1 class="f2 lh-title fw9 mb3 mt0 pt3 dark-gray">{{ .Title }}</h1>
+      <div class="f4 lh-copy measure">{{ .Content }}</div>
+    </header>
+
+    <!-- Schedule content -->
+    {{ $scheduleData := index .Site.Data .Site.Language.Lang "schedule" }}
+    {{ if $scheduleData }}
+      {{ if $scheduleData.schedule }}
+        <div class="schedule-container">
+          {{ range $scheduleData.schedule }}
+            <div class="day-schedule mb4 pb3 bb b--light-gray">
+              <h2 class="f3 fw6 mb3 dark-gray">{{ .day }}</h2>
+              
+              {{ if .classes }}
+                <div class="classes-grid">
+                  {{ range .classes }}
+                    <div class="class-item pa3 mb3 ba b--light-gray br2 bg-near-white">
+                      <div class="class-header mb2">
+                        <h3 class="f4 fw6 mb1 dark-gray">{{ .type }}</h3>
+                        <div class="f5 fw5 dark-blue">{{ .time }}</div>
+                      </div>
+                      
+                      {{ if .instructor }}
+                        <div class="instructor mb2">
+                          <span class="f6 fw5 gray">{{ if eq $.Site.Language.Lang "pt" }}Instrutor:{{ else }}Instructor:{{ end }}</span>
+                          <span class="f6 dark-gray">{{ .instructor }}</span>
+                        </div>
+                      {{ end }}
+                      
+                      {{ if .description }}
+                        <div class="description">
+                          <p class="f6 lh-copy gray mt2 mb0">{{ .description }}</p>
+                        </div>
+                      {{ end }}
+                    </div>
+                  {{ end }}
+                </div>
+              {{ else }}
+                <div class="no-classes pa3 ba b--light-gray br2 bg-light-gray">
+                  <p class="f5 gray ma0">
+                    {{ if eq .Site.Language.Lang "pt" }}
+                      Nenhuma aula programada para este dia.
+                    {{ else }}
+                      No classes scheduled for this day.
+                    {{ end }}
+                  </p>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      {{ else }}
+        <!-- No schedule data available -->
+        <div class="no-schedule-data pa4 ba b--light-gray br2 bg-light-gray tc">
+          <h3 class="f4 fw6 gray">
+            {{ if eq .Site.Language.Lang "pt" }}
+              Horário em Breve
+            {{ else }}
+              Schedule Coming Soon
+            {{ end }}
+          </h3>
+          <p class="f5 gray lh-copy">
+            {{ if eq .Site.Language.Lang "pt" }}
+              Estamos organizando nosso horário de aulas. Volte em breve para ver os horários disponíveis.
+            {{ else }}
+              We are organizing our class schedule. Please check back soon for available class times.
+            {{ end }}
+          </p>
+        </div>
+      {{ end }}
+    {{ else }}
+      <!-- Fallback when no schedule data exists -->
+      <div class="no-schedule-data pa4 ba b--light-gray br2 bg-light-gray tc">
+        <h3 class="f4 fw6 gray">
+          {{ if eq .Site.Language.Lang "pt" }}
+            Horário em Breve
+          {{ else }}
+            Schedule Coming Soon
+          {{ end }}
+        </h3>
+        <p class="f5 gray lh-copy">
+          {{ if eq .Site.Language.Lang "pt" }}
+            Estamos organizando nosso horário de aulas. Volte em breve para ver os horários disponíveis.
+          {{ else }}
+            We are organizing our class schedule. Please check back soon for available class times.
+          {{ end }}
+        </p>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.classes-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 60em) {
+  .classes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.class-item {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.class-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.day-schedule:last-child {
+  border-bottom: none;
+}
+</style>
+{{ end }}

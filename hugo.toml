@@ -56,6 +56,11 @@ defaultContentLanguage = "en"
     url = "/instructors/"
     weight = 2
 
+  [[languages.en.menu.main]]
+    name = "Schedule"
+    url = "/schedule/"
+    weight = 3
+
 [languages.pt.menu]
   [[languages.pt.menu.main]]
     name = "Sobre"
@@ -66,6 +71,11 @@ defaultContentLanguage = "en"
     name = "Instrutores"
     url = "/pt/instructors/"
     weight = 2
+
+  [[languages.pt.menu.main]]
+    name = "Horários"
+    url = "/pt/schedule/"
+    weight = 3
 
 [params]
   # Site description for meta tags
