@@ -61,6 +61,11 @@ defaultContentLanguage = "en"
     url = "/schedule/"
     weight = 3
 
+  [[languages.en.menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
 [languages.pt.menu]
   [[languages.pt.menu.main]]
     name = "Sobre"
@@ -76,6 +81,11 @@ defaultContentLanguage = "en"
     name = "Horários"
     url = "/pt/schedule/"
     weight = 3
+
+  [[languages.pt.menu.main]]
+    name = "Contato"
+    url = "/pt/contact/"
+    weight = 4
 
 [params]
   # Site description for meta tags

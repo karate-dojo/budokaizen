@@ -1,0 +1,209 @@
+{{ define "main" }}
+<div class="pa3 pa4-ns">
+  <div class="measure-wide center">
+    <!-- Page title and content -->
+    <header class="mb4">
+      <h1 class="f2 lh-title fw9 mb3 mt0 pt3 dark-gray">{{ .Title }}</h1>
+      <div class="f4 lh-copy measure">{{ .Content }}</div>
+    </header>
+
+    <!-- Contact information -->
+    {{ $dojoData := index .Site.Data .Site.Language.Lang "dojo" }}
+    {{ if $dojoData }}
+      <div class="contact-container">
+        <div class="flex-l">
+          <!-- Contact Details -->
+          <div class="w-100 w-50-l pr4-l mb4 mb0-l">
+            <div class="contact-info">
+              <!-- Dojo Name -->
+              {{ if $dojoData.dojo_name }}
+                <div class="contact-item mb4">
+                  <h2 class="f3 fw6 mb2 dark-gray">{{ $dojoData.dojo_name }}</h2>
+                </div>
+              {{ end }}
+
+              <!-- Address -->
+              {{ if $dojoData.address }}
+                <div class="contact-item mb4">
+                  <h3 class="f4 fw6 mb2 dark-gray">
+                    {{ if eq .Site.Language.Lang "pt" }}
+                      📍 Endereço
+                    {{ else }}
+                      📍 Address
+                    {{ end }}
+                  </h3>
+                  <div class="f5 lh-copy gray">
+                    {{ $dojoData.address | replaceRE "\n" "<br>" | safeHTML }}
+                  </div>
+                </div>
+              {{ end }}
+
+              <!-- Phone -->
+              {{ if $dojoData.phone }}
+                <div class="contact-item mb4">
+                  <h3 class="f4 fw6 mb2 dark-gray">
+                    {{ if eq .Site.Language.Lang "pt" }}
+                      📞 Telefone
+                    {{ else }}
+                      📞 Phone
+                    {{ end }}
+                  </h3>
+                  <div class="f5 lh-copy">
+                    <a href="tel:{{ $dojoData.phone | replaceRE "[^0-9+]" "" }}" class="link dark-blue hover-blue">
+                      {{ $dojoData.phone }}
+                    </a>
+                  </div>
+                </div>
+              {{ end }}
+
+              <!-- Email -->
+              {{ if $dojoData.email }}
+                <div class="contact-item mb4">
+                  <h3 class="f4 fw6 mb2 dark-gray">
+                    {{ if eq .Site.Language.Lang "pt" }}
+                      ✉️ Email
+                    {{ else }}
+                      ✉️ Email
+                    {{ end }}
+                  </h3>
+                  <div class="f5 lh-copy">
+                    <a href="mailto:{{ $dojoData.email }}" class="link dark-blue hover-blue">
+                      {{ $dojoData.email }}
+                    </a>
+                  </div>
+                </div>
+              {{ end }}
+
+              <!-- Hours -->
+              {{ if $dojoData.hours }}
+                <div class="contact-item mb4">
+                  <h3 class="f4 fw6 mb2 dark-gray">
+                    {{ if eq .Site.Language.Lang "pt" }}
+                      🕐 Horário de Funcionamento
+                    {{ else }}
+                      🕐 Hours
+                    {{ end }}
+                  </h3>
+                  <div class="f5 lh-copy gray">
+                    {{ $dojoData.hours | replaceRE "\n" "<br>" | safeHTML }}
+                  </div>
+                </div>
+              {{ end }}
+
+              <!-- Website -->
+              {{ if $dojoData.website }}
+                <div class="contact-item mb4">
+                  <h3 class="f4 fw6 mb2 dark-gray">
+                    {{ if eq .Site.Language.Lang "pt" }}
+                      🌐 Website
+                    {{ else }}
+                      🌐 Website
+                    {{ end }}
+                  </h3>
+                  <div class="f5 lh-copy">
+                    <a href="{{ $dojoData.website }}" target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
+                      {{ $dojoData.website }}
+                    </a>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="w-100 w-50-l">
+            <div class="map-container">
+              <h3 class="f4 fw6 mb3 dark-gray">
+                {{ if eq .Site.Language.Lang "pt" }}
+                  📍 Localização
+                {{ else }}
+                  📍 Location
+                {{ end }}
+              </h3>
+              <div class="map-placeholder ba b--light-gray br2 pa4 tc bg-light-gray" style="min-height: 300px;">
+                <div class="flex items-center justify-center h-100">
+                  <div class="tc">
+                    <div class="f1 mb3">🗺️</div>
+                    <p class="f5 gray ma0">
+                      {{ if eq .Site.Language.Lang "pt" }}
+                        Mapa será adicionado em breve
+                      {{ else }}
+                        Map will be added soon
+                      {{ end }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description (if available) -->
+        {{ if $dojoData.description }}
+          <div class="description-section mt5 pt4 bt b--light-gray">
+            <h3 class="f3 fw6 mb3 dark-gray">
+              {{ if eq .Site.Language.Lang "pt" }}
+                Sobre o Dojo
+              {{ else }}
+                About Our Dojo
+              {{ end }}
+            </h3>
+            <div class="f4 lh-copy measure-wide gray">
+              {{ $dojoData.description | replaceRE "\n" "<br>" | safeHTML }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <!-- Fallback when no dojo data exists -->
+      <div class="no-contact-data pa4 ba b--light-gray br2 bg-light-gray tc">
+        <h3 class="f4 fw6 gray">
+          {{ if eq .Site.Language.Lang "pt" }}
+            Informações de Contato em Breve
+          {{ else }}
+            Contact Information Coming Soon
+          {{ end }}
+        </h3>
+        <p class="f5 gray lh-copy">
+          {{ if eq .Site.Language.Lang "pt" }}
+            Estamos organizando nossas informações de contato. Volte em breve.
+          {{ else }}
+            We are organizing our contact information. Please check back soon.
+          {{ end }}
+        </p>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.contact-info .contact-item {
+  border-left: 3px solid #357edd;
+  padding-left: 1rem;
+}
+
+.contact-info .contact-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.map-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 60em) {
+  .contact-container .flex-l {
+    flex-direction: column;
+  }
+  
+  .contact-container .w-50-l {
+    width: 100%;
+  }
+  
+  .contact-container .pr4-l {
+    padding-right: 0;
+  }
+}
+</style>
+{{ end }}
