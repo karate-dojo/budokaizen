@@ -4,30 +4,68 @@ title = "Sample Dojo"
 theme = "ananke"
 defaultContentLanguage = "en"
 
+# For single language mode, comment out the [languages] section below
+# and uncomment the single language settings
+# 
+# SINGLE LANGUAGE CONFIGURATION:
+# Comment out everything from [languages] to [languages.pt.menu] sections
+# and uncomment the following:
+#
+# [menu]
+#   [[menu.main]]
+#     name = "About"
+#     url = "/about/"
+#     weight = 1
+#   
+#   [[menu.main]]
+#     name = "Instructors"
+#     url = "/instructors/"
+#     weight = 2
+#
+# Also in [params] section, set: hide_language_switcher = true
+#
+# For multiple languages, keep the [languages] section active
+
 # Pagination configuration
 [pagination]
   pagerSize = 3
 
-# Languages configuration
+# Multi-language configuration (comment out to use single language)
 [languages]
   [languages.en]
     title = "Sample Dojo"
     weight = 1
-    contentDir = "content"
+    contentDir = "content/en"
     languageName = "English"
     
   [languages.pt]
     title = "Dojo de Exemplo"
     weight = 2
-    contentDir = "content"
+    contentDir = "content/pt"
     languageName = "Português"
 
-# Language menu configuration
-[menu]
-  [[menu.main]]
-    identifier = "language"
-    name = "Language"
-    weight = 100
+# Multi-language menus (comment out for single language mode)
+[languages.en.menu]
+  [[languages.en.menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  
+  [[languages.en.menu.main]]
+    name = "Instructors"
+    url = "/instructors/"
+    weight = 2
+
+[languages.pt.menu]
+  [[languages.pt.menu.main]]
+    name = "Sobre"
+    url = "/pt/about/"
+    weight = 1
+  
+  [[languages.pt.menu.main]]
+    name = "Instrutores"
+    url = "/pt/instructors/"
+    weight = 2
 
 [params]
   # Site description for meta tags
@@ -38,3 +76,10 @@ defaultContentLanguage = "en"
   
   # Recent posts on homepage
   recent_posts_number = 3
+  
+  # Language configuration
+  # Set to true to show language switcher dropdown (only shows when multiple languages are available)
+  # Set to false to hide language switcher completely
+  show_language_switcher = true
+  # Alternative: set hide_language_switcher = true to disable it
+  # hide_language_switcher = false

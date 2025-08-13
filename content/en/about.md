@@ -1,9 +1,6 @@
 ---
 title: "About Goju-Ryu Karate"
 description: "Learn about the rich history and traditions of Goju-Ryu Karate and the International Okinawan Goju-Ryu Karate-do Federation"
-menu:
-  main:
-    weight: 20
 ---
 
 ## The Art of Goju-Ryu Karate

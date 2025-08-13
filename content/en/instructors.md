@@ -3,10 +3,6 @@ title: "Our Instructors"
 description: "Meet our experienced Goju-Ryu instructors dedicated to preserving authentic martial arts traditions"
 date: 2025-08-13
 layout: "instructors"
-menu:
-  main:
-    name: "Instructors"
-    weight: 30
 ---
 
 ## Meet Our Instructors
