@@ -47,55 +47,65 @@ defaultContentLanguage = "en"
 # Multi-language menus (comment out for single language mode)
 [languages.en.menu]
   [[languages.en.menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Goju Ryu"
+    url = "/goju-ryu/"
     weight = 1
+  
+  [[languages.en.menu.main]]
+    name = "IOGKF"
+    url = "/iogkf/"
+    weight = 2
   
   [[languages.en.menu.main]]
     name = "Instructors"
     url = "/instructors/"
-    weight = 2
+    weight = 3
 
   [[languages.en.menu.main]]
     name = "Schedule"
     url = "/schedule/"
-    weight = 3
+    weight = 4
 
   [[languages.en.menu.main]]
     name = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 5
 
   [[languages.en.menu.main]]
     name = "Follow Us"
     url = "/social/"
-    weight = 5
+    weight = 6
 
 [languages.pt.menu]
   [[languages.pt.menu.main]]
-    name = "Sobre"
-    url = "/pt/about/"
+    name = "Goju Ryu"
+    url = "/pt/goju-ryu/"
     weight = 1
+  
+  [[languages.pt.menu.main]]
+    name = "IOGKF"
+    url = "/pt/iogkf/"
+    weight = 2
   
   [[languages.pt.menu.main]]
     name = "Instrutores"
     url = "/pt/instructors/"
-    weight = 2
+    weight = 3
 
   [[languages.pt.menu.main]]
     name = "Horários"
     url = "/pt/schedule/"
-    weight = 3
+    weight = 4
 
   [[languages.pt.menu.main]]
     name = "Contato"
     url = "/pt/contact/"
-    weight = 4
+    weight = 5
 
   [[languages.pt.menu.main]]
     name = "Siga-nos"
     url = "/pt/social/"
-    weight = 5
+    weight = 6
 
 [params]
   # Site description for meta tags
