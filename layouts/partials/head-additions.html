@@ -1,0 +1,3 @@
+<!-- Custom Language Dropdown Styles -->
+{{ $css := resources.Get "css/language-dropdown.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
