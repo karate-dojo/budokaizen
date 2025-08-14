@@ -1,0 +1,180 @@
+/* Social Media Links Styles */
+.social-media-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.375rem;
+    padding: 0.25rem;
+}
+
+.social-link:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+    transform: translateY(-1px);
+}
+
+.social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Platform-specific colors on hover */
+.social-facebook:hover {
+    color: #1877F2;
+    background-color: rgba(24, 119, 242, 0.1);
+}
+
+.social-instagram:hover {
+    color: #E4405F;
+    background-color: rgba(228, 64, 95, 0.1);
+}
+
+.social-youtube:hover {
+    color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.social-twitter:hover {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.social-tiktok:hover {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .social-media-links {
+        gap: 0.5rem;
+    }
+
+    .social-link {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .social-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+/* Header social links (smaller) */
+.header-social .social-media-links {
+    gap: 0.5rem;
+}
+
+.header-social .social-link {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.header-social .social-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Footer social links (larger) */
+.footer-social .social-media-links {
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-social .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.footer-social .social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Quick links social (smaller, inline) */
+.quick-social .social-media-links {
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.quick-social .social-link {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.quick-social .social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Social Media Showcase Styles */
+.social-media-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.social-platform-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 0.75rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 280px;
+    transition: all 0.3s ease;
+}
+
+.social-platform-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.social-platform-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-platform-card a:hover {
+    color: #2563eb;
+}
+
+/* Tachyons utility additions for gaps */
+.gap4 {
+    gap: 1rem;
+}
+
+/* Mobile responsive for showcase */
+@media (max-width: 768px) {
+    .social-media-showcase {
+        gap: 1rem;
+    }
+
+    .social-platform-card {
+        width: 240px;
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-platform-card {
+        width: 200px;
+    }
+}

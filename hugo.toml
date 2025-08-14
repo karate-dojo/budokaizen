@@ -66,6 +66,11 @@ defaultContentLanguage = "en"
     url = "/contact/"
     weight = 4
 
+  [[languages.en.menu.main]]
+    name = "Follow Us"
+    url = "/social/"
+    weight = 5
+
 [languages.pt.menu]
   [[languages.pt.menu.main]]
     name = "Sobre"
@@ -87,6 +92,11 @@ defaultContentLanguage = "en"
     url = "/pt/contact/"
     weight = 4
 
+  [[languages.pt.menu.main]]
+    name = "Siga-nos"
+    url = "/pt/social/"
+    weight = 5
+
 [params]
   # Site description for meta tags
   description = "A Goju-Ryu Karate dojo website"
@@ -103,3 +113,6 @@ defaultContentLanguage = "en"
   show_language_switcher = true
   # Alternative: set hide_language_switcher = true to disable it
   # hide_language_switcher = false
+  
+  # Custom CSS files
+  custom_css = ["css/social-links.css"]
