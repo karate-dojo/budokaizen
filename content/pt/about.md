@@ -1,6 +1,9 @@
 ---
 title: "Sobre o Karate Goju-Ryu"
 description: "Aprenda sobre a rica história e tradições do Karate Goju-Ryu e a Federação Internacional de Karate-do Goju-Ryu de Okinawa"
+date: 2023-01-01
+draft: false
+type: "page"
 ---
 
 ## A Arte do Karate Goju-Ryu

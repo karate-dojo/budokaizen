@@ -74,41 +74,6 @@
                             </div>
                         </div>
                         {{ end }}
-
-                        <!-- Hours -->
-                        {{ if $dojoData.hours }}
-                        <div class="contact-item mb4">
-                            <h3 class="f4 fw6 mb2 dark-gray">
-                                {{ if eq .Site.Language.Lang "pt" }}
-                                🕐 Horário de Funcionamento
-                                {{ else }}
-                                🕐 Hours
-                                {{ end }}
-                            </h3>
-                            <div class="f5 lh-copy gray">
-                                {{ $dojoData.hours | replaceRE "\n" "<br>" | safeHTML }}
-                            </div>
-                        </div>
-                        {{ end }}
-
-                        <!-- Website -->
-                        {{ if $dojoData.website }}
-                        <div class="contact-item mb4">
-                            <h3 class="f4 fw6 mb2 dark-gray">
-                                {{ if eq .Site.Language.Lang "pt" }}
-                                🌐 Website
-                                {{ else }}
-                                🌐 Website
-                                {{ end }}
-                            </h3>
-                            <div class="f5 lh-copy">
-                                <a href="{{ $dojoData.website }}" target="_blank" rel="noopener noreferrer"
-                                    class="link dark-blue hover-blue">
-                                    {{ $dojoData.website }}
-                                </a>
-                            </div>
-                        </div>
-                        {{ end }}
                     </div>
                 </div>
 
@@ -122,82 +87,63 @@
                             📍 Location
                             {{ end }}
                         </h3>
-                        
+
                         {{ if $dojoData.map_embed_url }}
-                            <!-- Embedded Map -->
-                            <div class="map-frame ba b--light-gray br2 overflow-hidden" style="height: 300px;">
-                                <iframe 
-                                    src="{{ $dojoData.map_embed_url }}" 
-                                    width="100%" 
-                                    height="100%" 
-                                    style="border: 0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                    title="{{ if eq .Site.Language.Lang "pt" }}Localização do {{ $dojoData.dojo_name }}{{ else }}{{ $dojoData.dojo_name }} Location{{ end }}">
-                                </iframe>
-                            </div>
-                            
-                            <!-- Map fallback text for accessibility -->
-                            <div class="map-fallback mt2">
-                                <p class="f6 gray lh-copy">
-                                    {{ if eq .Site.Language.Lang "pt" }}
-                                        <a href="{{ $dojoData.map_embed_url | replaceRE "/export/embed.html" "" }}" target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
-                                            Ver mapa em tela cheia
-                                        </a>
-                                    {{ else }}
-                                        <a href="{{ $dojoData.map_embed_url | replaceRE "/export/embed.html" "" }}" target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
-                                            View full screen map
-                                        </a>
-                                    {{ end }}
-                                </p>
-                            </div>
+                        <!-- Embedded Map -->
+                        <div class="map-frame ba b--light-gray br2 overflow-hidden" style="height: 300px;">
+                            <iframe src="{{ $dojoData.map_embed_url }}" width="100%" height="100%" style="border: 0;"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="{{ if eq .Site.Language.Lang " pt" }}Localização do {{ $dojoData.dojo_name }}{{
+                                else }}{{ $dojoData.dojo_name }} Location{{ end }}">
+                            </iframe>
+                        </div>
+
+                        <!-- Map fallback text for accessibility -->
+                        <div class="map-fallback mt2">
+                            <p class="f6 gray lh-copy">
+                                {{ if eq .Site.Language.Lang "pt" }}
+                                <a href="{{ $dojoData.map_embed_url | replaceRE " /export/embed.html" "" }}"
+                                    target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
+                                    Ver mapa em tela cheia
+                                </a>
+                                {{ else }}
+                                <a href="{{ $dojoData.map_embed_url | replaceRE " /export/embed.html" "" }}"
+                                    target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
+                                    View full screen map
+                                </a>
+                                {{ end }}
+                            </p>
+                        </div>
                         {{ else }}
-                            <!-- Map Placeholder (when no URL is available) -->
-                            <div class="map-placeholder ba b--light-gray br2 pa4 tc bg-light-gray"
-                                style="min-height: 300px;">
-                                <div class="flex items-center justify-center h-100">
-                                    <div class="tc">
-                                        <div class="f1 mb3">🗺️</div>
-                                        <p class="f5 gray ma0 mb2">
-                                            {{ if eq .Site.Language.Lang "pt" }}
-                                                Mapa não disponível
-                                            {{ else }}
-                                                Map not available
-                                            {{ end }}
-                                        </p>
-                                        {{ if $dojoData.address }}
-                                            <div class="f6 gray lh-copy mt2">
-                                                {{ if eq .Site.Language.Lang "pt" }}
-                                                    Consulte o endereço acima para localização
-                                                {{ else }}
-                                                    Please refer to the address above for location
-                                                {{ end }}
-                                            </div>
+                        <!-- Map Placeholder (when no URL is available) -->
+                        <div class="map-placeholder ba b--light-gray br2 pa4 tc bg-light-gray"
+                            style="min-height: 300px;">
+                            <div class="flex items-center justify-center h-100">
+                                <div class="tc">
+                                    <div class="f1 mb3">🗺️</div>
+                                    <p class="f5 gray ma0 mb2">
+                                        {{ if eq .Site.Language.Lang "pt" }}
+                                        Mapa não disponível
+                                        {{ else }}
+                                        Map not available
+                                        {{ end }}
+                                    </p>
+                                    {{ if $dojoData.address }}
+                                    <div class="f6 gray lh-copy mt2">
+                                        {{ if eq .Site.Language.Lang "pt" }}
+                                        Consulte o endereço acima para localização
+                                        {{ else }}
+                                        Please refer to the address above for location
                                         {{ end }}
                                     </div>
+                                    {{ end }}
                                 </div>
                             </div>
+                        </div>
                         {{ end }}
                     </div>
                 </div>
             </div>
-
-            <!-- Description (if available) -->
-            {{ if $dojoData.description }}
-            <div class="description-section mt5 pt4 bt b--light-gray">
-                <h3 class="f3 fw6 mb3 dark-gray">
-                    {{ if eq .Site.Language.Lang "pt" }}
-                    Sobre o Dojo
-                    {{ else }}
-                    About Our Dojo
-                    {{ end }}
-                </h3>
-                <div class="f4 lh-copy measure-wide gray">
-                    {{ $dojoData.description | replaceRE "\n" "<br>" | safeHTML }}
-                </div>
-            </div>
-            {{ end }}
         </div>
         {{ else }}
         <!-- Fallback when no dojo data exists -->

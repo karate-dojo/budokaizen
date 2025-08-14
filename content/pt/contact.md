@@ -5,6 +5,4 @@ draft: false
 type: "contact"
 ---
 
-# Entre em Contato
-
 Entre em contato com nosso dojo. Estamos aqui para responder quaisquer perguntas sobre nossas aulas, treinamento ou a arte do karatê Goju-Ryu.
