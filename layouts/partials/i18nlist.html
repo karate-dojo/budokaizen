@@ -8,7 +8,7 @@
             {{ $currentLang := .Site.Language.Lang }}
             {{ range .Site.Languages }}
             <li class="language-item">
-                <a href="/{{ if ne .Lang " en" }}{{ .Lang }}/{{ end }}"
+                <a href="{{ $.Site.BaseURL }}{{ if ne .Lang "en" }}{{ .Lang }}/{{ end }}"
                     class="language-link {{ if eq .Lang $currentLang }}current{{ end }}">
                     <span class="flag">{{ if eq .Lang "en" }}🇺🇸{{ else if eq .Lang "pt" }}🇵🇹{{ end }}</span>
                     <span class="language-name">{{ .LanguageName }}</span>

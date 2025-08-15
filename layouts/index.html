@@ -3,13 +3,13 @@
 {{ $dojo := index .Site.Data .Site.Language.Lang "dojo" }}
 
 {{/* Hero Section with Dojo Name and Logo */}}
-<div class="cover bg-center" style="background-image: url('/images/hero.jpg'); background-size: cover; background-position: center;">
+<div class="cover bg-center" style="background-image: url('{{ "/images/hero.jpg" | relURL }}'); background-size: cover; background-position: center;">
   <div class="bg-black-60">
     <div class="tc-l pv6 ph3 ph4-ns">
       {{/* Association Logo */}}
       {{ if fileExists "static/images/logo.png" }}
       <div class="mb4">
-        <img src="/images/logo.png" alt="IOGKF Logo" class="center db" style="max-height: 120px; max-width: 300px;">
+        <img src="{{ "/images/logo.png" | relURL }}" alt="IOGKF Logo" class="center db" style="max-height: 120px; max-width: 300px;">
       </div>
       {{ end }}
 

@@ -4,6 +4,9 @@ title = "Sakura Dojo"
 theme = "ananke"
 defaultContentLanguage = "en"
 
+# Configure languages to use proper paths for GitHub Pages subdirectory
+defaultContentLanguageInSubdir = false
+
 # For single language mode, comment out the [languages] section below
 # and uncomment the single language settings
 # 
