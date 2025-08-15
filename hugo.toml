@@ -1,6 +1,6 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
-title = "Sample Dojo"
+title = "Sakura Dojo"
 theme = "ananke"
 defaultContentLanguage = "en"
 
@@ -33,13 +33,13 @@ defaultContentLanguage = "en"
 # Multi-language configuration (comment out to use single language)
 [languages]
   [languages.en]
-    title = "Sample Dojo"
+    title = "Sakura Dojo"
     weight = 1
     contentDir = "content/en"
     languageName = "English"
     
   [languages.pt]
-    title = "Dojo de Exemplo"
+    title = "Dojo Sakura"
     weight = 2
     contentDir = "content/pt"
     languageName = "Português"

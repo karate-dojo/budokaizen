@@ -9,8 +9,6 @@ layout: "instructors"
 
 Our dojo is proud to have a team of dedicated and experienced instructors who are committed to preserving the authentic traditions of Goju-Ryu Karate. Each instructor brings their own unique expertise and perspective to help students grow both as martial artists and as individuals.
 
-All our instructors are certified under the International Okinawan Goju-Ryu Karate-do Federation (IOGKF) standards and continue their own training to maintain the highest level of instruction.
-
 ### Our Teaching Philosophy
 
 - **Traditional Values**: Maintaining the authentic spirit of Okinawan Goju-Ryu

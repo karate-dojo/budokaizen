@@ -34,13 +34,13 @@ Comment out the multi-language sections and uncomment the single-language menu:
 # Comment out the [languages] section:
 # [languages]
 #   [languages.en]
-#     title = "Sample Dojo"
+#     title = "Sakura Dojo"
 #     weight = 1
 #     contentDir = "content/en"
 #     languageName = "English"
 #     
 #   [languages.pt]
-#     title = "Dojo de Exemplo"
+#     title = "Dojo Sakura"
 #     weight = 2
 #     contentDir = "content/pt"
 #     languageName = "Português"

@@ -1,31 +1,7 @@
 # Instructors
 # List of dojo instructors with their ranks and specializations
 
-instructors:
-  - name: "Sensei Hiroshi Yamamoto"
-    dan: "7th Dan"
-    title: "Chief Instructor"
-    specialization: "Traditional Kata, Self-Defense"
-    bio: "Sensei Yamamoto has been practicing Goju-Ryu for over 30 years and trained directly under Morio Higaonna Sensei in Okinawa."
-    
-  - name: "Sensei Maria Rodriguez"
-    dan: "5th Dan"
-    title: "Senior Instructor"
-    specialization: "Youth Programs, Competition"
-    bio: "Sensei Rodriguez specializes in teaching children and young adults, with a focus on discipline and character development."
-    
-  - name: "Sensei David Chen"
-    dan: "4th Dan"
-    title: "Assistant Instructor"
-    specialization: "Kumite, Physical Conditioning"
-    bio: "A former tournament competitor, Sensei Chen brings modern training methods to traditional Goju-Ryu practice."
-    
-  - name: "Sempai Sarah Johnson"
-    dan: "2nd Dan"
-    title: "Junior Instructor"
-    specialization: "Beginner Classes, Forms"
-    bio: "Sempai Johnson assists with beginner classes and helps new students learn the fundamentals of Goju-Ryu."
-    
+instructors: 
   - name: "Sensei John Doe"
     dan: "3rd Dan"
     title: "Instructor"
