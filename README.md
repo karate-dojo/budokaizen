@@ -10,7 +10,7 @@ This template is designed to help IOGKF dojos around the world create beautiful,
 - **Easy configuration** through YAML files
 - **Multi-language support** (starting with English, expandable)
 - **Mobile-responsive design**
-- **Automated deployment** to GitHub Pages and Netlify
+- **Automated deployment** to GitHub Pages
 
 ## Prerequisites
 
@@ -22,11 +22,28 @@ This template is designed to help IOGKF dojos around the world create beautiful,
 
 ## Quick Start
 
-*(Detailed setup instructions will be added as the template develops)*
+### Deploy to GitHub Pages
+
+[![Deploy with GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/gabrielpedepera/IOGKF_dojo_website_template/fork)
+
+1. **Fork this repository** to your GitHub account
+2. **Configure your dojo information** in the YAML files (see Customization section)
+3. **Update the baseURL** in `hugo.toml` to match your repository:
+   ```toml
+   baseURL = "https://yourusername.github.io/your-repository-name/"
+   ```
+4. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Set Source to "GitHub Actions"
+5. **Push your changes** - the site will automatically deploy!
+
+### Local Development
 
 1. Clone this repository
-2. Configure your dojo information in the YAML files
-3. Build and deploy your site
+2. Install Hugo Extended v0.100.0+
+3. Run `hugo server` for live preview
+4. Configure your dojo information in the YAML files
+5. Build and deploy your site
 
 ## Project Status
 
