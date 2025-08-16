@@ -17,5 +17,3 @@ Nosso dojo tem orgulho de ter uma equipe de instrutores dedicados e experientes 
 - **Aprendizado Contínuo**: Nossos instrutores também são alunos, sempre buscando melhorar
 
 ---
-
-*Interessado em treinar conosco? [Entre em contato](/pt/contact) para agendar uma aula experimental ou [veja nossa programação](/pt/schedule) para encontrar uma aula que se adeque às suas necessidades.*

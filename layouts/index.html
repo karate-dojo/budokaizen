@@ -88,29 +88,30 @@ Main Content Section
   - Simple, clean layout without card styling
   - Better use of available space
   - Proper font sizes and spacing
+  - UX-optimized colors: red for primary elements, black/gray for text
   */}}
   {{ if $dojo }}
   <div class="mt5 pt4 bt b--light-gray">
-    <h3 class="f3 fw6 mb4 tc dark-blue">{{ i18n "visit_our_dojo" }}</h3>
+    <h3 class="f3 fw6 mb4 tc red">{{ i18n "visit_our_dojo" }}</h3>
     <div class="cf">
       {{ if $dojo.address }}
       <div class="fl w-100 w-third-ns pr3-ns mb3">
-        <h4 class="f5 fw6 mb2 dark-blue">📍 {{ i18n "location" }}</h4>
+        <h4 class="f5 fw6 mb2 black">📍 {{ i18n "location" }}</h4>
         <p class="f6 ma0 lh-copy gray">{{ $dojo.address | markdownify }}</p>
       </div>
       {{ end }}
 
       {{ if $dojo.phone }}
       <div class="fl w-100 w-third-ns ph3-ns mb3">
-        <h4 class="f5 fw6 mb2 dark-blue">📞 {{ i18n "phone" }}</h4>
-        <p class="f6 ma0"><a href="tel:{{ $dojo.phone }}" class="link blue hover-dark-blue">{{ $dojo.phone }}</a></p>
+        <h4 class="f5 fw6 mb2 black">📞 {{ i18n "phone" }}</h4>
+        <p class="f6 ma0"><a href="tel:{{ $dojo.phone }}" class="link red hover-dark-red">{{ $dojo.phone }}</a></p>
       </div>
       {{ end }}
 
       {{ if $dojo.email }}
       <div class="fl w-100 w-third-ns pl3-ns mb3">
-        <h4 class="f5 fw6 mb2 dark-blue">✉️ {{ i18n "email" }}</h4>
-        <p class="f6 ma0"><a href="mailto:{{ $dojo.email }}" class="link blue hover-dark-blue">{{ $dojo.email }}</a></p>
+        <h4 class="f5 fw6 mb2 black">✉️ {{ i18n "email" }}</h4>
+        <p class="f6 ma0"><a href="mailto:{{ $dojo.email }}" class="link red hover-dark-red">{{ $dojo.email }}</a></p>
       </div>
       {{ end }}
     </div>

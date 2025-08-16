@@ -32,8 +32,7 @@
                 {{ range $platform, $data := $socialData.social_media }}
                 {{ if and $data.enabled $data.url }}
                 <div class="social-platform-card bg-white ba b--light-gray br3 pa4 ma3 tc shadow-2 w5">
-                    <a href="{{ $data.url }}" target="_blank" rel="noopener noreferrer"
-                        class="link dark-gray hover-blue">
+                    <a href="{{ $data.url }}" target="_blank" rel="noopener noreferrer" class="link gray hover-red">
 
                         {{/* Platform Icon */}}
                         <div class="mb3">
@@ -72,7 +71,7 @@
 
                         {{/* CTA */}}
                         <div class="mt3">
-                            <span class="f6 fw5 dib pv2 ph3 br2 bg-blue white hover-bg-dark-blue">
+                            <span class="f6 fw5 dib pv2 ph3 br2 bg-red white hover-bg-dark-red">
                                 {{ if eq $.Site.Language.Lang "pt" }}
                                 Seguir
                                 {{ else }}

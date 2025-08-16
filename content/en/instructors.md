@@ -17,5 +17,3 @@ Our dojo is proud to have a team of dedicated and experienced instructors who ar
 - **Continuous Learning**: Our instructors are also students, always seeking to improve
 
 ---
-
-*Interested in training with us? [Contact us](/contact) to schedule a trial class or [view our schedule](/schedule) to find a class that fits your needs.*

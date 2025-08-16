@@ -111,4 +111,4 @@ The International Okinawan Goju-Ryu Karate-do Federation (IOGKF) is the official
 
 ---
 
-**Made with ❤️ by Gabriel Pedepera for the Goju-Ryu community**
+**Made with ❤️ by Gabriel Pereira for the Goju-Ryu community**

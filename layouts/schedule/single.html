@@ -3,7 +3,7 @@
     <div class="measure-wide center">
         <!-- Page title and content -->
         <header class="mb4">
-            <h1 class="f2 lh-title fw9 mb3 mt0 pt3 dark-gray">{{ .Title }}</h1>
+            <h1 class="f2 lh-title fw9 mb3 mt0 pt3 black">{{ .Title }}</h1>
             <div class="f4 lh-copy measure">{{ .Content }}</div>
         </header>
 
@@ -14,22 +14,22 @@
         <div class="schedule-container">
             {{ range $scheduleData.schedule }}
             <div class="day-schedule mb4 pb3 bb b--light-gray">
-                <h2 class="f3 fw6 mb3 dark-gray">{{ .day }}</h2>
+                <h2 class="f3 fw6 mb3 black">{{ .day }}</h2>
 
                 {{ if .classes }}
                 <div class="classes-grid">
                     {{ range .classes }}
                     <div class="class-item pa3 mb3 ba b--light-gray br2 bg-near-white">
                         <div class="class-header mb2">
-                            <h3 class="f4 fw6 mb1 dark-gray">{{ .type }}</h3>
-                            <div class="f5 fw5 dark-blue">{{ .time }}</div>
+                            <h3 class="f4 fw6 mb1 black">{{ .type }}</h3>
+                            <div class="f5 fw5 red">{{ .time }}</div>
                         </div>
 
                         {{ if .instructor }}
                         <div class="instructor mb2">
                             <span class="f6 fw5 gray">{{ if eq $.Site.Language.Lang "pt" }}Instrutor:{{ else
                                 }}Instructor:{{ end }}</span>
-                            <span class="f6 dark-gray">{{ .instructor }}</span>
+                            <span class="f6 gray">{{ .instructor }}</span>
                         </div>
                         {{ end }}
 

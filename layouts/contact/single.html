@@ -3,7 +3,7 @@
     <div class="measure-wide center">
         <!-- Page title and content -->
         <header class="mb4">
-            <h1 class="f2 lh-title fw9 mb3 mt0 pt3 dark-gray">{{ .Title }}</h1>
+            <h1 class="f2 lh-title fw9 mb3 mt0 pt3 black">{{ .Title }}</h1>
             <div class="f4 lh-copy measure">{{ .Content }}</div>
         </header>
 
@@ -18,14 +18,14 @@
                         <!-- Dojo Name -->
                         {{ if $dojoData.dojo_name }}
                         <div class="contact-item mb4">
-                            <h2 class="f3 fw6 mb2 dark-gray">{{ $dojoData.dojo_name }}</h2>
+                            <h2 class="f3 fw6 mb2 black">{{ $dojoData.dojo_name }}</h2>
                         </div>
                         {{ end }}
 
                         <!-- Address -->
                         {{ if $dojoData.address }}
                         <div class="contact-item mb4">
-                            <h3 class="f4 fw6 mb2 dark-gray">
+                            <h3 class="f4 fw6 mb2 black">
                                 {{ if eq .Site.Language.Lang "pt" }}
                                 📍 Endereço
                                 {{ else }}
@@ -41,7 +41,7 @@
                         <!-- Phone -->
                         {{ if $dojoData.phone }}
                         <div class="contact-item mb4">
-                            <h3 class="f4 fw6 mb2 dark-gray">
+                            <h3 class="f4 fw6 mb2 black">
                                 {{ if eq .Site.Language.Lang "pt" }}
                                 📞 Telefone
                                 {{ else }}
@@ -50,7 +50,7 @@
                             </h3>
                             <div class="f5 lh-copy">
                                 <a href="tel:{{ $dojoData.phone | replaceRE " [^0-9+]" "" }}"
-                                    class="link dark-blue hover-blue">
+                                    class="link red hover-dark-red">
                                     {{ $dojoData.phone }}
                                 </a>
                             </div>
@@ -60,7 +60,7 @@
                         <!-- Email -->
                         {{ if $dojoData.email }}
                         <div class="contact-item mb4">
-                            <h3 class="f4 fw6 mb2 dark-gray">
+                            <h3 class="f4 fw6 mb2 black">
                                 {{ if eq .Site.Language.Lang "pt" }}
                                 ✉️ Email
                                 {{ else }}
@@ -68,7 +68,7 @@
                                 {{ end }}
                             </h3>
                             <div class="f5 lh-copy">
-                                <a href="mailto:{{ $dojoData.email }}" class="link dark-blue hover-blue">
+                                <a href="mailto:{{ $dojoData.email }}" class="link red hover-dark-red">
                                     {{ $dojoData.email }}
                                 </a>
                             </div>
@@ -80,7 +80,7 @@
                 <!-- Map Section -->
                 <div class="w-100 w-50-l">
                     <div class="map-container">
-                        <h3 class="f4 fw6 mb3 dark-gray">
+                        <h3 class="f4 fw6 mb3 black">
                             {{ if eq .Site.Language.Lang "pt" }}
                             📍 Localização
                             {{ else }}
@@ -103,12 +103,12 @@
                             <p class="f6 gray lh-copy">
                                 {{ if eq .Site.Language.Lang "pt" }}
                                 <a href="{{ $dojoData.map_embed_url | replaceRE " /export/embed.html" "" }}"
-                                    target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
+                                    target="_blank" rel="noopener noreferrer" class="link red hover-dark-red">
                                     Ver mapa em tela cheia
                                 </a>
                                 {{ else }}
                                 <a href="{{ $dojoData.map_embed_url | replaceRE " /export/embed.html" "" }}"
-                                    target="_blank" rel="noopener noreferrer" class="link dark-blue hover-blue">
+                                    target="_blank" rel="noopener noreferrer" class="link red hover-dark-red">
                                     View full screen map
                                 </a>
                                 {{ end }}
