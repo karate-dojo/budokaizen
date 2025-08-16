@@ -25,5 +25,47 @@ other = "Nossas Redes Sociais"
 [follow]
 other = "Seguir"
 
+[address]
+other = "📍 Endereço"
+
+[phone_contact]
+other = "📞 Telefone"
+
+[email_contact]
+other = "📧 Email"
+
+[visit_us]
+other = "Visite-nos"
+
+[location_map_title]
+other = "Localização do"
+
+[directions]
+other = "Direções"
+
+[call_us]
+other = "Ligue-nos"
+
+[send_email]
+other = "Enviar Email"
+
+[view_full_map]
+other = "Ver mapa em tela cheia"
+
+[location_suffix]
+other = "Localização do"
+
+[refer_address]
+other = "Consulte o endereço acima para localização"
+
+[contact_info_soon]
+other = "Informações de Contato em Breve"
+
+[organizing_info]
+other = "Estamos organizando nossas informações de contato. Volte em breve."
+
+[map_not_available]
+other = "Mapa não disponível"
+
 [instructors_coming_soon]
 other = "Informações dos instrutores em breve"

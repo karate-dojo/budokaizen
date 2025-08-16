@@ -26,11 +26,7 @@
                         {{ if $dojoData.address }}
                         <div class="contact-item mb4">
                             <h3 class="f4 fw6 mb2 black">
-                                {{ if eq .Site.Language.Lang "pt" }}
-                                📍 Endereço
-                                {{ else }}
-                                📍 Address
-                                {{ end }}
+                                {{ i18n "address" }}
                             </h3>
                             <div class="f5 lh-copy gray">
                                 {{ $dojoData.address | replaceRE "\n" "<br>" | safeHTML }}
@@ -42,11 +38,7 @@
                         {{ if $dojoData.phone }}
                         <div class="contact-item mb4">
                             <h3 class="f4 fw6 mb2 black">
-                                {{ if eq .Site.Language.Lang "pt" }}
-                                📞 Telefone
-                                {{ else }}
-                                📞 Phone
-                                {{ end }}
+                                {{ i18n "phone_contact" }}
                             </h3>
                             <div class="f5 lh-copy">
                                 <a href="tel:{{ $dojoData.phone | replaceRE " [^0-9+]" "" }}"
@@ -61,11 +53,7 @@
                         {{ if $dojoData.email }}
                         <div class="contact-item mb4">
                             <h3 class="f4 fw6 mb2 black">
-                                {{ if eq .Site.Language.Lang "pt" }}
-                                ✉️ Email
-                                {{ else }}
-                                ✉️ Email
-                                {{ end }}
+                                {{ i18n "email_contact" }}
                             </h3>
                             <div class="f5 lh-copy">
                                 <a href="mailto:{{ $dojoData.email }}" class="link red hover-dark-red">
@@ -81,11 +69,7 @@
                 <div class="w-100 w-50-l">
                     <div class="map-container">
                         <h3 class="f4 fw6 mb3 black">
-                            {{ if eq .Site.Language.Lang "pt" }}
-                            📍 Localização
-                            {{ else }}
-                            📍 Location
-                            {{ end }}
+                            {{ i18n "location" }}
                         </h3>
 
                         {{ if $dojoData.map_embed_url }}
@@ -93,25 +77,17 @@
                         <div class="map-frame ba b--light-gray br2 overflow-hidden" style="height: 300px;">
                             <iframe src="{{ $dojoData.map_embed_url }}" width="100%" height="100%" style="border: 0;"
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                                title="{{ if eq .Site.Language.Lang " pt" }}Localização do {{ $dojoData.dojo_name }}{{
-                                else }}{{ $dojoData.dojo_name }} Location{{ end }}">
+                                title="{{ $dojoData.dojo_name }} - {{ i18n "location" }}">
                             </iframe>
                         </div>
 
                         <!-- Map fallback text for accessibility -->
                         <div class="map-fallback mt2">
                             <p class="f6 gray lh-copy">
-                                {{ if eq .Site.Language.Lang "pt" }}
-                                <a href="{{ $dojoData.map_embed_url | replaceRE " /export/embed.html" "" }}"
+                                <a href="{{ $dojoData.map_embed_url | replaceRE "/export/embed.html" "" }}"
                                     target="_blank" rel="noopener noreferrer" class="link red hover-dark-red">
-                                    Ver mapa em tela cheia
+                                    {{ i18n "view_full_map" }}
                                 </a>
-                                {{ else }}
-                                <a href="{{ $dojoData.map_embed_url | replaceRE " /export/embed.html" "" }}"
-                                    target="_blank" rel="noopener noreferrer" class="link red hover-dark-red">
-                                    View full screen map
-                                </a>
-                                {{ end }}
                             </p>
                         </div>
                         {{ else }}
@@ -122,19 +98,11 @@
                                 <div class="tc">
                                     <div class="f1 mb3">🗺️</div>
                                     <p class="f5 gray ma0 mb2">
-                                        {{ if eq .Site.Language.Lang "pt" }}
-                                        Mapa não disponível
-                                        {{ else }}
-                                        Map not available
-                                        {{ end }}
+                                        {{ i18n "map_not_available" }}
                                     </p>
                                     {{ if $dojoData.address }}
                                     <div class="f6 gray lh-copy mt2">
-                                        {{ if eq .Site.Language.Lang "pt" }}
-                                        Consulte o endereço acima para localização
-                                        {{ else }}
-                                        Please refer to the address above for location
-                                        {{ end }}
+                                        {{ i18n "refer_address" }}
                                     </div>
                                     {{ end }}
                                 </div>
@@ -149,18 +117,10 @@
         <!-- Fallback when no dojo data exists -->
         <div class="no-contact-data pa4 ba b--light-gray br2 bg-light-gray tc">
             <h3 class="f4 fw6 gray">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Informações de Contato em Breve
-                {{ else }}
-                Contact Information Coming Soon
-                {{ end }}
+                {{ i18n "contact_info_soon" }}
             </h3>
             <p class="f5 gray lh-copy">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Estamos organizando nossas informações de contato. Volte em breve.
-                {{ else }}
-                We are organizing our contact information. Please check back soon.
-                {{ end }}
+                {{ i18n "organizing_info" }}
             </p>
         </div>
         {{ end }}

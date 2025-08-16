@@ -49,5 +49,23 @@ other = "Call Us"
 [send_email]
 other = "Send Email"
 
+[view_full_map]
+other = "View full screen map"
+
+[location_suffix]
+other = "Location"
+
+[refer_address]
+other = "Please refer to the address above for location"
+
+[contact_info_soon]
+other = "Contact Information Coming Soon"
+
+[organizing_info]
+other = "We are organizing our contact information. Please check back soon."
+
+[map_not_available]
+other = "Map not available"
+
 [instructors_coming_soon]
 other = "Instructor information coming soon"
