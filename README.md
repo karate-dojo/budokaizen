@@ -51,7 +51,7 @@ All website content is managed through YAML configuration files. No HTML or tech
 | `data/en/dojo.yaml` | Basic dojo information, contact details |
 | `data/en/instructors.yaml` | Instructor names, ranks, photos |
 | `data/en/schedule.yaml` | Class schedule and timetables |
-| `data/en/social.yaml` | Social media links and handles |
+| `data/social.yaml` | Social media links and handles |
 | `static/images/logo.png` | Your dojo logo |
 
 **📖 Complete reference:** [Configuration Guide](docs/CONFIGURATION.md)

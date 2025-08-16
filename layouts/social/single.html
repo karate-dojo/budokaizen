@@ -17,15 +17,11 @@
         {{ .Content }}
 
         {{/* Main social media display */}}
-        {{ $socialData := index .Site.Data .Site.Language.Lang "social" }}
+        {{ $socialData := .Site.Data.social }}
         {{ if $socialData.social_media }}
         <div class="mt5 tc">
             <h2 class="f3 fw4 mb4">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Nossas Redes Sociais
-                {{ else }}
-                Our Social Media
-                {{ end }}
+                {{ i18n "our_social_media" }}
             </h2>
 
             <div class="social-media-showcase flex flex-wrap justify-center items-center gap4 mb5">
@@ -65,18 +61,14 @@
                         </div>
 
                         {{/* Platform Info */}}
-                        <h3 class="f4 fw6 mv2">{{ $platform | title }}</h3>
-                        <p class="f5 fw4 ma0 mb2">{{ $data.display_name }}</p>
+                        <h3 class="f4 fw6 mv2 black">{{ $platform | title }}</h3>
+                        <p class="f5 fw4 ma0 mb2 gray">{{ $data.display_name }}</p>
                         <p class="f6 fw3 gray ma0">@{{ $data.username }}</p>
 
                         {{/* CTA */}}
                         <div class="mt3">
                             <span class="f6 fw5 dib pv2 ph3 br2 bg-red white hover-bg-dark-red">
-                                {{ if eq $.Site.Language.Lang "pt" }}
-                                Seguir
-                                {{ else }}
-                                Follow
-                                {{ end }}
+                                {{ i18n "follow" }}
                             </span>
                         </div>
                     </a>

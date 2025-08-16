@@ -19,5 +19,11 @@ other = "Telefone"
 [email]
 other = "Email"
 
+[our_social_media]
+other = "Nossas Redes Sociais"
+
+[follow]
+other = "Seguir"
+
 [instructors_coming_soon]
 other = "Informações dos instrutores em breve"

@@ -19,5 +19,35 @@ other = "Phone"
 [email]
 other = "Email"
 
+[our_social_media]
+other = "Our Social Media"
+
+[follow]
+other = "Follow"
+
+[address]
+other = "📍 Address"
+
+[phone_contact]
+other = "📞 Phone"
+
+[email_contact]
+other = "📧 Email"
+
+[visit_us]
+other = "Visit Us"
+
+[location_map_title]
+other = "Location of"
+
+[directions]
+other = "Directions"
+
+[call_us]
+other = "Call Us"
+
+[send_email]
+other = "Send Email"
+
 [instructors_coming_soon]
 other = "Instructor information coming soon"

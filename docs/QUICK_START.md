@@ -131,13 +131,28 @@ classes:
 
 ### 3.4 Add Social Media (Optional - 2 minutes)
 
-1. **Navigate to**: `data/en/social.yaml`
+1. **Navigate to**: `data/social.yaml`
 2. **Click the pencil icon** (✏️) to edit
-3. **Add your social media links** (remove lines you don't use):
+3. **Add your social media links** (enable/disable as needed):
 
 ```yaml
-facebook: "https://facebook.com/yourdojo"
-instagram: "https://instagram.com/yourdojo"
+social_media:
+  facebook:
+    url: "https://www.facebook.com/yourdojo"
+    username: "@yourdojo"
+    display_name: "Your Dojo Name"
+    enabled: true
+    
+  instagram:
+    url: "https://www.instagram.com/yourdojo"
+    username: "@yourdojo"
+    display_name: "Your Dojo"
+    enabled: true
+    
+  # Set enabled: false to hide platforms you don't use
+  twitter:
+    enabled: false
+```
 # youtube: "https://youtube.com/yourdojo"
 # twitter: "https://twitter.com/yourdojo"
 ```
