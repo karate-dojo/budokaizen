@@ -31,15 +31,3 @@ social_media:
     username: "@sakuragojuryu.br"
     display_name: "Sakura Goju-Ryu"
     enabled: false  # Definir como true para habilitar links do TikTok
-
-# Preferências de contato
-contact_social:
-  primary_platform: "facebook"  # Qual plataforma destacar para contato
-  show_in_header: true
-  show_in_footer: true
-  
-# Configurações de exibição
-display:
-  show_usernames: true     # Mostrar @username junto com ícones
-  show_icons_only: false   # Definir como true para mostrar apenas ícones sem texto
-  icon_size: "medium"      # small, medium, large

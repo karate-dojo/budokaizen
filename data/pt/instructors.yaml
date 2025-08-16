@@ -2,38 +2,14 @@
 # Lista dos instrutores do dojo com suas graduações e especializações
 
 instructors:
-  - name: "Sensei Hiroshi Yamamoto"
-    dan: "7º Dan"
-    title: "Instrutor Chefe"
-    specialization: "Kata Tradicional, Defesa Pessoal"
-    bio: "Sensei Yamamoto pratica Goju-Ryu há mais de 30 anos e treinou diretamente com Morio Higaonna Sensei em Okinawa."
-    
-  - name: "Sensei Maria Rodriguez"
-    dan: "5º Dan"
-    title: "Instrutora Sênior"
-    specialization: "Programas Juvenis, Competição"
-    bio: "Sensei Rodriguez é especialista em ensinar crianças e jovens adultos, com foco em disciplina e desenvolvimento de caráter."
-    
-  - name: "Sensei David Chen"
-    dan: "4º Dan"
-    title: "Instrutor Assistente"
-    specialization: "Kumite, Condicionamento Físico"
-    bio: "Ex-competidor de torneios, Sensei Chen traz métodos modernos de treinamento para a prática tradicional do Goju-Ryu."
-    
-  - name: "Sempai Sarah Johnson"
-    dan: "2º Dan"
-    title: "Instrutora Júnior"
-    specialization: "Aulas para Iniciantes, Formas"
-    bio: "Sempai Johnson auxilia nas aulas para iniciantes e ajuda novos alunos a aprender os fundamentos do Goju-Ryu."
-    
-  - name: "Sensei João Silva"
+  - name: "Sensei John Doe"
     dan: "3º Dan"
     title: "Instrutor"
     specialization: "Armas Tradicionais, Kata"
-    bio: "Sensei Silva traz experiência em armas tradicionais de Okinawa e possui conhecimento profundo das aplicações de kata clássicos."
+    bio: "Sensei Doe traz experiência em armas tradicionais de Okinawa e possui conhecimento profundo das aplicações de kata clássicos."
     
-  - name: "Sempai Ana Santos"
+  - name: "Sempai Jane Doe"
     dan: "1º Dan"
     title: "Instrutora Assistente"
     specialization: "Treinamento de Flexibilidade, Meditação"
-    bio: "Sempai Santos foca nos aspectos mentais e espirituais do Goju-Ryu, enfatizando respiração adequada e técnicas de meditação."
+    bio: "Sempai Doe foca nos aspectos mentais e espirituais do Goju-Ryu, enfatizando respiração adequada e técnicas de meditação."
