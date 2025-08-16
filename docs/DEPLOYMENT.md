@@ -6,7 +6,7 @@ Complete guide for deploying your IOGKF dojo website to GitHub Pages.
 
 ### Quick Deployment (Template Users)
 
-[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/gabrielpedepera/IOGKF_dojo_website_template/generate)
+[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/karate-dojo/IOGKF_website_template/generate)
 
 1. **Create your site** - Click the "Use this template" button above
 2. **Configure your dojo** - Edit the YAML files in `/data/en/`
@@ -17,10 +17,9 @@ Complete guide for deploying your IOGKF dojo website to GitHub Pages.
 
 #### Step 1: Repository Setup
 1. Fork or use the template to create your repository
-2. Update `baseURL` in `hugo.toml` with your repository name:
-   ```toml
-   baseURL = "https://yourusername.github.io/your-repository-name/"
-   ```
+2. **No baseURL configuration needed!** - The template automatically detects your GitHub Pages URL
+
+   > ✨ **Dynamic baseURL**: This template automatically configures the correct URL for your deployment. No manual editing required!
 
 #### Step 2: Enable GitHub Pages
 1. Go to your repository **Settings**
@@ -105,5 +104,35 @@ This repository is now configured for automatic deployment to GitHub Pages using
 4. **Update dojo-specific configuration** as needed
 
 ---
+
+## 🌐 Dynamic baseURL Configuration
+
+This template features **automatic baseURL detection** - no manual configuration required!
+
+### How It Works
+
+- **Local Development**: Uses `/` for relative URLs
+- **GitHub Pages**: Automatically detects `https://username.github.io/repository-name/`
+- **Custom Domains**: Adapts automatically when custom domains are configured
+- **Other Hosting**: Can override baseURL as needed
+
+### Benefits
+
+✅ **Zero Configuration** - Works immediately for any GitHub Pages deployment  
+✅ **Fork Friendly** - New users don't need to edit configuration files  
+✅ **Custom Domain Ready** - Automatically adapts when domains are added  
+✅ **Template Friendly** - Perfect for template repositories  
+
+### Technical Implementation
+
+The GitHub Actions workflow uses GitHub's provided environment variables:
+```yaml
+hugo --baseURL "${{ steps.pages.outputs.base_url }}/"
+```
+
+While `hugo.toml` uses a development-friendly default:
+```toml
+baseURL = "/"
+```
 
 *Configuration completed as part of Prompt 12 implementation.*

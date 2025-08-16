@@ -61,7 +61,7 @@ hugo server
 Perfect for non-technical users who want to get started quickly.
 
 1. **Fork the Repository**
-   - Go to: https://github.com/gabrielpedepera/IOGKF_dojo_website_template
+   - Go to: https://github.com/karate-dojo/IOGKF_website_template
    - Click "Fork" button
    - Choose your GitHub account
 

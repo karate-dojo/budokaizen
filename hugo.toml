@@ -1,4 +1,7 @@
-baseURL = "https://gabrielpedepera.github.io/IOGKF_dojo_website_template/"
+# Dynamic baseURL - automatically set by hosting platform
+# For GitHub Pages: uses repository URL automatically 
+# For custom domains: will be overridden by hosting
+baseURL = "/"
 languageCode = "en-us"
 title = "Sakura Dojo"
 theme = "ananke"

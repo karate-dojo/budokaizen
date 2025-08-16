@@ -28,7 +28,7 @@ You'll need:
 
 ## 🚀 Step 1: Create Your Website (2 minutes)
 
-1. **Go to the template**: https://github.com/gabrielpedepera/IOGKF_dojo_website_template
+1. **Go to the template**: https://github.com/karate-dojo/IOGKF_website_template
 
 2. **Click "Use this template"** → **"Create a new repository"**
 
@@ -191,7 +191,7 @@ Visit your website and verify:
 
 ## 📞 Need Help?
 
-- **Template Issues**: [Report here](https://github.com/gabrielpedepera/IOGKF_dojo_website_template/issues)
+- **Template Issues**: [Report here](https://github.com/karate-dojo/IOGKF_website_template/issues)
 - **YAML Formatting**: Use [YAML Validator](https://yamlvalidator.com/) to check your files
 - **General Questions**: Consult with your dojo instructor or IOGKF representative
 

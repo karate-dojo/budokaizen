@@ -28,7 +28,7 @@ This template provides a unified, professional web presence for IOGKF dojos worl
 
 ### For Developers
 
-[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/gabrielpedepera/IOGKF_dojo_website_template/generate)
+[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/karate-dojo/IOGKF_website_template/generate)
 
 **[📖 Complete Setup Guide](docs/SETUP.md)** - Local development and advanced configuration
 
