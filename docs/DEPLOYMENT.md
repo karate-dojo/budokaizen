@@ -1,6 +1,58 @@
-# GitHub Pages Deployment Configuration
+# Deployment Guide
 
-## ✅ Completed Setup
+Complete guide for deploying your IOGKF dojo website to GitHub Pages.
+
+## 🚀 GitHub Pages Deployment
+
+### Quick Deployment (Template Users)
+
+[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/gabrielpedepera/IOGKF_dojo_website_template/generate)
+
+1. **Create your site** - Click the "Use this template" button above
+2. **Configure your dojo** - Edit the YAML files in `/data/en/`
+3. **Enable GitHub Pages** - Go to Settings → Pages → Select "GitHub Actions"
+4. **Your site is live!** - Available at `https://yourusername.github.io/repository-name`
+
+### Detailed Steps
+
+#### Step 1: Repository Setup
+1. Fork or use the template to create your repository
+2. Update `baseURL` in `hugo.toml` with your repository name:
+   ```toml
+   baseURL = "https://yourusername.github.io/your-repository-name/"
+   ```
+
+#### Step 2: Enable GitHub Pages
+1. Go to your repository **Settings**
+2. Click **Pages** in the left sidebar
+3. Under **Source**, select **"GitHub Actions"**
+4. Save the settings
+
+#### Step 3: Deploy
+1. **Push your changes** to the `main` branch
+2. **GitHub Actions automatically builds and deploys** your site
+3. **Access your site** at `https://yourusername.github.io/repository-name`
+
+*Deployment typically takes 2-3 minutes*
+
+### Custom Domain Setup
+
+To use your own domain (e.g., `www.yourdojo.com`):
+
+1. **Add CNAME file**:
+   ```bash
+   echo "www.yourdojo.com" > static/CNAME
+   ```
+
+2. **Configure DNS** with your domain provider:
+   - Add a CNAME record pointing `www` to `yourusername.github.io`
+   - Or add A records pointing to GitHub's IP addresses
+
+3. **Enable custom domain** in GitHub Pages settings
+
+*For detailed custom domain setup, see [GitHub's documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)*
+
+## ✅ What's Been Pre-configured
 
 This repository is now configured for automatic deployment to GitHub Pages using GitHub Actions.
 

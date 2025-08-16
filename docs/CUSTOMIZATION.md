@@ -79,6 +79,17 @@ Create a custom CSS file that won't be overwritten:
 
 ### Color Schemes
 
+#### Default Template Colors
+
+The template uses traditional martial arts colors optimized for conversion and accessibility:
+
+- **Red**: Primary call-to-action buttons (drives action)
+- **Black**: Text and strong elements (authority)
+- **White**: Background and secondary buttons (clean, professional)
+- **Gray**: Supporting text and borders (neutral, readable)
+
+This color palette was chosen based on UX best practices for martial arts websites and conversion optimization.
+
 #### Traditional Dojo Colors
 ```css
 /* Traditional red and gold */

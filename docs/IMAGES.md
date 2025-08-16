@@ -29,6 +29,12 @@ Your dojo logo is the most important image:
 - **Also supported**: `static/images/logo.svg`
 - **Displays**: Homepage, navigation, social media
 
+#### Quick Logo Requirements
+- **Recommended size**: 300x120px (maintains aspect ratio)
+- **Format**: PNG with transparent background preferred
+- **Alternative**: SVG for vector graphics (scales perfectly)
+- **File name**: Must be exactly `logo.png` or `logo.svg`
+
 ## Image Requirements
 
 ### Logo Specifications

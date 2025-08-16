@@ -2,6 +2,16 @@
 
 Common issues and solutions for your IOGKF dojo website. This guide helps you quickly diagnose and fix problems.
 
+## Quick Reference Table
+
+| Problem | Solution |
+|---------|----------|
+| Site won't build | Check YAML syntax in configuration files |
+| Images not showing | Verify file paths and names match exactly |
+| Changes not appearing | Clear browser cache and wait for deployment |
+| Template not found | Check file is named exactly as expected |
+| Navigation not working | Verify content files have proper front matter |
+
 ## Quick Diagnostics
 
 ### Is Your Site Working?
@@ -398,7 +408,7 @@ When asking for help, provide:
 ### Where to Get Help
 
 1. **GitHub Issues**: Create issue in template repository
-2. **IOGKF Community**: Ask other dojo webmasters
+2. **Dojo Network**: Ask other dojo webmasters
 3. **Hugo Documentation**: [gohugo.io](https://gohugo.io/documentation/)
 4. **GitHub Pages Help**: [docs.github.com](https://docs.github.com/en/pages)
 

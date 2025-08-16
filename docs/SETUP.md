@@ -28,6 +28,30 @@ This guide will walk you through setting up your IOGKF dojo website from start t
 ### Account Setup
 
 - **GitHub Account**: For hosting and deployment
+
+## 🏗️ Local Development Setup
+
+If you want to work on your website locally and see changes instantly:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/your-dojo-website.git
+cd your-dojo-website
+
+# Install theme dependencies
+git submodule update --init --recursive
+
+# Start development server
+hugo server
+
+# Your site is now available at http://localhost:1313
+```
+
+**Benefits of local development:**
+- See changes instantly as you edit
+- Work offline
+- Test before deploying
+- Better for multiple edits
 - **OpenStreetMap** (optional): For embedded maps
 
 ## Installation Methods
@@ -153,4 +177,4 @@ After setup, verify these items work:
 
 ---
 
-**Need help?** Don't hesitate to ask! The IOGKF community is here to support each other.
+**Need help?** Don't hesitate to ask for technical support or consult with your dojo instructors.
