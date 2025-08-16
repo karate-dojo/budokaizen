@@ -27,8 +27,7 @@
 
                         {{ if .instructor }}
                         <div class="instructor mb2">
-                            <span class="f6 fw5 gray">{{ if eq $.Site.Language.Lang "pt" }}Instrutor:{{ else
-                                }}Instructor:{{ end }}</span>
+                            <span class="f6 fw5 gray">{{ i18n "instructor" }}</span>
                             <span class="f6 gray">{{ .instructor }}</span>
                         </div>
                         {{ end }}
@@ -44,11 +43,7 @@
                 {{ else }}
                 <div class="no-classes pa3 ba b--light-gray br2 bg-light-gray">
                     <p class="f5 gray ma0">
-                        {{ if eq .Site.Language.Lang "pt" }}
-                        Nenhuma aula programada para este dia.
-                        {{ else }}
-                        No classes scheduled for this day.
-                        {{ end }}
+                        {{ i18n "no_classes_today" }}
                     </p>
                 </div>
                 {{ end }}
@@ -59,18 +54,10 @@
         <!-- No schedule data available -->
         <div class="no-schedule-data pa4 ba b--light-gray br2 bg-light-gray tc">
             <h3 class="f4 fw6 gray">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Horário em Breve
-                {{ else }}
-                Schedule Coming Soon
-                {{ end }}
+                {{ i18n "schedule_coming_soon" }}
             </h3>
             <p class="f5 gray lh-copy">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Estamos organizando nosso horário de aulas. Volte em breve para ver os horários disponíveis.
-                {{ else }}
-                We are organizing our class schedule. Please check back soon for available class times.
-                {{ end }}
+                {{ i18n "organizing_schedule" }}
             </p>
         </div>
         {{ end }}
@@ -78,18 +65,10 @@
         <!-- Fallback when no schedule data exists -->
         <div class="no-schedule-data pa4 ba b--light-gray br2 bg-light-gray tc">
             <h3 class="f4 fw6 gray">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Horário em Breve
-                {{ else }}
-                Schedule Coming Soon
-                {{ end }}
+                {{ i18n "schedule_coming_soon" }}
             </h3>
             <p class="f5 gray lh-copy">
-                {{ if eq .Site.Language.Lang "pt" }}
-                Estamos organizando nosso horário de aulas. Volte em breve para ver os horários disponíveis.
-                {{ else }}
-                We are organizing our class schedule. Please check back soon for available class times.
-                {{ end }}
+                {{ i18n "organizing_schedule" }}
             </p>
         </div>
         {{ end }}

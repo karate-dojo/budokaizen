@@ -69,3 +69,15 @@ other = "Mapa não disponível"
 
 [instructors_coming_soon]
 other = "Informações dos instrutores em breve"
+
+[instructor]
+other = "Instrutor:"
+
+[no_classes_today]
+other = "Nenhuma aula programada para este dia."
+
+[schedule_coming_soon]
+other = "Horário em Breve"
+
+[organizing_schedule]
+other = "Estamos organizando nosso horário de aulas. Volte em breve para ver os horários disponíveis."

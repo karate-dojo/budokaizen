@@ -69,3 +69,15 @@ other = "Map not available"
 
 [instructors_coming_soon]
 other = "Instructor information coming soon"
+
+[instructor]
+other = "Instructor:"
+
+[no_classes_today]
+other = "No classes scheduled for this day."
+
+[schedule_coming_soon]
+other = "Schedule Coming Soon"
+
+[organizing_schedule]
+other = "We are organizing our class schedule. Please check back soon for available class times."
