@@ -1,17 +1,51 @@
+{{/*
+Instructors Page Template
+
+Displays all dojo instructors with their ranks, titles, and biographies
+
+Data Source: data/{lang}/instructors.yaml
+Structure:
+instructors:
+- name: "Full Name"
+dan: "Rank (e.g., '5th Dan')"
+title: "Role (e.g., 'Chief Instructor')"
+specialization: "Areas of expertise"
+bio: "Biography text"
+certifications: "IOGKF certifications"
+teaching_since: "Year started teaching"
+
+Layout Features:
+- Responsive two-column grid on desktop
+- Card-based design with shadows
+- Color-coded rank display
+- Optional fields gracefully handle missing data
+*/}}
+
 {{ define "main" }}
 <article class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy mid-gray">
+    {{/* Page content from instructors/_index.md */}}
     {{ .Content }}
 
-    {{/* Load instructor data from language-specific YAML */}}
+    {{/* Load instructor data from language-specific YAML file */}}
     {{ $instructors := index .Site.Data .Site.Language.Lang "instructors" "instructors" }}
 
     {{ if $instructors }}
     <div class="mt5 pt4 bt b--light-gray">
         <div class="cf">
+            {{/*
+            Instructor cards in responsive grid
+            - Two columns on desktop (w-50-ns)
+            - Single column on mobile (w-100)
+            - Alternating padding for proper spacing
+            */}}
             {{ range $index, $instructor := $instructors }}
             <div class="fl w-100 w-50-ns {{ if eq (mod $index 2) 0 }}pr3-ns{{ else }}pl3-ns{{ end }} mb4">
                 <div class="bg-white ba b--light-gray br3 pa4 shadow-4">
-                    {{/* Instructor Name and Title */}}
+                    {{/*
+                    Instructor Header
+                    - Name, rank, and title prominently displayed
+                    - Color-coded dan rank in blue
+                    */}}
                     <div class="mb3">
                         <h3 class="f3 fw6 mb1 dark-blue">{{ $instructor.name }}</h3>
                         {{ if $instructor.dan }}
@@ -22,7 +56,7 @@
                         {{ end }}
                     </div>
 
-                    {{/* Specialization */}}
+                    {{/* Specialization section (optional) */}}
                     {{ if $instructor.specialization }}
                     <div class="mb3">
                         <h4 class="f5 fw6 mb1 dark-gray">Specialization</h4>
@@ -30,7 +64,7 @@
                     </div>
                     {{ end }}
 
-                    {{/* Biography */}}
+                    {{/* Biography section (optional) */}}
                     {{ if $instructor.bio }}
                     <div class="mb2">
                         <h4 class="f5 fw6 mb1 dark-gray">About</h4>
@@ -38,37 +72,31 @@
                     </div>
                     {{ end }}
 
-                    {{/* Visual separator between instructors */}}
-                    {{ if $instructor.dan }}
-                    <div class="mt3 pt2 bt b--light-gray">
-                        <div class="f7 ttu tracked gray">{{ $instructor.dan | upper }} INSTRUCTOR</div>
+                    {{/* Additional instructor details (if available) */}}
+                    <div class="mt3 pt3 bt b--light-gray">
+                        {{ if $instructor.certifications }}
+                        <div class="mb2">
+                            <h5 class="f6 fw6 mb1 gray">IOGKF Certifications</h5>
+                            <p class="f7 ma0">{{ $instructor.certifications }}</p>
+                        </div>
+                        {{ end }}
+
+                        {{ if $instructor.teaching_since }}
+                        <div class="mb2">
+                            <h5 class="f6 fw6 mb1 gray">Teaching Since</h5>
+                            <p class="f7 ma0">{{ $instructor.teaching_since }}</p>
+                        </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
                 </div>
             </div>
-
-            {{/* Clear float every two instructors for proper layout */}}
-            {{ if eq (mod (add $index 1) 2) 0 }}
-            <div class="cf"></div>
-            {{ end }}
             {{ end }}
         </div>
     </div>
     {{ else }}
-    {{/* Fallback content if no instructors are configured */}}
+    {{/* Fallback message if no instructor data available */}}
     <div class="mt5 pt4 bt b--light-gray tc">
-        <div class="bg-light-gray br3 pa4 mb4">
-            <h3 class="f3 fw6 mb3 gray">Instructors Information Coming Soon</h3>
-            <p class="f5 lh-copy mb3">
-                We are in the process of updating our instructor profiles.
-                Please check back soon or <a href="/contact" class="link blue">contact us</a>
-                for more information about our qualified teaching staff.
-            </p>
-            <p class="f6 gray">
-                All our instructors are certified under IOGKF standards and bring years of experience
-                in traditional Goju-Ryu Karate.
-            </p>
-        </div>
+        <p class="f4 gray">{{ i18n "instructors_coming_soon" }}</p>
     </div>
     {{ end }}
 </article>

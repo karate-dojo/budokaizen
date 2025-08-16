@@ -7,8 +7,6 @@ description: "Welcome to our traditional Goju-Ryu Karate dojo"
 
 Experience authentic Okinawan martial arts in a supportive and disciplined environment. Our dojo is proudly affiliated with the International Okinawan Goju-Ryu Karate-do Federation (IOGKF), ensuring the highest standards of traditional training.
 
-*🚀 Deployment test - August 15, 2025*
-
 ### What We Offer
 
 - **Traditional Training**: Authentic Goju-Ryu techniques passed down through generations

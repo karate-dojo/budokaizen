@@ -1,8 +1,17 @@
-[contact_us]
-other = "Contacte-nos"
-
-[view_schedule]
-other = "Ver Horários"
-
 [welcome_message]
 other = "Bem-vindos ao nosso dojo tradicional de Karate Goju-Ryu, orgulhosamente afiliado à Federação Internacional de Karate-do Goju-Ryu de Okinawa (IOGKF)."
+
+[visit_our_dojo]
+other = "Visite o Nosso Dojo"
+
+[location]
+other = "Localização"
+
+[phone]
+other = "Telefone"
+
+[email]
+other = "Email"
+
+[instructors_coming_soon]
+other = "Informações dos instrutores em breve"
