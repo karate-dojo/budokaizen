@@ -8,17 +8,27 @@ type: "page"
 
 ## Foundation and Mission
 
-The International Okinawan Goju-Ryu Karate-do Federation (IOGKF) was established in 1979 by Sensei Morio Higaonna, 10th Dan, to preserve and promote authentic Okinawan Goju-Ryu karate worldwide. The IOGKF serves as the premier organization dedicated to maintaining the traditional standards and methods of Goju-Ryu as taught by its founder, Chojun Miyagi.
+The International Okinawan Goju-Ryu Karate-do Federation (IOGKF) was established in July 1979 by Sensei Morio Higaonna in Poole, England, to preserve and promote authentic Okinawan Goju-Ryu karate worldwide. The IOGKF was formed with the support and backing of Ken Miyagi (fourth son of Goju-Ryu founder Chojun Miyagi), An'ichi Miyagi (successor to Chojun Miyagi), and senior students of the late Chojun Miyagi.
 
-## Sensei Morio Higaonna: The Living Legend
+Since its formation, the IOGKF has grown to have more than 55 affiliated countries and over 75,000 members worldwide, making it one of the largest traditional karate organizations globally.
+
+## Current Leadership
+
+In 2012, Higaonna Sensei took up an advisory role within the Federation and appointed **Sensei Tetsuji Nakamura** as his successor and chief instructor of IOGKF International. Sensei Ernie Molyneux and Sensei Henrik Larsen were also promoted to IOGKF Vice Chief Instructor at the same time, and together the three form the IOGKF International executive committee. 
+
+In 2022, at the age of 84, Higaonna Sensei stepped down from his role in IOGKF. The IOGKF International Honbu Dojo is now located in Burlington, Ontario, Canada, where Sensei Tetsuji Nakamura resides.
+
+## Sensei Morio Higaonna: The Founder
 
 Morio Higaonna was born in Naha, Okinawa in 1938. He began training in Goju-Ryu karate at the age of 14 under Sensei Chojun Miyagi's senior student, An'ichi Miyagi. Later, he became the student of Sensei Ei'ichi Miyazato, another direct disciple of Chojun Miyagi.
 
 **Key Achievements:**
-- Founded the IOGKF in 1979
+- Founded the IOGKF in July 1979
 - Established authentic Goju-Ryu training worldwide
 - Author of several authoritative books on Goju-Ryu
 - Recognized as one of the world's foremost authorities on traditional Okinawan karate
+- The IOGKF is recognized by the Japanese Government as a true Japanese traditional martial arts organization
+- The IOGKF is a proud member of the Nihon Kobudo Kyokai (Japan Traditional Martial Arts Association)
 
 ## IOGKF Principles and Standards
 
@@ -37,13 +47,21 @@ The IOGKF follows the traditional Okinawan ranking system:
 - Promotions are based on technical skill, understanding, and character development
 
 ### International Network
-The IOGKF has established dojos and training centers across six continents, including:
+The IOGKF has established dojos and training centers across six continents with more than 55 affiliated countries and over 75,000 members worldwide, including:
 - Europe
-- North America
+- North America  
 - South America
 - Asia
 - Australia
 - Africa
+
+Every year gasshuku (training seminars) are held in various countries to ensure the transmission of correct techniques and to promote friendship and exchange between members.
+
+## The IOGKF Logo and Trademarks
+
+The IOGKF logo is the identifying symbol of the International Okinawan Goju-Ryu Karate-do Federation, created in 1979. The logo incorporates both the outer design from the former Yoyogi Dojo and the inner design of Sensei Chojun Miyagi's family crest (used with permission from the Miyagi family).
+
+**Important:** The IOGKF logo, IOGKF acronym, "International Okinawan Goju-Ryu Karate-do Federation," and "国際沖縄剛柔流空手道連盟" are all trademarks created by and legally owned by IOGKF International. Only IOGKF member countries in good standing are granted specific permissions to use these trademarked materials.
 
 ## Commitment to Authenticity
 
@@ -98,6 +116,8 @@ Unlike many modern martial arts organizations, the IOGKF prioritizes:
 
 ## The Journey Continues
 
+Today the IOGKF is as dedicated to its original purpose as it was in 1979. The IOGKF represents the philosophy of Goju-Ryu founder "Bushi" Chojun Miyagi, and with this in mind, it is important to dedicate ourselves to the further improvement and development of Goju-Ryu karate through diligent training, so that we may come to understand the very essence of our art.
+
 Whether you are beginning your martial arts journey or seeking to deepen your understanding of traditional karate, the IOGKF offers a path of continuous learning and personal growth. Through dedicated practice and study under qualified instructors, students develop not only physical techniques but also the mental fortitude and spiritual insight that define true martial artists.
 
-The guidance of Sensei Morio Higaonna and the global IOGKF community continue to inspire new generations of practitioners worldwide, ensuring that the authentic spirit of Goju-Ryu will endure for centuries to come.
+The legacy of Sensei Morio Higaonna and the current leadership under Sensei Tetsuji Nakamura continue to inspire new generations of practitioners worldwide, ensuring that the authentic spirit of Goju-Ryu will endure for centuries to come.
