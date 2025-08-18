@@ -14,7 +14,7 @@ Since its formation, the IOGKF has grown to have more than 55 affiliated countri
 
 ## Current Leadership
 
-In 2012, Higaonna Sensei took up an advisory role within the Federation and appointed **Sensei Tetsuji Nakamura** as his successor and chief instructor of IOGKF International. Sensei Ernie Molyneux and Sensei Henrik Larsen were also promoted to IOGKF Vice Chief Instructor at the same time, and together the three form the IOGKF International executive committee. 
+In 2012, Higaonna Sensei took up an advisory role within the Federation and appointed **Sensei Tetsuji Nakamura** as his successor and chief instructor of IOGKF International. Sensei Ernie Molyneux and Sensei Henrik Larsen were also promoted to IOGKF Vice Chief Instructor at the same time, and together the three form the IOGKF International executive committee.
 
 In 2022, at the age of 84, Higaonna Sensei stepped down from his role in IOGKF. The IOGKF International Honbu Dojo is now located in Burlington, Ontario, Canada, where Sensei Tetsuji Nakamura resides.
 
@@ -23,6 +23,7 @@ In 2022, at the age of 84, Higaonna Sensei stepped down from his role in IOGKF. 
 Morio Higaonna was born in Naha, Okinawa in 1938. He began training in Goju-Ryu karate at the age of 14 under Sensei Chojun Miyagi's senior student, An'ichi Miyagi. Later, he became the student of Sensei Ei'ichi Miyazato, another direct disciple of Chojun Miyagi.
 
 **Key Achievements:**
+
 - Founded the IOGKF in July 1979
 - Established authentic Goju-Ryu training worldwide
 - Author of several authoritative books on Goju-Ryu
@@ -35,21 +36,26 @@ Morio Higaonna was born in Naha, Okinawa in 1938. He began training in Goju-Ryu 
 The IOGKF maintains strict standards to ensure the authenticity of Goju-Ryu training:
 
 ### Traditional Training Methods
+
 - **Hojo Undo**: Supplementary conditioning exercises using traditional tools
 - **Kata**: Precise practice of traditional forms with correct bunkai (applications)
 - **Kumite**: Controlled sparring emphasizing Goju-Ryu principles
 - **Breathing Exercises**: Development of internal power through proper breathing
 
 ### Ranking System
+
 The IOGKF follows the traditional Okinawan ranking system:
+
 - **Kyu Grades**: White, yellow, orange, green, brown belts (student ranks)
 - **Dan Grades**: Black belt degrees (master ranks)
 - Promotions are based on technical skill, understanding, and character development
 
 ### International Network
+
 The IOGKF has established dojos and training centers across six continents with more than 55 affiliated countries and over 75,000 members worldwide, including:
+
 - Europe
-- North America  
+- North America
 - South America
 - Asia
 - Australia
@@ -58,6 +64,8 @@ The IOGKF has established dojos and training centers across six continents with 
 Every year gasshuku (training seminars) are held in various countries to ensure the transmission of correct techniques and to promote friendship and exchange between members.
 
 ## The IOGKF Logo and Trademarks
+
+{{< figure src="/images/logo-iogkf.png" alt="IOGKF Logo" class="center" width="200" >}}
 
 The IOGKF logo is the identifying symbol of the International Okinawan Goju-Ryu Karate-do Federation, created in 1979. The logo incorporates both the outer design from the former Yoyogi Dojo and the inner design of Sensei Chojun Miyagi's family crest (used with permission from the Miyagi family).
 
@@ -77,18 +85,21 @@ What sets the IOGKF apart is its unwavering commitment to preserving the origina
 The IOGKF emphasizes that Goju-Ryu is not merely a fighting system, but a way of life that develops:
 
 **Technical Excellence:**
+
 - Precise kata performance with correct timing and breathing
 - Understanding of bunkai (kata applications)
 - Traditional conditioning methods
 - Proper etiquette and dojo protocols
 
 **Character Development:**
+
 - Discipline and perseverance
 - Respect and humility
 - Leadership and mentorship
 - Cultural understanding and appreciation
 
 **Global Community:**
+
 - Regular international seminars and gasshuku (training camps)
 - Standardized curriculum and testing requirements
 - Exchange programs between countries

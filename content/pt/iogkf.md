@@ -23,6 +23,7 @@ Em 2022, aos 84 anos, Higaonna Sensei se afastou de seu papel na IOGKF. O Honbu 
 Morio Higaonna nasceu em Naha, Okinawa, em 1938. Começou a treinar karate Goju-Ryu aos 14 anos sob o estudante sênior de Sensei Chojun Miyagi, An'ichi Miyagi. Mais tarde, tornou-se estudante de Sensei Ei'ichi Miyazato, outro discípulo direto de Chojun Miyagi.
 
 **Principais Conquistas:**
+
 - Fundou a IOGKF em julho de 1979
 - Estabeleceu o treinamento autêntico de Goju-Ryu mundialmente
 - Autor de vários livros autorais sobre Goju-Ryu
@@ -35,19 +36,24 @@ Morio Higaonna nasceu em Naha, Okinawa, em 1938. Começou a treinar karate Goju-
 A IOGKF mantém padrões rigorosos para garantir a autenticidade do treinamento de Goju-Ryu:
 
 #### Métodos de Treinamento Tradicionais
+
 - **Hojo Undo**: Exercícios de condicionamento suplementares usando ferramentas tradicionais
 - **Kata**: Prática precisa de formas tradicionais com bunkai correto (aplicações)
 - **Kumite**: Combate controlado enfatizando os princípios do Goju-Ryu
 - **Exercícios de Respiração**: Desenvolvimento do poder interno através da respiração adequada
 
 #### Sistema de Graduação
+
 A IOGKF segue o sistema de graduação tradicional de Okinawa:
+
 - **Graus Kyu**: Faixas branca, amarela, laranja, verde, marrom (graus de estudante)
 - **Graus Dan**: Graus de faixa preta (graus de mestre)
 - Promoções são baseadas em habilidade técnica, compreensão e desenvolvimento de caráter
 
 #### Rede Internacional
+
 A IOGKF estabeleceu dojos e centros de treinamento em seis continentes com mais de 55 países afiliados e mais de 75.000 membros em todo o mundo, incluindo:
+
 - Europa
 - América do Norte
 - América do Sul
@@ -58,6 +64,8 @@ A IOGKF estabeleceu dojos e centros de treinamento em seis continentes com mais 
 Todos os anos gasshuku (seminários de treinamento) são realizados em vários países para garantir a transmissão de técnicas corretas e promover amizade e intercâmbio entre os membros.
 
 ### O Logo e Marcas Registradas da IOGKF
+
+{{< figure src="/images/logo-iogkf.png" alt="Logo da IOGKF" class="center" width="200" >}}
 
 O logo da IOGKF é o símbolo identificador da Federação Internacional de Karate-do Goju-Ryu de Okinawa, criado em 1979. O logo incorpora tanto o design externo do antigo Yoyogi Dojo quanto o design interno do brasão da família de Sensei Chojun Miyagi (usado com permissão da família Miyagi).
 
@@ -77,18 +85,21 @@ O que distingue a IOGKF é seu compromisso inabalável em preservar os ensinamen
 A IOGKF enfatiza que o Goju-Ryu não é meramente um sistema de luta, mas um modo de vida que desenvolve:
 
 **Excelência Técnica:**
+
 - Performance precisa de kata com timing e respiração corretos
 - Compreensão do bunkai (aplicações de kata)
 - Métodos de condicionamento tradicionais
 - Etiqueta adequada e protocolos do dojo
 
 **Desenvolvimento do Caráter:**
+
 - Disciplina e perseverança
 - Respeito e humildade
 - Liderança e mentoria
 - Compreensão e apreciação cultural
 
 **Comunidade Global:**
+
 - Seminários internacionais regulares e gasshuku (campos de treinamento)
 - Currículo padronizado e requisitos de teste
 - Programas de intercâmbio entre países
