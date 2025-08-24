@@ -1,0 +1,27 @@
+# English Menu Configuration
+# Configure the main navigation menu for English
+
+menu:
+  - name: "Goju Ryu"
+    url: "/goju-ryu/"
+    weight: 1
+
+  - name: "IOGKF"
+    url: "/iogkf/"
+    weight: 2
+
+  - name: "Instructors"
+    url: "/instructors/"
+    weight: 3
+
+  - name: "Schedule"
+    url: "/schedule/"
+    weight: 4
+
+  - name: "Contact"
+    url: "/contact/"
+    weight: 5
+
+  - name: "Follow Us"
+    url: "/social/"
+    weight: 6

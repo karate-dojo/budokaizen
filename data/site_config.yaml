@@ -1,0 +1,32 @@
+# Optional Site Configuration Enhancements
+# This file provides optional visual enhancements for the language switcher
+#
+# Language configuration is controlled in hugo.toml [languages] section
+# Menu configuration is in data/{lang}/menu.yaml files
+
+# Language display enhancements (optional)
+# Add flags and enhanced names for languages configured in hugo.toml
+languages:
+  en:
+    name: "English"
+    flag: "🇺🇸"
+  pt:
+    name: "Português"
+    flag: "🇵🇹"
+  es:
+    name: "Español"
+    flag: "🇪🇸"
+  fr:
+    name: "Français"
+    flag: "🇫🇷"
+  de:
+    name: "Deutsch"
+    flag: "🇩🇪"
+  it:
+    name: "Italiano"
+    flag: "🇮🇹"
+  ja:
+    name: "日本語"
+    flag: "🇯🇵"
+# Note: Only languages configured in hugo.toml [languages] section will be active
+# This file just provides visual enhancements (flags) for the language switcher

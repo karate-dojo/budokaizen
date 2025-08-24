@@ -1,53 +1,47 @@
-{{/*
-Language Switcher Component
-
-Creates a dropdown menu for multi-language navigation
-
-Features:
-- Only displays if multiple languages are configured
-- Uses country flags for visual identification
-- Highlights current language
-- Uses proper URL construction for GitHub Pages
-
-Language URL Structure:
-- English (default): https://site.com/
-- Other languages: https://site.com/{lang}/
-
-Configuration:
-- Languages defined in hugo.toml
-- Language names from hugo.toml languageName property
-- Flags hardcoded for EN (🇺🇸) and PT (🇵🇹)
-*/}}
-
-{{ if (gt (len .Site.Languages) 1) }}
+{{/* Dynamic Language Switcher Component Features: - Uses Hugo's built-in
+language configuration from hugo.toml - Automatically hides when only one
+language is configured - Uses flags from data/site_config.yaml for visual
+enhancement - Respects show_language_switcher parameter Configuration: -
+Languages: Configure in hugo.toml [languages] section - Flags: Optional
+enhancement via data/site_config.yaml - Toggle: Set
+params.show_language_switcher = false to disable */}} {{ $showSwitcher :=
+.Site.Params.show_language_switcher }} {{ $siteConfig := .Site.Data.site_config
+}} {{/* Only show language switcher if: 1. show_language_switcher is not false
+2. More than one language is configured in hugo.toml */}} {{ if and (ne
+$showSwitcher false) (gt (len .Site.Languages) 1) }}
 <div class="language-dropdown dib mr3">
-    <div class="language-parent">
-        {{/* Dropdown trigger with arrow */}}
-        <span class="hover-white white-90 no-underline f5 f4-ns fw4 pv2 ph3 pointer">
-            Languages ▾
-        </span>
+  <div class="language-parent">
+    {{/* Dropdown trigger with arrow */}}
+    <span
+      class="hover-white white-90 no-underline f5 f4-ns fw4 pv2 ph3 pointer"
+    >
+      Languages ▾
+    </span>
 
-        {{/* Language options dropdown */}}
-        <ul class="language-submenu">
-            {{ $currentLang := .Site.Language.Lang }}
-            {{ range .Site.Languages }}
-            <li class="language-item">
-                {{/*
-                Language link construction:
-                - Uses .Site.BaseURL for GitHub Pages compatibility
-                - English gets root path, others get /{lang}/ prefix
-                - Highlights current language with 'current' class
-                */}}
-                <a href="{{ $.Site.BaseURL }}{{ if ne .Lang " en" }}{{ .Lang }}/{{ end }}"
-                    class="language-link {{ if eq .Lang $currentLang }}current{{ end }}">
-                    {{/* Country flag icons (add more as needed) */}}
-                    <span class="flag">{{ if eq .Lang "en" }}🇺🇸{{ else if eq .Lang "pt" }}🇵🇹{{ end }}</span>
-                    {{/* Language name from hugo.toml */}}
-                    <span class="language-name">{{ .LanguageName }}</span>
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </div>
+    {{/* Language options dropdown */}}
+    <ul class="language-submenu">
+      {{ $currentLang := .Site.Language.Lang }} {{ range .Site.Languages }}
+      <li class="language-item">
+        {{ $langCode := .Lang }} {{ $langName := .LanguageName }} {{/* Try to
+        get flag from site_config.yaml, fallback to default */}} {{ $flag :=
+        "🌐" }} {{ if $siteConfig }} {{ $langConfig := index
+        $siteConfig.languages $langCode }} {{ if $langConfig }} {{ $flag =
+        $langConfig.flag }} {{ end }} {{ end }} {{/* Build proper language URL
+        using Hugo's baseURL and language path */}} {{ $url := $.Site.BaseURL }}
+        {{ if ne $langCode "en" }} {{ $url = printf "%s%s/" $.Site.BaseURL
+        $langCode }} {{ end }}
+
+        <a
+          href="{{ $url }}"
+          class="language-link {{ if eq $langCode $currentLang }}current{{ end }}"
+          title="{{ $langName }}"
+        >
+          <span class="flag">{{ $flag }}</span>
+          <span class="language-name">{{ $langName }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </div>
 {{ end }}

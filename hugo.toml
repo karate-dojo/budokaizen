@@ -5,38 +5,25 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Sakura Dojo"
 theme = "ananke"
-defaultContentLanguage = "en"
 
-# Configure languages to use proper paths for GitHub Pages subdirectory
+# Language Configuration
+# Configure which languages your site supports
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
-# For single language mode, comment out the [languages] section below
-# and uncomment the single language settings
-# 
-# SINGLE LANGUAGE CONFIGURATION:
-# Comment out everything from [languages] to [languages.pt.menu] sections
-# and uncomment the following:
-#
-# [menu]
-#   [[menu.main]]
-#     name = "About"
-#     url = "/about/"
-#     weight = 1
-#   
-#   [[menu.main]]
-#     name = "Instructors"
-#     url = "/instructors/"
-#     weight = 2
-#
-# Also in [params] section, set: hide_language_switcher = true
-#
-# For multiple languages, keep the [languages] section active
+# To add or remove languages, modify the [languages] section below
+# and ensure you have corresponding:
+# - content/{lang}/ directories  
+# - data/{lang}/menu.yaml files
 
 # Pagination configuration
 [pagination]
   pagerSize = 3
 
-# Multi-language configuration (comment out to use single language)
+# Language Configuration
+# Add or remove languages as needed. Each language you add here must have:
+# 1. A content/{lang}/ directory with your content
+# 2. A data/{lang}/menu.yaml file with menu configuration
 [languages]
   [languages.en]
     title = "Sakura Dojo"
@@ -45,73 +32,19 @@ defaultContentLanguageInSubdir = false
     languageName = "English"
     
   [languages.pt]
-    title = "Dojo Sakura"
+    title = "Dojo Sakura"  
     weight = 2
     contentDir = "content/pt"
     languageName = "Português"
 
-# Multi-language menus (comment out for single language mode)
-[languages.en.menu]
-  [[languages.en.menu.main]]
-    name = "Goju Ryu"
-    url = "/goju-ryu/"
-    weight = 1
-  
-  [[languages.en.menu.main]]
-    name = "IOGKF"
-    url = "/iogkf/"
-    weight = 2
-  
-  [[languages.en.menu.main]]
-    name = "Instructors"
-    url = "/instructors/"
-    weight = 3
+# Example: To add Spanish support, uncomment the following:
+# [languages.es]
+#   title = "Dojo Sakura"
+#   weight = 3
+#   contentDir = "content/es"
+#   languageName = "Español"
 
-  [[languages.en.menu.main]]
-    name = "Schedule"
-    url = "/schedule/"
-    weight = 4
-
-  [[languages.en.menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 5
-
-  [[languages.en.menu.main]]
-    name = "Follow Us"
-    url = "/social/"
-    weight = 6
-
-[languages.pt.menu]
-  [[languages.pt.menu.main]]
-    name = "Goju Ryu"
-    url = "/pt/goju-ryu/"
-    weight = 1
-  
-  [[languages.pt.menu.main]]
-    name = "IOGKF"
-    url = "/pt/iogkf/"
-    weight = 2
-  
-  [[languages.pt.menu.main]]
-    name = "Instrutores"
-    url = "/pt/instructors/"
-    weight = 3
-
-  [[languages.pt.menu.main]]
-    name = "Horários"
-    url = "/pt/schedule/"
-    weight = 4
-
-  [[languages.pt.menu.main]]
-    name = "Contato"
-    url = "/pt/contact/"
-    weight = 5
-
-  [[languages.pt.menu.main]]
-    name = "Siga-nos"
-    url = "/pt/social/"
-    weight = 6
+# For single language sites, remove all [languages.XX] sections except your default language
 
 [params]
   # Site description for meta tags
@@ -123,12 +56,13 @@ defaultContentLanguageInSubdir = false
   # Recent posts on homepage
   recent_posts_number = 3
   
-  # Language configuration
-  # Set to true to show language switcher dropdown (only shows when multiple languages are available)
-  # Set to false to hide language switcher completely
+  # Language switcher configuration
+  # Set to false to always hide the language switcher
+  # When true, switcher only appears when multiple languages are configured
   show_language_switcher = true
-  # Alternative: set hide_language_switcher = true to disable it
-  # hide_language_switcher = false
+  
+  # Menu configuration is managed via data/{lang}/menu.yaml files
+  # This provides cleaner separation and easier maintenance
   
   # Custom CSS files
   custom_css = ["css/social-links.css"]

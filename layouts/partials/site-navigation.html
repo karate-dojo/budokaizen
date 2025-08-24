@@ -1,3 +1,16 @@
+{{/*
+Dynamic Site Navigation Component
+
+Automatically configures navigation based on:
+- data/site_config.yaml for language settings
+- data/{lang}/menu.yaml for menu items per language
+
+Features:
+- Supports single or multi-language setup
+- Hides language switcher when only one language is supported
+- Uses data files instead of hugo.toml for menu configuration
+*/}}
+
 <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
     <div class="flex items-center">
@@ -13,19 +26,24 @@
       </a>
     </div>
     <div class="flex-l items-center">
-      {{ if .Site.Menus.main }}
-        <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
-          {{ range .Site.Menus.main }}
-          <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
-              {{ .Name }}
+      {{/* Dynamic menu from data files */}}
+      {{ $currentLang := .Site.Language.Lang }}
+      {{ $menuData := index .Site.Data $currentLang "menu" }}
+      {{ if $menuData }}
+        <ul class="{{ if eq $.Site.Language.LanguageDirection "rtl" }}pr0 ml3{{ else }}pl0 mr3{{ end }}">
+          {{ range sort $menuData.menu "weight" }}
+          <li class="list f5 f4-ns fw4 dib {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl3{{ else }}pr3{{ end }}">
+            <a class="hover-white white-90 no-underline" href="{{ .url }}" title="{{ .name }}">
+              {{ .name }}
             </a>
           </li>
           {{ end }}
         </ul>
       {{ end }}
-      {{ partials.Include "i18nlist.html" . }}
-      {{ partials.IncludeCached "social/follow.html" . }}
+      
+      {{/* Dynamic language switcher */}}
+      {{ partial "i18nlist.html" . }}
+      {{ partial "social/follow.html" . }}
     </div>
   </div>
 </nav>

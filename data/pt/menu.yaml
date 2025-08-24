@@ -1,0 +1,27 @@
+# Portuguese Menu Configuration
+# Configure the main navigation menu for Portuguese
+
+menu:
+  - name: "Goju Ryu"
+    url: "/pt/goju-ryu/"
+    weight: 1
+
+  - name: "IOGKF"
+    url: "/pt/iogkf/"
+    weight: 2
+
+  - name: "Instrutores"
+    url: "/pt/instructors/"
+    weight: 3
+
+  - name: "Horários"
+    url: "/pt/schedule/"
+    weight: 4
+
+  - name: "Contato"
+    url: "/pt/contact/"
+    weight: 5
+
+  - name: "Siga-nos"
+    url: "/pt/social/"
+    weight: 6

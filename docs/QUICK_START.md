@@ -1,6 +1,6 @@
 # Dojo Owner's Quick Start Guide
 
-**Goal## 🌐 Step 2: Enable Website Hosting (1 minute)
+\*\*Goal## 🌐 Step 2: Enable Website Hosting (1 minute)
 
 > **📋 Setup step**: Complete this before making changes to your site to ensure smooth deployment.
 

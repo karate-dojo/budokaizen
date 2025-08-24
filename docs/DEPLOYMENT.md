@@ -9,7 +9,7 @@ Complete guide for deploying your IOGKF dojo website to GitHub Pages.
 [![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/karate-dojo/IOGKF_website_template/generate)
 
 1. **Create your site** - Click the "Use this template" button above
-2. **📝 Note: Enable GitHub Pages first** - Go to Settings → Pages → Select "GitHub Actions" 
+2. **📝 Note: Enable GitHub Pages first** - Go to Settings → Pages → Select "GitHub Actions"
 3. **Configure your dojo** - Edit the YAML files in `/data/en/`
 4. **Push changes** - The GitHub Actions workflow will automatically deploy
 5. **Your site is live!** - Available at `https://yourusername.github.io/repository-name`
