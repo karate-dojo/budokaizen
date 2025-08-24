@@ -30,6 +30,8 @@ This template provides a unified, professional web presence for IOGKF dojos worl
 
 [![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://github.com/karate-dojo/IOGKF_website_template/generate)
 
+> **📝 Note**: After creating your repository, remember to enable GitHub Pages in Settings → Pages → Source: "GitHub Actions" before your first deployment.
+
 **[📖 Complete Setup Guide](docs/SETUP.md)** - Local development and advanced configuration
 
 ## 📋 Prerequisites
@@ -38,7 +40,7 @@ This template provides a unified, professional web presence for IOGKF dojos worl
 - **GitHub Account** for hosting (free)
 - Basic text editing skills for YAML configuration
 
-*Verify Hugo installation: `hugo version` (must show "extended")*
+_Verify Hugo installation: `hugo version` (must show "extended")_
 
 ## ⚙️ Configuration
 
@@ -46,13 +48,13 @@ All website content is managed through YAML configuration files. No HTML or tech
 
 ### Essential Files
 
-| File | Purpose | 
-|------|---------|
-| `data/en/dojo.yaml` | Basic dojo information, contact details |
-| `data/en/instructors.yaml` | Instructor names, ranks, photos |
-| `data/en/schedule.yaml` | Class schedule and timetables |
-| `data/social.yaml` | Social media links and handles |
-| `static/images/logo.png` | Your dojo logo |
+| File                       | Purpose                                 |
+| -------------------------- | --------------------------------------- |
+| `data/en/dojo.yaml`        | Basic dojo information, contact details |
+| `data/en/instructors.yaml` | Instructor names, ranks, photos         |
+| `data/en/schedule.yaml`    | Class schedule and timetables           |
+| `data/social.yaml`         | Social media links and handles          |
+| `static/images/logo.png`   | Your dojo logo                          |
 
 **📖 Complete reference:** [Configuration Guide](docs/CONFIGURATION.md)
 
@@ -63,17 +65,20 @@ The template includes English and Portuguese translations. To add more languages
 ## 📚 Documentation
 
 ### Getting Started
+
 - [🥋 **Dojo Owner's Quick Start**](docs/QUICK_START.md) - **15-minute setup for dojo owners**
 - [📖 Complete Setup Guide](docs/SETUP.md) - Advanced setup and local development
 - [⚙️ Configuration Reference](docs/CONFIGURATION.md) - All YAML files explained
 
 ### Customization & Advanced Topics
+
 - [🎨 Customization Guide](docs/CUSTOMIZATION.md) - Layout, styling, and advanced features
 - [📷 Images Guide](docs/IMAGES.md) - Photo requirements and upload
 - [🚀 Deployment Guide](docs/DEPLOYMENT.md) - GitHub Pages setup and custom domains
 - [📱 Social Media Setup](docs/SOCIAL_MEDIA.md) - Connect your social accounts
 
 ### Support & Troubleshooting
+
 - [🔧 Troubleshooting](docs/TROUBLESHOOTING.md) - Common issues and solutions
 - [⚠️ Error Handling](docs/ERROR_HANDLING.md) - Template error recovery
 - [🌐 Language Configuration](docs/LANGUAGE_CONFIGURATION.md) - Adding new languages
@@ -103,11 +108,11 @@ The International Okinawan Goju-Ryu Karate-do Federation (IOGKF) is the official
 
 ---
 
-*This template is an independent open-source project created to help IOGKF dojos worldwide maintain professional websites while preserving the traditional values of Goju-Ryu Karate. Not officially affiliated with IOGKF.*
+_This template is an independent open-source project created to help IOGKF dojos worldwide maintain professional websites while preserving the traditional values of Goju-Ryu Karate. Not officially affiliated with IOGKF._
 
 ## 🏆 Example Sites
 
-*Add your dojo site here by submitting a pull request!*
+_Add your dojo site here by submitting a pull request!_
 
 ---
 

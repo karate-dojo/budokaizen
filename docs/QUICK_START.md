@@ -1,6 +1,18 @@
 # Dojo Owner's Quick Start Guide
 
-**Goal**: Get your dojo website live in 15 minutes with minimal technical knowledge.
+**Goal## 🌐 Step 2: Enable Website Hosting (1 minute)
+
+> **📋 Setup step**: Complete this before making changes to your site to ensure smooth deployment.
+
+1. **In your new repository**, go to **Settings** (top menu)
+
+2. **Click "Pages"** in the left sidebar
+
+3. **Under "Source"**, select **"GitHub Actions"**
+
+4. **Done!** Your website will be live at: `https://yourusername.github.io/your-repository-name`
+
+*Note: It takes 2-3 minutes for the site to become available*dojo website live in 15 minutes with minimal technical knowledge.
 
 This guide is for dojo owners who want the simplest possible setup - one language (English), default pages, and just your dojo's basic information. No programming knowledge required!
 
@@ -20,6 +32,7 @@ This guide is for dojo owners who want the simplest possible setup - one languag
 ## 📋 Before You Start
 
 You'll need:
+
 - [ ] A computer with internet access
 - [ ] Your dojo's basic information (name, address, phone, email)
 - [ ] List of instructors with their ranks
@@ -32,12 +45,14 @@ You'll need:
 
 2. **Click "Use this template"** → **"Create a new repository"**
 
-3. **Name your repository**: 
+3. **Name your repository**:
    - Repository name: `your-dojo-name-website` (example: `sakura-dojo-website`)
    - Make sure it's **Public**
    - Click **"Create repository"**
 
 ## 🌐 Step 2: Enable Website Hosting (1 minute)
+
+> **⚠️ Critical Step**: You MUST complete this step before making any changes to your site. Skipping this will cause deployment errors.
 
 1. **In your new repository**, go to **Settings** (top menu)
 
@@ -47,7 +62,7 @@ You'll need:
 
 4. **Done!** Your website will be live at: `https://yourusername.github.io/your-repository-name`
 
-*Note: It takes 2-3 minutes for the site to become available*
+_Note: It takes 2-3 minutes for the site to become available_
 
 ## ✏️ Step 3: Customize Your Dojo Information (12 minutes)
 
@@ -92,7 +107,7 @@ instructors:
     dan: "7th Dan"
     title: "Chief Instructor"
     bio: "Brief biography of your chief instructor"
-  
+
   - name: "Assistant Instructor Name"
     dan: "3rd Dan"
     title: "Assistant Instructor"
@@ -100,6 +115,7 @@ instructors:
 ```
 
 **Tips:**
+
 - Add as many instructors as you have
 - Remove instructors you don't need
 - Keep the exact spacing (2 spaces for indentation)
@@ -117,11 +133,11 @@ classes:
   - day: "Monday"
     time: "19:00 - 20:30"
     type: "Adult Beginner"
-    
+
   - day: "Wednesday"
     time: "19:00 - 20:30"
     type: "Adult Advanced"
-    
+
   - day: "Saturday"
     time: "10:00 - 11:30"
     type: "Youth Class"
@@ -142,19 +158,22 @@ social_media:
     username: "@yourdojo"
     display_name: "Your Dojo Name"
     enabled: true
-    
+
   instagram:
     url: "https://www.instagram.com/yourdojo"
     username: "@yourdojo"
     display_name: "Your Dojo"
     enabled: true
-    
+
   # Set enabled: false to hide platforms you don't use
   twitter:
     enabled: false
 ```
+
 # youtube: "https://youtube.com/yourdojo"
+
 # twitter: "https://twitter.com/yourdojo"
+
 ```
 
 4. **Commit changes**
@@ -180,7 +199,7 @@ Visit your website and verify:
 **Solution**: Wait 5 minutes and try again. GitHub takes time to deploy changes.
 
 ### Problem: Information not updated
-**Solution**: 
+**Solution**:
 1. Check you edited files in `data/en/` folder
 2. Make sure you clicked "Commit changes"
 3. Wait 2-3 minutes for deployment
@@ -210,6 +229,29 @@ Visit your website and verify:
 - **YAML Formatting**: Use [YAML Validator](https://yamlvalidator.com/) to check your files
 - **General Questions**: Consult with your dojo instructor or IOGKF representative
 
+## 🔧 Common Issues
+
+### "Resource not accessible by integration" Error
+
+If you see this error in GitHub Actions:
+
+```
+
+Error: Create Pages site failed. Error: Resource not accessible by integration
+
+```
+
+**Solution**: GitHub Pages needs to be enabled first!
+1. Go to **Settings** → **Pages**
+2. Under **Source**, select **"GitHub Actions"**
+3. Re-run the failed workflow by going to **Actions** tab and clicking "Re-run jobs"
+
+### Website Not Loading
+
+- Wait 2-3 minutes after your first deployment
+- Check that GitHub Pages is enabled (Settings → Pages)
+- Verify your site URL: `https://yourusername.github.io/repository-name`
+
 ## 🎯 What's Next?
 
 Your basic website is now live! Optional enhancements:
@@ -232,3 +274,4 @@ Share your website URL with students and the community!
 ---
 
 **🥋 Remember**: This is an independent open-source template created to help IOGKF dojos maintain professional websites while preserving the traditional values of Goju-Ryu Karate.
+```
