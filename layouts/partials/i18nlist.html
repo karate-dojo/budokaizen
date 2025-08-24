@@ -1,15 +1,14 @@
 {{/* Dynamic Language Switcher Component Features: - Uses Hugo's built-in
 language configuration from hugo.toml - Automatically hides when only one
 language is configured - Uses flags from data/site_config.yaml for visual
-enhancement - Respects show_language_switcher parameter - Properly handles any
-default language configuration Configuration: - Languages: Configure in
-hugo.toml [languages] section - Flags: Optional enhancement via
-data/site_config.yaml - Toggle: Set params.show_language_switcher = false to
-disable */}} {{ $showSwitcher := .Site.Params.show_language_switcher }} {{
-$siteConfig := .Site.Data.site_config }} {{/* Only show language switcher if: 1.
-show_language_switcher is not false 2. More than one language is configured in
-hugo.toml */}} {{ if and (ne $showSwitcher false) (gt (len .Site.Languages) 1)
-}}
+enhancement - Respects show_language_switcher parameter Configuration: -
+Languages: Configure in hugo.toml [languages] section - Flags: Optional
+enhancement via data/site_config.yaml - Toggle: Set
+params.show_language_switcher = false to disable */}} {{ $showSwitcher :=
+.Site.Params.show_language_switcher }} {{ $siteConfig := .Site.Data.site_config
+}} {{/* Only show language switcher if: 1. show_language_switcher is not false
+2. More than one language is configured in hugo.toml */}} {{ if and (ne
+$showSwitcher false) (gt (len .Site.Languages) 1) }}
 <div class="language-dropdown dib mr3">
   <div class="language-parent">
     {{/* Dropdown trigger with arrow */}}
@@ -27,13 +26,10 @@ hugo.toml */}} {{ if and (ne $showSwitcher false) (gt (len .Site.Languages) 1)
         get flag from site_config.yaml, fallback to default */}} {{ $flag :=
         "🌐" }} {{ if $siteConfig }} {{ $langConfig := index
         $siteConfig.languages $langCode }} {{ if $langConfig }} {{ $flag =
-        $langConfig.flag }} {{ end }} {{ end }} {{/* Build proper language URL -
-        dynamically handle default language */}} {{ $url := "/" }} {{ if eq
-        $langCode $currentLang }} {{ $url = $.Site.Home.RelPermalink }} {{ else
-        }} {{ $defaultLang := "en" }} {{ range $.Site.Languages }} {{ if eq
-        .Weight 1 }} {{ $defaultLang = .Lang }} {{ break }} {{ end }} {{ end }}
-        {{ if eq $langCode $defaultLang }} {{ $url = "/" }} {{ else }} {{ $url =
-        printf "/%s/" $langCode }} {{ end }} {{ end }}
+        $langConfig.flag }} {{ end }} {{ end }} {{/* Build proper language URL
+        using Hugo's baseURL and language path */}} {{ $url := $.Site.BaseURL }}
+        {{ if ne $langCode "en" }} {{ $url = printf "%s%s/" $.Site.BaseURL
+        $langCode }} {{ end }}
 
         <a
           href="{{ $url }}"
