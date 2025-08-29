@@ -3,12 +3,12 @@
 # For custom domains: will be overridden by hosting
 baseURL = "/"
 languageCode = "en-us"
-title = "Sakura Dojo"
+title = "Budôkaizen Dojo"
 theme = "ananke"
 
 # Language Configuration
 # Configure which languages your site supports
-defaultContentLanguage = "en"
+defaultContentLanguage = "pt"
 defaultContentLanguageInSubdir = false
 
 # To add or remove languages, modify the [languages] section below
@@ -25,17 +25,17 @@ defaultContentLanguageInSubdir = false
 # 1. A content/{lang}/ directory with your content
 # 2. A data/{lang}/menu.yaml file with menu configuration
 [languages]
-  [languages.en]
-    title = "Sakura Dojo"
-    weight = 1
-    contentDir = "content/en"
-    languageName = "English"
-    
   [languages.pt]
-    title = "Dojo Sakura"  
-    weight = 2
+    title = "Dojo Budôkaizen"  
+    weight = 1
     contentDir = "content/pt"
     languageName = "Português"
+
+  [languages.en]
+    title = "Dojo Budôkaizen"
+    weight = 2
+    contentDir = "content/en"
+    languageName = "English"
 
 # Example: To add Spanish support, uncomment the following:
 # [languages.es]

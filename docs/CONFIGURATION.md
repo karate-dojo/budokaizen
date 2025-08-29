@@ -28,7 +28,7 @@ This file contains your dojo's essential information.
 
 ```yaml
 # Your dojo's name (appears on homepage and titles)
-dojo_name: "Sakura Goju-Ryu Dojo"
+dojo_name: "Budôkaizen Goju-Ryu Dojo"
 
 # Full address for contact page
 address: |
@@ -56,12 +56,14 @@ description: |
 ```
 
 #### Required Fields
+
 - `dojo_name`: Your dojo's name
 - `address`: Physical address
 - `email`: Contact email
 - `phone`: Contact phone number
 
 #### Optional Fields
+
 - `map_embed_url`: Interactive map (highly recommended)
 - `website`: Custom domain if you have one
 - `description`: Brief description for homepage
@@ -77,12 +79,12 @@ instructors:
     dan: "7th Dan"
     title: "Chief Instructor"
     bio: "Sensei Smith has been practicing Goju-Ryu for over 30 years..."
-    
+
   - name: "Maria Santos"
     dan: "4th Dan"
     title: "Senior Instructor"
     bio: "Sensei Santos specializes in kata and self-defense..."
-    
+
   - name: "David Wilson"
     dan: "2nd Dan"
     title: "Assistant Instructor"
@@ -90,12 +92,14 @@ instructors:
 ```
 
 #### Field Explanations
+
 - `name`: Instructor's full name
 - `dan`: Rank (e.g., "1st Dan", "Shodan", "Kyudansha")
 - `title`: Role at the dojo (optional)
 - `bio`: Brief biography (optional)
 
 #### Notes
+
 - List instructors in order of seniority
 - If no instructors are configured, the page won't appear in navigation
 - Support for photos coming in future versions
@@ -111,22 +115,22 @@ schedule:
     time: "7:00 PM - 8:30 PM"
     type: "Adult Classes"
     description: "Beginner to Advanced"
-    
+
   - day: "Tuesday"
     time: "6:00 PM - 7:00 PM"
     type: "Youth Classes"
     description: "Ages 8-16"
-    
+
   - day: "Wednesday"
     time: "7:00 PM - 8:30 PM"
     type: "Adult Classes"
     description: "Intermediate to Advanced"
-    
+
   - day: "Thursday"
     time: "6:00 PM - 7:00 PM"
     type: "Youth Classes"
     description: "Ages 8-16"
-    
+
   - day: "Saturday"
     time: "10:00 AM - 12:00 PM"
     type: "Open Training"
@@ -140,6 +144,7 @@ notes: |
 ```
 
 #### Field Explanations
+
 - `day`: Day of the week
 - `time`: Class time range
 - `type`: Type of class (Adult, Youth, Open Training, etc.)
@@ -158,13 +163,14 @@ social:
   youtube: "https://youtube.com/c/yourdojo"
   twitter: "https://twitter.com/yourdojo"
   tiktok: "https://tiktok.com/@yourdojo"
-  
+
 # Optional: Display social links in header/footer
 show_in_header: true
 show_in_footer: true
 ```
 
 #### Supported Platforms
+
 - `facebook`
 - `instagram`
 - `youtube`
@@ -173,6 +179,7 @@ show_in_footer: true
 - `linkedin`
 
 #### Notes
+
 - Only include platforms you actively use
 - Links will only appear if configured
 - Icons are automatically provided
@@ -183,7 +190,7 @@ Add your dojo's unique story and history.
 
 ```yaml
 # Enable dojo history page
-enabled: true
+enabled: false
 
 # Page title
 title: "Our Dojo History"
@@ -191,22 +198,22 @@ title: "Our Dojo History"
 # Page content (supports Markdown formatting)
 content: |
   ## Foundation
-  
+
   Sakura Dojo was founded in 1995 by Sensei John Smith after his return
   from training in Okinawa with the IOGKF masters.
-  
+
   ## Early Years
-  
+
   Starting with just 5 students in a community center, our dojo has grown
   to serve over 100 students of all ages.
-  
+
   ## IOGKF Affiliation
-  
+
   We became officially affiliated with the IOGKF in 1998, connecting us
   to the global family of traditional Goju-Ryu practitioners.
-  
+
   ## Today
-  
+
   Today, we continue to preserve and teach authentic Okinawan Goju-Ryu
   Karate while building a strong community of martial artists.
 
@@ -223,12 +230,14 @@ timeline:
 ```
 
 #### When to Use
+
 - Your dojo has a unique founding story
 - You want to highlight special achievements
 - You have historical photos or documentation
 - You want to build deeper connection with students
 
 #### Notes
+
 - This page is completely optional
 - If `enabled: false` or file doesn't exist, page won't appear
 - Supports Markdown for rich text formatting
@@ -262,27 +271,30 @@ phone: "+55 (11) 5555-0123"
 ### YAML Syntax Check
 
 Use online validators to check your YAML:
+
 - [YAML Lint](https://www.yamllint.com/)
 - [Online YAML Parser](https://yaml-online-parser.appspot.com/)
 
 ### Common Mistakes
 
 1. **Indentation**: YAML is sensitive to spaces
+
    ```yaml
    # ❌ Wrong
    instructors:
    - name: "John"
-   
+
    # ✅ Correct
    instructors:
      - name: "John"
    ```
 
 2. **Quotes**: Use quotes for strings with special characters
+
    ```yaml
    # ❌ Wrong
    description: This has: special characters
-   
+
    # ✅ Correct
    description: "This has: special characters"
    ```
@@ -304,8 +316,8 @@ After making changes:
    ```bash
    hugo server
    ```
-   
 2. **Build Test**:
+
    ```bash
    hugo --gc --minify
    ```

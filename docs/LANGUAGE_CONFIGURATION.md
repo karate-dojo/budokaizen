@@ -19,13 +19,13 @@ defaultContentLanguage = "en"
 
 [languages]
   [languages.en]
-    title = "Sakura Dojo"
+    title = "Budôkaizen Dojo"
     weight = 1
     contentDir = "content/en"
     languageName = "English"
 
   [languages.pt]
-    title = "Dojo Sakura"
+    title = "Budôkaizen Sakura"
     weight = 2
     contentDir = "content/pt"
     languageName = "Português"

@@ -6,29 +6,29 @@ social_media:
   facebook:
     url: "https://www.facebook.com/sakuragojuryu"
     username: "@sakuragojuryu"
-    display_name: "Sakura Goju-Ryu Dojo"
-    enabled: true
-    
+    display_name: "Budôkaizen Goju-Ryu Dojo"
+    enabled: false
+
   instagram:
     url: "https://www.instagram.com/sakuragojuryu"
     username: "@sakuragojuryu"
-    display_name: "Sakura Goju-Ryu"
+    display_name: "Budôkaizen Goju-Ryu"
     enabled: true
-    
+
   youtube:
     url: "https://www.youtube.com/c/SakuraGojuRyu"
     username: "@SakuraGojuRyu"
-    display_name: "Sakura Goju-Ryu Dojo"
-    enabled: true
-    
+    display_name: "Budôkaizen Goju-Ryu Dojo"
+    enabled: false
+
   twitter:
     url: "https://twitter.com/sakuragojuryu"
     username: "@sakuragojuryu"
-    display_name: "Sakura Goju-Ryu"
-    enabled: false  # Set to true to enable Twitter/X links
-    
+    display_name: "Budôkaizen Goju-Ryu"
+    enabled: false # Set to true to enable Twitter/X links
+
   tiktok:
     url: "https://www.tiktok.com/@sakuragojuryu"
     username: "@sakuragojuryu"
-    display_name: "Sakura Goju-Ryu"
-    enabled: false  # Set to true to enable TikTok links
+    display_name: "Budôkaizen Goju-Ryu"
+    enabled: false # Set to true to enable TikTok links
