@@ -2,14 +2,10 @@
 # Lista dos instrutores do dojo com suas graduações e especializações
 
 instructors:
-  - name: "Sensei John Doe"
-    dan: "3º Dan"
-    title: "Instrutor"
-    specialization: "Armas Tradicionais, Kata"
-    bio: "Sensei Doe traz experiência em armas tradicionais de Okinawa e possui conhecimento profundo das aplicações de kata clássicos."
-    
-  - name: "Sempai Jane Doe"
-    dan: "1º Dan"
-    title: "Instrutora Assistente"
-    specialization: "Treinamento de Flexibilidade, Meditação"
-    bio: "Sempai Doe foca nos aspectos mentais e espirituais do Goju-Ryu, enfatizando respiração adequada e técnicas de meditação."
+  - name: "Sensei Rui Seixas"
+    dan: "3rd Dan"
+    title: "Instructor"
+
+  - name: "Sensei Luis Filipe"
+    dan: "2nd Dan"
+    title: "Instructor"

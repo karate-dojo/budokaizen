@@ -8,7 +8,7 @@ theme = "ananke"
 
 # Language Configuration
 # Configure which languages your site supports
-defaultContentLanguage = "en"
+defaultContentLanguage = "pt"
 defaultContentLanguageInSubdir = false
 
 # To add or remove languages, modify the [languages] section below

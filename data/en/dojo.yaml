@@ -3,18 +3,18 @@
 
 dojo_name: "Budôkaizen Goju-Ryu Dojo"
 address: |
-  123 Karate Way
-  San Francisco, CA 94102
-  United States
-email: "info@sakuragojuryu.com"
-phone: "+1 (415) 555-0123"
+  R. de Almorode 185, 
+  4470-231 Maia
+  Porto - Portugal
+email: "info@budokaizen.pt"
+phone: "+351 99 999 9999"
 # OpenStreetMap embed URL - To get this URL:
 # 1. Go to https://www.openstreetmap.org
 # 2. Search for your address
 # 3. Click "Share" on the right sidebar
 # 4. Click "Embed" tab and copy the iframe src URL
 # Example format: https://www.openstreetmap.org/export/embed.html?bbox=...&marker=...
-map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-122.4194%2C37.7749%2C-122.4094%2C37.7849&layer=mapnik&marker=37.7799%2C-122.4144"
+map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-8.599095046520235%2C41.229287897239956%2C-8.596069514751436%2C41.231192135271776&amp;layer=mapnik&amp;marker=41.23024002318878%2C-8.597582280635834"
 
 # Additional contact information
 

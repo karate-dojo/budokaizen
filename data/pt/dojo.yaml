@@ -1,20 +1,20 @@
 # Configuração do Dojo
 # Este arquivo contém as informações básicas sobre o dojo
 
-dojo_name: "Dojo Budôkaizen Goju-Ryu"
+dojo_name: "Budôkaizen Goju-Ryu Dojo"
 address: |
-  Rua do Karatê, 123
-  São Paulo, SP 01234-567
-  Brasil
-email: "info@sakuragojuryu.com.br"
-phone: "+55 (11) 5555-0123"
+  R. de Almorode 185, 
+  4470-231 Maia
+  Porto - Portugal
+email: "info@budokaizen.pt"
+phone: "+351 99 999 9999"
 # URL de embed do OpenStreetMap - Para obter esta URL:
 # 1. Acesse https://www.openstreetmap.org
 # 2. Pesquise pelo seu endereço
 # 3. Clique em "Compartilhar" na barra lateral direita
 # 4. Clique na aba "Incorporar" e copie a URL do src do iframe
 # Formato de exemplo: https://www.openstreetmap.org/export/embed.html?bbox=...&marker=...
-map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-46.6341%2C-23.5489%2C-46.6241%2C-23.5389&layer=mapnik&marker=-23.5439%2C-46.6291"
+map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-8.599095046520235%2C41.229287897239956%2C-8.596069514751436%2C41.231192135271776&amp;layer=mapnik&amp;marker=41.23024002318878%2C-8.597582280635834"
 
 # Informações de contato adicionais
 

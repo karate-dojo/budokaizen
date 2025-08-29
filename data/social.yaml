@@ -10,8 +10,8 @@ social_media:
     enabled: false
 
   instagram:
-    url: "https://www.instagram.com/sakuragojuryu"
-    username: "@sakuragojuryu"
+    url: "https://www.instagram.com/budokaizen_goju_ryu"
+    username: "budokaizen_goju_ryu"
     display_name: "Budôkaizen Goju-Ryu"
     enabled: true
 
