@@ -3,25 +3,25 @@
 
 menu:
   - name: "Goju Ryu"
-    url: "/pt/goju-ryu/"
+    url: "/goju-ryu/"
     weight: 1
 
   - name: "IOGKF"
-    url: "/pt/iogkf/"
+    url: "/iogkf/"
     weight: 2
 
   - name: "Instrutores"
-    url: "/pt/instructors/"
+    url: "/instructors/"
     weight: 3
 
   - name: "Horários"
-    url: "/pt/schedule/"
+    url: "/schedule/"
     weight: 4
 
   - name: "Contato"
-    url: "/pt/contact/"
+    url: "/contact/"
     weight: 5
 
   - name: "Siga-nos"
-    url: "/pt/social/"
+    url: "/social/"
     weight: 6
