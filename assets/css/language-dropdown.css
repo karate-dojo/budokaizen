@@ -15,7 +15,6 @@
 
 /* Submenu styles */
 .language-submenu {
-  display: none;
   position: absolute;
   top: 100%;
   right: 0;
@@ -27,10 +26,15 @@
   min-width: 160px;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: none;
 }
 
-/* Show submenu on hover */
-.language-dropdown:hover .language-submenu {
+/* Respect the hidden attribute */
+.language-submenu[hidden] {
+  display: none !important;
+}
+
+.language-dropdown.open .language-submenu {
   display: block;
 }
 

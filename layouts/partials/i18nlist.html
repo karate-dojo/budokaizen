@@ -14,36 +14,64 @@ hugo.toml */}} {{ if and (ne $showSwitcher false) (gt (len .Site.Languages) 1)
   <div class="language-parent">
     {{/* Dropdown trigger with arrow */}}
     <span
-      class="hover-white white-90 no-underline f5 f4-ns fw4 pv2 ph3 pointer"
+      class="lang-toggle hover-white white-90 no-underline f5 f4-ns fw4 pv2 ph3 pointer"
+      role="button"
+      tabindex="0"
+      aria-haspopup="true"
+      aria-expanded="false"
     >
       Languages ▾
     </span>
 
     {{/* Language options dropdown */}}
-    <ul class="language-submenu">
-      {{ $currentLang := .Site.Language.Lang }} {{ range .Site.Languages }}
-      <li class="language-item">
-        {{ $langCode := .Lang }} {{ $langName := .LanguageName }} {{/* Try to
-        get flag from site_config.yaml, fallback to default */}} {{ $flag :=
-        "🌐" }} {{ if $siteConfig }} {{ $langConfig := index
-        $siteConfig.languages $langCode }} {{ if $langConfig }} {{ $flag =
-        $langConfig.flag }} {{ end }} {{ end }} {{/* Build proper language URL -
-        dynamically handle default language */}} {{ $url := "/" }} {{ if eq
-        $langCode $currentLang }} {{ $url = $.Site.Home.RelPermalink }} {{ else
-        }} {{ $defaultLang := "en" }} {{ range $.Site.Languages }} {{ if eq
-        .Weight 1 }} {{ $defaultLang = .Lang }} {{ break }} {{ end }} {{ end }}
-        {{ if eq $langCode $defaultLang }} {{ $url = "/" }} {{ else }} {{ $url =
-        printf "/%s/" $langCode }} {{ end }} {{ end }}
-
-        <a
-          href="{{ $url }}"
-          class="language-link {{ if eq $langCode $currentLang }}current{{ end }}"
-          title="{{ $langName }}"
-        >
-          <span class="flag">{{ $flag }}</span>
-          <span class="language-name">{{ $langName }}</span>
-        </a>
-      </li>
+  <ul class="language-submenu" hidden>
+      {{/* Dynamic per-page translation linking:
+           For each configured language, if the current page has a translation
+           in that language, link to it. Otherwise fall back to that language's
+           home page (root for default language, /code/ for others).
+       */}}
+  {{ $currentPage := . }}
+  {{ $currentLang := .Site.Language.Lang }}
+  {{ $weightOne := where $.Site.Languages "Weight" 1 }}
+  {{ $defaultLang := (cond (gt (len $weightOne) 0) ((index $weightOne 0).Lang) $currentLang) }}
+      {{ range .Site.Languages }}
+        {{ $langCode := .Lang }}
+        {{ $langName := .LanguageName }}
+        {{/* Flag lookup */}}
+        {{ $flag := "🌐" }}
+        {{ if $siteConfig }}
+          {{ $langConfig := index $siteConfig.languages $langCode }}
+          {{ if $langConfig }}{{ $flag = $langConfig.flag }}{{ end }}
+        {{ end }}
+        {{/* Determine target URL */}}
+  {{ $url := "" }}
+        {{ if eq $langCode $currentLang }}
+          {{/* Current language: stay on this page */}}
+          {{ $url = $currentPage.RelPermalink }}
+        {{ else }}
+          {{/* Attempt to find a translation page with matching lang */}}
+          {{ $candidates := where $currentPage.Translations "Lang" $langCode }}
+          {{ if gt (len $candidates) 0 }}
+            {{ $url = (index $candidates 0).RelPermalink }}
+          {{ else }}
+            {{ if eq $langCode $defaultLang }}
+              {{ $url = "/" }}
+            {{ else }}
+              {{ $url = printf "/%s/" $langCode }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        <li class="language-item">
+          <a
+            href="{{ $url }}"
+            class="language-link {{ if eq $langCode $currentLang }}current{{ end }}"
+            title="{{ $langName }}"
+            lang="{{ $langCode }}"
+          >
+            <span class="flag">{{ $flag }}</span>
+            <span class="language-name">{{ $langName }}</span>
+          </a>
+        </li>
       {{ end }}
     </ul>
   </div>
