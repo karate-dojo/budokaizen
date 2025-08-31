@@ -12,7 +12,7 @@ Features:
 */}}
 
 <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
+  <div class="flex center items-center justify-between">
     <div class="flex items-center">
       <a href="{{ .Site.Home.RelPermalink }}" class="mr2" title="IOGKF Affiliated Dojo">
         <img src="{{ .Site.BaseURL }}images/logo-iogkf.png" alt="IOGKF" style="height: 24px;" />
@@ -25,7 +25,7 @@ Features:
         {{ end }}
       </a>
     </div>
-    <div class="flex-l items-center">
+  <div class="flex items-center desktop-only-nav" style="gap:1.25rem;">
       {{/* Dynamic menu from data files */}}
       {{ $currentLang := .Site.Language.Lang }}
       {{ $menuData := index .Site.Data $currentLang "menu" }}
@@ -45,5 +45,64 @@ Features:
       {{ partial "i18nlist.html" . }}
       {{ partial "social/follow.html" . }}
     </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open menu" aria-controls="mobileMenuPanel" aria-expanded="false" style="margin-left:.5rem;">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile Slide-in Panel -->
+<div id="mobileMenuPanel" class="mobile-menu-panel" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="mobile-menu-header">
+    <strong>{{ .Site.Title }}</strong>
+    <button class="mobile-close-btn" aria-label="Close menu" onclick="document.getElementById('mobileNavToggle').click()">&times;</button>
+  </div>
+  <div class="mobile-menu-body">
+    {{ $currentLang := .Site.Language.Lang }}
+    {{ $menuData := index .Site.Data $currentLang "menu" }}
+    {{ if $menuData }}
+      <ul class="mobile-primary-nav">
+        {{ range sort $menuData.menu "weight" }}
+        <li>
+          <a href="{{ .url | relLangURL }}" title="{{ .name }}">{{ .name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    <div class="mobile-lang-section">Languages</div>
+    <ul class="mobile-lang-nav">
+      {{/* Dynamic per-page translation linking for mobile with safe checks */}}
+      {{ $currentPage := . }}
+      {{ $currentLang := .Site.Language.Lang }}
+      {{ $weightOne := where $.Site.Languages "Weight" 1 }}
+      {{ $defaultLang := (cond (gt (len $weightOne) 0) ((index $weightOne 0).Lang) $currentLang) }}
+      {{ range .Site.Languages }}
+        {{ $code := .Lang }}
+        {{ $isCurrent := eq $code $currentLang }}
+        {{ $href := "" }}
+        {{ if $isCurrent }}
+          {{ $href = $currentPage.RelPermalink }}
+        {{ else }}
+          {{ $candidates := where $currentPage.Translations "Lang" $code }}
+          {{ if gt (len $candidates) 0 }}
+            {{ $href = (index $candidates 0).RelPermalink }}
+          {{ else }}
+            {{ if eq $code $defaultLang }}
+              {{ $href = "/" }}
+            {{ else }}
+              {{ $href = printf "/%s/" $code }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        <li><a href="{{ $href }}" class="language-link {{ if $isCurrent }}current{{ end }}" lang="{{ $code }}">{{ .LanguageName }}</a></li>
+      {{ end }}
+    </ul>
+
+  </div>
+  <div class="mobile-menu-footer">
+    <small>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</small>
+  </div>
+</div>
