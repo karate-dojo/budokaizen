@@ -41,9 +41,9 @@ Data Sources:
       - Fallback: hugo.toml -> title
       */}}
       {{ if $dojo.dojo_name }}
-      <div class="f2 f1-l fw2 white-90 mb0 lh-title">{{ $dojo.dojo_name }}</div>
+      <div class="f2 f1-l fw6 white-90 mb0 lh-title">{{ $dojo.dojo_name }}</div>
       {{ else }}
-      <div class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Site.Title }}</div>
+      <div class="f2 f1-l fw6 white-90 mb0 lh-title">{{ .Site.Title }}</div>
       {{ end }}
 
       {{/*
@@ -51,7 +51,7 @@ Data Sources:
       - Primary source: dojo.yaml -> description
       - Fallback: i18n translation file
       */}}
-      <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+      <div class="fw4 f5 f3-l white-90 measure-wide-l center lh-copy mt3 mb4">
         {{ if $dojo.description }}
         {{ $dojo.description }}
         {{ else }}
