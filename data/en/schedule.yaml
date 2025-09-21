@@ -4,11 +4,11 @@ schedule:
   - day: "Tuesday"
     classes:
       - time: "19:30 - 21:00"
-        instructor: "All Instructors"
+        instructor: "Sensei Rui Seixas"
         description: "Age-appropriate karate training with focus on discipline. Basic techniques, kata, kumite, conditioning, and self-defense."
 
   - day: "Friday"
     classes:
       - time: "19:30 - 21:00"
-        instructor: "All Instructors"
+        instructor: "Sensei Rui Seixas"
         description: "Age-appropriate karate training with focus on discipline. Basic techniques, kata, kumite, conditioning, and self-defense."
