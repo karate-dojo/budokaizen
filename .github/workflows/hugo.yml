@@ -57,6 +57,17 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: |
+            /home/runner/.cache/hugo_cache
+            /tmp/hugo_cache_runner
+            resources/_gen/images
+          key: ${{ runner.os }}-hugo-${{ hashFiles('**/hugo.toml') }}-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
@@ -68,13 +79,21 @@ jobs:
         run: |
           # Clear cache if requested or if this is a push event
           if [[ "${{ github.event.inputs.clear_cache }}" == "true" ]] || [[ "${{ github.event_name }}" == "push" ]]; then
-            echo "Clearing Hugo cache..."
+            echo "Clearing Hugo cache and building fresh..."
             rm -rf ${{ runner.temp }}/hugo_cache
+            hugo \
+              --gc \
+              --minify \
+              --ignoreCache \
+              --timeout 120s \
+              --baseURL "${{ steps.pages.outputs.base_url }}/"
+          else
+            hugo \
+              --gc \
+              --minify \
+              --timeout 120s \
+              --baseURL "${{ steps.pages.outputs.base_url }}/"
           fi
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
