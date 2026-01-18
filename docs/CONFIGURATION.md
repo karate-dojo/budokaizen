@@ -252,7 +252,7 @@ Create identical files in `/data/pt/` with Portuguese translations:
 # data/pt/dojo.yaml
 dojo_name: "Dojo Sakura Goju-Ryu"
 address: |
-  Rua do Karatê, 123
+  Rua do karaté, 123
   São Paulo, SP 01234-567
   Brasil
 email: "info@sakuragojuryu.com.br"

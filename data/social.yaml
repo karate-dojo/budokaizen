@@ -10,9 +10,9 @@ social_media:
     enabled: false
 
   instagram:
-    url: "https://www.instagram.com/budokaizen_goju_ryu"
-    username: "budokaizen_goju_ryu"
-    display_name: "Budôkaizen Goju-Ryu"
+    url: "https://www.instagram.com/dojobudokaizenluisfilipe"
+    username: "dojobudokaizenluisfilipe"
+    display_name: "Budôkaizen Goju-Ryu (Luis Filipe)"
     enabled: true
 
   youtube:

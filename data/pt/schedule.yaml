@@ -5,11 +5,11 @@ schedule:
   - day: "Terça-feira"
     classes:
       - time: "19:30 - 21:00"
-        instructor: "Todos instrutores"
-        description: "Treinamento de karatê adequado para a idade com foco em disciplina. Técnicas básicas, kata, kumite, condicionamento e defesa pessoal."
+        instructor: "SenseiLuis Filipe"
+        description: "Treinamento de karaté adequado para a idade com foco em disciplina. Técnicas básicas, kata, kumite, condicionamento e defesa pessoal."
 
   - day: "Sexta-feira"
     classes:
       - time: "19:30 - 21:00"
-        instructor: "Todos instrutores"
-        description: "Treinamento de karatê adequado para a idade com foco em disciplina. Técnicas básicas, kata, kumite, condicionamento e defesa pessoal."
+        instructor: "SenseiLuis Filipe"
+        description: "Treinamento de karaté adequado para a idade com foco em disciplina. Técnicas básicas, kata, kumite, condicionamento e defesa pessoal."
