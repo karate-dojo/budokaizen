@@ -85,13 +85,11 @@ jobs:
               --gc \
               --minify \
               --ignoreCache \
-              --timeout 120s \
               --baseURL "${{ steps.pages.outputs.base_url }}/"
           else
             hugo \
               --gc \
               --minify \
-              --timeout 120s \
               --baseURL "${{ steps.pages.outputs.base_url }}/"
           fi
 
