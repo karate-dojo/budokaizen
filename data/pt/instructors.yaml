@@ -3,4 +3,9 @@
 
 instructors:
   - name: "Sensei Luis Filipe"
-    title: "Instructor"
+    rank: "2º Dan"
+    title: "Instrutor"
+
+  - name: "Senpai Carlota Silva"
+    rank: "1º Dan"
+    title: "Instrutor"
