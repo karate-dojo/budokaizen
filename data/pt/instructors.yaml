@@ -2,10 +2,10 @@
 # Lista dos instrutores do dojo com suas graduações e especializações
 
 instructors:
-  - name: "Sensei Luis Filipe"
+  - name: "Luis Filipe"
     rank: "2º Dan"
-    title: "Instrutor"
+    title: "Sensei"
 
-  - name: "Senpai Carlota Silva"
+  - name: "Carlota Silva"
     rank: "1º Dan"
-    title: "Instrutor"
+    title: "Senpai"

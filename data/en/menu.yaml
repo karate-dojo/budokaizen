@@ -10,18 +10,22 @@ menu:
     url: "/iogkf/"
     weight: 2
 
+  - name: "APOGK"
+    url: "/apogk/"
+    weight: 3
+
   - name: "Instructors"
     url: "/instructors/"
-    weight: 3
+    weight: 4
 
   - name: "Schedule"
     url: "/schedule/"
-    weight: 4
+    weight: 5
 
   - name: "Contact"
     url: "/contact/"
-    weight: 5
+    weight: 6
 
   - name: "Follow Us"
     url: "/social/"
-    weight: 6
+    weight: 7
