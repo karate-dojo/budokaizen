@@ -22,7 +22,7 @@ menu:
     url: "/schedule/"
     weight: 5
 
-  - name: "Contato"
+  - name: "Contacto"
     url: "/contact/"
     weight: 6
 

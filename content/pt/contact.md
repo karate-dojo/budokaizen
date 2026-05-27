@@ -1,8 +1,8 @@
 ---
-title: "Contato"
+title: "Contacto"
 date: 2023-01-01
 draft: false
 type: "contact"
 ---
 
-Entre em contato com nosso dojo. Estamos aqui para responder quaisquer perguntas sobre nossas aulas, treinamento ou a arte do karaté Goju-Ryu.
+Entre em contacto com o nosso dojo. Estamos aqui para responder a quaisquer perguntas sobre as nossas aulas, treino ou a arte do karaté Goju-Ryu.

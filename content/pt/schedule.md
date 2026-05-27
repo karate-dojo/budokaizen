@@ -5,4 +5,4 @@ draft: false
 type: "schedule"
 ---
 
-Descubra quando nossas aulas acontecem durante a semana. Oferecemos aulas para todas as idades e níveis de habilidade.
+Descubra quando as nossas aulas acontecem durante a semana. Oferecemos aulas para todas as idades e níveis de habilidade.
