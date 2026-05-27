@@ -1,5 +1,5 @@
 # Instrutores
-# Lista dos instrutores do dojo com suas graduações e especializações
+# Lista dos instrutores do dojo com as suas graduações e especializações
 
 instructors:
   - name: "Sensei John Doe"
@@ -11,5 +11,5 @@ instructors:
   - name: "Sempai Jane Doe"
     dan: "1º Dan"
     title: "Instrutora Assistente"
-    specialization: "Treinamento de Flexibilidade, Meditação"
-    bio: "Sempai Doe foca nos aspectos mentais e espirituais do Goju-Ryu, enfatizando respiração adequada e técnicas de meditação."
+    specialization: "Treino de Flexibilidade, Meditação"
+    bio: "Sempai Doe foca nos aspetos mentais e espirituais do Goju-Ryu, enfatizando respiração adequada e técnicas de meditação."

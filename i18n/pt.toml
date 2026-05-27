@@ -20,13 +20,13 @@ other = "Telefone"
 other = "Email"
 
 [our_social_media]
-other = "Nossas Redes Sociais"
+other = "As Nossas Redes Sociais"
 
 [follow]
 other = "Seguir"
 
 [address]
-other = "📍 Endereço"
+other = "📍 Morada"
 
 [phone_contact]
 other = "📞 Telefone"
@@ -41,7 +41,7 @@ other = "Visite-nos"
 other = "Localização do"
 
 [directions]
-other = "Direções"
+other = "Como chegar"
 
 [call_us]
 other = "Ligue-nos"
@@ -50,19 +50,19 @@ other = "Ligue-nos"
 other = "Enviar Email"
 
 [view_full_map]
-other = "Ver mapa em tela cheia"
+other = "Ver mapa em ecrã inteiro"
 
 [location_suffix]
 other = "Localização do"
 
 [refer_address]
-other = "Consulte o endereço acima para localização"
+other = "Consulte a morada acima para localização"
 
 [contact_info_soon]
-other = "Informações de Contato em Breve"
+other = "Informações de Contacto em Breve"
 
 [organizing_info]
-other = "Estamos organizando nossas informações de contato. Volte em breve."
+other = "Estamos a organizar as nossas informações de contacto. Volte em breve."
 
 [map_not_available]
 other = "Mapa não disponível"
@@ -80,4 +80,4 @@ other = "Nenhuma aula programada para este dia."
 other = "Horário em Breve"
 
 [organizing_schedule]
-other = "Estamos organizando nosso horário de aulas. Volte em breve para ver os horários disponíveis."
+other = "Estamos a organizar o nosso horário de aulas. Volte em breve para ver os horários disponíveis."

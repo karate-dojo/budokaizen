@@ -1,25 +1,25 @@
 # Configuração do Dojo
-# Este arquivo contém as informações básicas sobre o dojo
+# Este ficheiro contém as informações básicas sobre o dojo
 
 dojo_name: "Dojo Sakura Goju-Ryu"
 address: |
-  Rua do Karatê, 123
-  São Paulo, SP 01234-567
-  Brasil
-email: "info@sakuragojuryu.com.br"
-phone: "+55 (11) 5555-0123"
+  Rua do Karaté, 123
+  1000-001 Lisboa
+  Portugal
+email: "info@sakuragojuryu.pt"
+phone: "+351 21 555 0123"
 # URL de embed do OpenStreetMap - Para obter esta URL:
-# 1. Acesse https://www.openstreetmap.org
-# 2. Pesquise pelo seu endereço
-# 3. Clique em "Compartilhar" na barra lateral direita
-# 4. Clique na aba "Incorporar" e copie a URL do src do iframe
+# 1. Aceda a https://www.openstreetmap.org
+# 2. Pesquise pela sua morada
+# 3. Clique em "Partilhar" na barra lateral direita
+# 4. Clique no separador "Incorporar" e copie a URL do src do iframe
 # Formato de exemplo: https://www.openstreetmap.org/export/embed.html?bbox=...&marker=...
-map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-46.6341%2C-23.5489%2C-46.6241%2C-23.5389&layer=mapnik&marker=-23.5439%2C-46.6291"
+map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-9.1531%2C38.7077%2C-9.1431%2C38.7177&layer=mapnik&marker=38.7127%2C-9.1481"
 
-# Informações de contato adicionais
+# Informações de contacto adicionais
 
 # Descrição do dojo
 description: |
-  Um dojo tradicional de karatê Goju-Ryu dedicado a preservar as 
+  Um dojo tradicional de karaté Goju-Ryu dedicado a preservar as 
   autênticas artes marciais de Okinawa. Somos membros orgulhosos da 
-  Federação Internacional de Karatê-do Goju-Ryu de Okinawa (IOGKF).
+  Federação Internacional de Karaté-do Goju-Ryu de Okinawa (IOGKF).

@@ -5,33 +5,33 @@ schedule:
   - day: "Segunda-feira"
     classes:
       - time: "18:00 - 19:00"
-        type: "Karatê Adulto Iniciante"
+        type: "Karaté Adulto Iniciante"
         instructor: "Sempai Johnson"
         description: "Técnicas básicas, kata e condicionamento"
         
       - time: "19:15 - 20:30"
-        type: "Karatê Adulto Avançado"
+        type: "Karaté Adulto Avançado"
         instructor: "Sensei Yamamoto"
         description: "Kata avançado, kumite e defesa pessoal"
         
   - day: "Terça-feira"
     classes:
       - time: "18:00 - 19:00"
-        type: "Karatê Juvenil (8-14 anos)"
+        type: "Karaté Juvenil (8-14 anos)"
         instructor: "Sensei Rodriguez"
-        description: "Treinamento de karatê adequado para a idade com foco em disciplina"
+        description: "Treino de karaté adequado para a idade com foco em disciplina"
         
       - time: "19:15 - 20:15"
         type: "Condicionamento Adulto"
         instructor: "Sensei Chen"
-        description: "Treinamento de força e flexibilidade para artistas marciais"
+        description: "Treino de força e flexibilidade para artistas marciais"
         
   - day: "Quarta-feira"
     classes:
       - time: "18:00 - 19:00"
-        type: "Karatê Adulto Intermediário"
+        type: "Karaté Adulto Intermédio"
         instructor: "Sensei Rodriguez"
-        description: "Técnicas intermediárias e preparação para kumite"
+        description: "Técnicas intermédias e preparação para kumite"
         
       - time: "19:15 - 20:30"
         type: "Aula de Kata Tradicional"
@@ -41,9 +41,9 @@ schedule:
   - day: "Quinta-feira"
     classes:
       - time: "18:00 - 19:00"
-        type: "Karatê Juvenil (8-14 anos)"
+        type: "Karaté Juvenil (8-14 anos)"
         instructor: "Sensei Rodriguez"
-        description: "Treinamento de karatê adequado para a idade com foco em disciplina"
+        description: "Treino de karaté adequado para a idade com foco em disciplina"
         
       - time: "19:15 - 20:15"
         type: "Aula de Kumite (Luta)"
@@ -58,9 +58,9 @@ schedule:
         description: "Prática individual com orientação dos instrutores"
         
       - time: "19:15 - 20:30"
-        type: "Aula de Faixa Preta"
+        type: "Aula de Cinturão Negro"
         instructor: "Sensei Yamamoto"
-        description: "Treinamento avançado somente para faixas pretas"
+        description: "Treino avançado somente para cinturões negros"
         
   - day: "Sábado"
     classes:

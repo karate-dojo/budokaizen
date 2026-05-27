@@ -1,4 +1,4 @@
 ---
 title: "Siga-nos"
-description: "Conecte-se conosco nas redes sociais"
+description: "Conecte-se connosco nas redes sociais"
 ---
