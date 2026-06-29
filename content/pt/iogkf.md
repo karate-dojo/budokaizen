@@ -46,8 +46,8 @@ A IOGKF mantém padrões rigorosos para garantir a autenticidade do treino de Go
 
 A IOGKF segue o sistema de graduação tradicional de Okinawa:
 
-- **Graus Kyu**: Faixas branca, amarela, laranja, verde e castanha (graus de estudante)
-- **Graus Dan**: Graus de faixa preta (graus de mestre)
+- **Graus Kyu**: Faixas branca, amarela, laranja, verde e castanha
+- **Graus Dan**: Graus de faixa preta
 - As promoções baseiam-se na habilidade técnica, na compreensão e no desenvolvimento do caráter
 
 #### Rede Internacional
