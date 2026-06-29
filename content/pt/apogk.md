@@ -43,7 +43,7 @@ Em 1979 participou no primeiro Gasshuku internacional de Goju-Ryu, em Inglaterra
 **Competição e Reconhecimento:**
 
 - Em 1984 foi selecionado pela Federação Nacional de Karate e participou no 19º campeonato da Europa da WUKO (World Union Karate-Do Organisation) em França
-- Em 1987 é diplomado Instrutor de 2º Grau pela Comissão Diretiva de Artes Marciais
+- Em 1987 é diplomado Instrutor de 2ª graduação pela Comissão Diretiva de Artes Marciais
 
 **Cargos de Liderança:**
 
