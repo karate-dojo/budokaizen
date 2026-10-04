@@ -64,6 +64,8 @@ Hugo resolves these strings in the language of the current page. If an entry is 
 
 When configured, the site explains that optional analytics cookies help understand how visitors use the website, with **Accept analytics cookies** and **Reject** choices. The Google Analytics script is not requested until the visitor accepts. Rejecting means GA4 is not loaded. After either choice the banner closes completely; no floating preferences button remains. Visitors can use **Cookie preferences** in the site footer to reopen the banner and change or withdraw their choice. This is a keyboard-accessible button styled as a discreet link.
 
+Cookie preferences shares the footer's copyright row, vertically centered, and wraps when the available width is too narrow.
+
 The generic banner wording does not replace a privacy notice: the dojo's notice should still identify Google Analytics and explain its purpose and data handling.
 
 If GA4 has already been loaded, withdrawal immediately sets Google's per-property collection-disable flag and **reloads the current page** to remove the tag's runtime and automatic event listeners. The reloaded page does not load GA4. Simply setting `analytics_storage` to `denied` would still permit cookieless measurements, so this integration does not rely on that alone. Requests already in flight may finish; withdrawal cannot undo previously collected data and does not erase existing analytics cookies.
