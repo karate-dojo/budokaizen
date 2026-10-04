@@ -58,6 +58,8 @@ All website content is managed through YAML configuration files. No HTML or tech
 
 **📖 Complete reference:** [Configuration Guide](docs/CONFIGURATION.md)
 
+Optional, consent-first Google Analytics 4 setup is described in the [Analytics guide](docs/ANALYTICS.md). Analytics is disabled by default.
+
 ## 🌍 Multi-language Support
 
 The template includes English and Portuguese translations. To add more languages or customize translations, see [� Language Configuration](docs/LANGUAGE_CONFIGURATION.md)

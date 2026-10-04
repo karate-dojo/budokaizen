@@ -117,6 +117,8 @@ Create `content/es/` and add your Spanish content files.
 
 The language switcher will automatically appear when multiple languages are configured.
 
+If you enable consent-first Google Analytics, add translations for all `analytics_consent_*` keys to the new language's `i18n/{lang}.toml` file. The labels, optional privacy-notice link, and regression-test expectations are documented in the [Analytics Setup Guide](ANALYTICS.md).
+
 ## 🎛️ Configuration Options
 
 ### Single Language Setup

@@ -6,6 +6,11 @@ on:
     branches:
       - main
 
+  # Build and run regression checks for proposed changes without deploying.
+  pull_request:
+    branches:
+      - main
+
   # Allow manual workflow dispatch with option to clear caches
   workflow_dispatch:
     inputs:
@@ -71,6 +76,14 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
+      - name: Set up Node.js for analytics regression checks
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check analytics consent and configuration
+        run: node --test tests/analytics-consent.test.cjs tests/analytics-build.test.cjs
+
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
@@ -100,6 +113,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
