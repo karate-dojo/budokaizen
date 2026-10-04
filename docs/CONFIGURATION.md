@@ -326,6 +326,10 @@ After making changes:
 
 ## Best Practices
 
+### Optional Analytics
+
+Google Analytics 4 is disabled by default. To enable it, configure a dojo-owned Measurement ID, prepare an appropriate privacy notice, and review the consent behavior before changing `[params.analytics]` in `hugo.toml`. See the [Analytics Setup Guide](ANALYTICS.md) for configuration, translations, and limitations.
+
 ### Content Guidelines
 
 1. **Keep It Current**: Update schedules and instructor information regularly
