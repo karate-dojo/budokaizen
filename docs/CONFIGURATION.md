@@ -328,7 +328,7 @@ After making changes:
 
 ### Optional Analytics
 
-Google Analytics 4 is disabled by default. To enable it, configure a dojo-owned Measurement ID, prepare an appropriate privacy notice, and review the consent behavior before changing `[params.analytics]` in `hugo.toml`. See the [Analytics Setup Guide](ANALYTICS.md) for configuration, translations, and limitations.
+The consent-first Google Analytics 4 integration is disabled by default in the template. Budôkaizen has enabled it using its own Measurement ID; tracking starts only after visitor acceptance. No privacy notice is currently configured, so the prompt has no notice link. See the [Analytics Setup Guide](ANALYTICS.md) for configuration, translations, and privacy responsibilities.
 
 ### Content Guidelines
 

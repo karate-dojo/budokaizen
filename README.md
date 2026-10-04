@@ -58,7 +58,7 @@ All website content is managed through YAML configuration files. No HTML or tech
 
 **📖 Complete reference:** [Configuration Guide](docs/CONFIGURATION.md)
 
-Optional, consent-first Google Analytics 4 setup is described in the [Analytics guide](docs/ANALYTICS.md). Analytics is disabled by default.
+Consent-first Google Analytics 4 is enabled for this site; it loads only after visitors accept. No privacy-notice page has been configured, so the consent prompt does not link to one. See the [Analytics guide](docs/ANALYTICS.md) for setup and privacy responsibilities.
 
 ## 🌍 Multi-language Support
 
