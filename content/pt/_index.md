@@ -1,6 +1,8 @@
 ---
 title: "Início"
-description: "Bem-vindo ao nosso dojo tradicional de Karate Goju-Ryu"
+description: "Conheça o Dojo Budôkaizen: treino de Karate Goju-Ryu com o Sensei Luís Filipe no Acro Clube Maia. Consulte os horários e entre em contacto."
+seo:
+  title: "Karate Goju-Ryu | Dojo Budôkaizen"
 ---
 
 ## Bem-vindo ao Karate Tradicional Goju-Ryu

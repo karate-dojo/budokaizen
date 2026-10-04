@@ -60,6 +60,8 @@ All website content is managed through YAML configuration files. No HTML or tech
 
 Consent-first Google Analytics 4 is enabled for this site; it loads only after visitors accept. No privacy-notice page has been configured, so the consent prompt does not link to one. See the [Analytics guide](docs/ANALYTICS.md) for setup and privacy responsibilities.
 
+For language-specific browser and search titles, see the [SEO guide](docs/SEO.md).
+
 ## 🌍 Multi-language Support
 
 The template includes English and Portuguese translations. To add more languages or customize translations, see [� Language Configuration](docs/LANGUAGE_CONFIGURATION.md)

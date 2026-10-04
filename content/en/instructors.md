@@ -1,6 +1,8 @@
 ---
 title: "Our Instructors"
-description: "Meet our experienced Goju-Ryu instructors dedicated to preserving authentic martial arts traditions"
+description: "Meet Sensei Luís Filipe and the Dojo Budôkaizen instructor team. Learn more about those who lead Goju-Ryu Karate training."
+seo:
+  title: "Sensei Luís Filipe | Dojo Budôkaizen"
 date: 2025-08-13
 layout: "instructors"
 ---
