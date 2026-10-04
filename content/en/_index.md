@@ -1,6 +1,8 @@
 ---
 title: "Home"
-description: "Welcome to our traditional Goju-Ryu Karate dojo"
+description: "Discover Dojo Budôkaizen: train in Goju-Ryu Karate with Sensei Luís Filipe at Acro Clube Maia. Check the schedule and get in touch."
+seo:
+  title: "Goju-Ryu Karate | Dojo Budôkaizen"
 ---
 
 ## Welcome to Traditional Goju-Ryu Karate

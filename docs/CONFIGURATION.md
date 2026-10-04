@@ -330,6 +330,10 @@ After making changes:
 
 The consent-first Google Analytics 4 integration is disabled by default in the template. Budôkaizen has enabled it using its own Measurement ID; tracking starts only after visitor acceptance. No privacy notice is currently configured, so the prompt has no notice link. See the [Analytics Setup Guide](ANALYTICS.md) for configuration, translations, and privacy responsibilities.
 
+### Page SEO Metadata
+
+Set optional `seo.title` and `description` fields in each language's content front matter. SEO titles do not change navigation labels or visible page headings. See [SEO Configuration](SEO.md) for examples and language support.
+
 ### Content Guidelines
 
 1. **Keep It Current**: Update schedules and instructor information regularly
