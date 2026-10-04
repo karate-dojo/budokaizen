@@ -1,6 +1,8 @@
 # Analytics Setup
 
-This site supports optional Google Analytics 4 (GA4). Google's standard GA4 offering is free; Google Analytics 360 is a paid enterprise service. Analytics is disabled by default. If enabled, use a GA4 property and Measurement ID owned by this dojo; never send this site's data to another organization's account.
+This site supports consent-first Google Analytics 4 (GA4). Google's standard GA4 offering is free; Google Analytics 360 is a paid enterprise service. The integration is disabled by default in the template; Budôkaizen has enabled it with its own Measurement ID. Analytics does not load until a visitor accepts. Never send this site's data to another organization's account.
+
+**Current configuration:** No privacy-notice page or URL has been provided for the dojo. The consent prompt therefore does not include a privacy-notice link; `privacy_notice_url` remains empty. Publish an appropriate notice and configure its URL before relying on this integration for your privacy disclosures.
 
 ## Create a GA4 property
 

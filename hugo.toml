@@ -67,12 +67,12 @@ defaultContentLanguageInSubdir = false
   # Custom CSS files
   custom_css = ["css/social-links.css"]
 
-  # Optional consent-first Google Analytics 4. Leave disabled until this dojo
-  # has its own Measurement ID and a privacy notice appropriate to its needs.
+  # Consent-first Google Analytics 4 for this dojo. Publish an appropriate
+  # privacy notice before configuring privacy_notice_url.
   [params.analytics]
-    enabled = false
+    enabled = true
     provider = "google-analytics"
-    measurement_id = ""
+    measurement_id = "G-KZY69RG00X"
     consent_version = "1"
     privacy_notice_url = ""
 

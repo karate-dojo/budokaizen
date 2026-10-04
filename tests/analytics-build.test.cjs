@@ -50,13 +50,25 @@ function build(extraConfig = "", args = [], translations = {}) {
   };
 }
 
-test("default build emits no analytics references or assets", (t) => {
-  const result = build();
+test("analytics can be disabled without emitting analytics references or assets", (t) => {
+  const result = build('[params.analytics]\nenabled = false\nmeasurement_id = ""\n');
   t.after(result.cleanup);
   assert.equal(result.status, 0, result.output);
   assert.doesNotMatch(result.page(), integrationPattern);
   assert.doesNotMatch(result.page("en/index.html"), integrationPattern);
   assert.equal(result.files().some((file) => file.includes("analytics-consent")), false);
+});
+
+test("Budokaizen's configured Measurement ID remains behind consent without a privacy link", (t) => {
+  const result = build();
+  t.after(result.cleanup);
+  assert.equal(result.status, 0, result.output);
+  for (const page of [result.page(), result.page("en/index.html")]) {
+    assert.match(page, /data-measurement-id=["']?G-KZY69RG00X/);
+    assert.match(page, /data-consent-version=["']?1/);
+    assert.match(page, /data-privacy-notice-url(?:=(?:""|''))?(?=\s|>)/);
+    assert.doesNotMatch(page, /googletagmanager/);
+  }
 });
 
 test("enabled build emits localized consent settings with repository-relative paths", (t) => {
