@@ -1,11 +1,18 @@
 const assert = require("node:assert/strict");
 const { spawnSync } = require("node:child_process");
-const { cpSync, mkdtempSync, readFileSync, rmSync, writeFileSync } = require("node:fs");
+const { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } = require("node:fs");
 const { tmpdir } = require("node:os");
 const { join } = require("node:path");
 const test = require("node:test");
 
 const root = join(__dirname, "..");
+
+function metaContent(html, attribute, name) {
+  const match = html.match(new RegExp(`<meta ${attribute}=["']?${name}["']? content=(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`));
+  assert.ok(match, `Missing ${name} metadata`);
+  const entities = { "&lt;": "<", "&gt;": ">", "&amp;": "&", "&#34;": '"', "&#39;": "'" };
+  return (match[1] ?? match[2] ?? match[3]).replace(/&(?:lt|gt|amp|#34|#39);/g, (entity) => entities[entity]);
+}
 
 function build(t, extraConfig = "", args = []) {
   const directory = mkdtempSync(join(tmpdir(), "dojo-seo-build-"));
@@ -24,6 +31,7 @@ function build(t, extraConfig = "", args = []) {
     ...result,
     output: result.stdout + result.stderr,
     page: (path = "index.html") => readFileSync(join(destination, path), "utf8"),
+    exists: (path) => existsSync(join(destination, path)),
   };
 }
 
@@ -101,8 +109,8 @@ test("approved English and Portuguese SEO metadata leaves visible navigation and
   assert.match(result.page("contact/index.html"), /<h1[^>]*>Contacto<\/h1>/);
   assert.match(result.page("en/schedule/index.html"), /<h1[^>]*>Schedule<\/h1>/);
   assert.match(result.page("schedule/index.html"), /<h1[^>]*>Horários<\/h1>/);
-  assert.match(result.page("en/instructors/index.html"), /<h2[^>]*>Meet Our Instructors<\/h2>/);
-  assert.match(result.page("instructors/index.html"), /<h2[^>]*>Conheça os Nossos Instrutores<\/h2>/);
+  assert.match(result.page("en/instructors/index.html"), /<h1[^>]*>Meet Our Instructors<\/h1>/);
+  assert.match(result.page("instructors/index.html"), /<h1[^>]*>Conheça os Nossos Instrutores<\/h1>/);
 });
 
 function buildWithMetadata(t, languages) {
@@ -195,4 +203,80 @@ test("SEO titles are escaped rather than treated as HTML", (t) => {
   const html = page("contact/index.html");
   assert.match(html, /<title>&lt;script/);
   assert.doesNotMatch(html, /<title><script>/);
+  assert.equal(metaContent(html, "property", "og:title"), '<script>alert("test")</script> | Test dojo');
+  assert.equal(metaContent(html, "name", "twitter:title"), '<script>alert("test")</script> | Test dojo');
+});
+
+test("public pages have canonical, reciprocal language links and localized sharing metadata", (t) => {
+  const result = build(t, "", ["--baseURL", "https://example.com/dojo/"]);
+  assert.equal(result.status, 0, result.output);
+  for (const slug of ["", "contact/", "schedule/", "instructors/", "goju-ryu/", "iogkf/", "apogk/", "social/"]) {
+    for (const language of ["pt", "en"]) {
+      const prefix = language === "pt" ? "" : "en/";
+      const html = result.page(`${prefix}${slug}index.html`);
+      const url = `https://example.com/dojo/${prefix}${slug}`;
+      assert.ok(html.includes(`rel=canonical href=${url}`), `Canonical missing on ${prefix}${slug}`);
+      for (const alternate of ["pt", "en"]) {
+        const alternateURL = `https://example.com/dojo/${alternate === "pt" ? "" : "en/"}${slug}`;
+        assert.ok(html.includes(`rel=alternate hreflang=${alternate} href=${alternateURL}`));
+      }
+      assert.equal((html.match(/<h1\b/g) || []).length, 1, `Expected one H1 on ${prefix}${slug}`);
+      assert.match(html, /property=["']?og:image["']? content=["']?https:\/\/example.com\/dojo\/images\/logo.png/);
+      assert.match(html, new RegExp(`property=["']?og:locale["']? content=["']?${language === "pt" ? "pt_PT" : "en_US"}`));
+      if (!slug) {
+        const schema = JSON.parse(html.match(/<script type=["']?application\/ld\+json["']?>(.*?)<\/script>/)[1]);
+        assert.equal(schema.image, "https://example.com/dojo/images/logo.png");
+        assert.equal(schema["@id"], "https://example.com/dojo/#dojo");
+      }
+      const title = html.match(/<title>(.*?)<\/title>/)[1];
+      assert.equal(metaContent(html, "property", "og:title"), title);
+      assert.equal(metaContent(html, "name", "twitter:title"), title);
+      assert.equal((html.match(/property=["']?og:title\b/g) || []).length, 1);
+      assert.equal((html.match(/name=["']?twitter:title\b/g) || []).length, 1);
+    }
+  }
+  for (const language of ["pt", "en"]) {
+    const sitemap = result.page(`${language}/sitemap.xml`);
+    assert.doesNotMatch(sitemap, /\/(?:tags|categories)\//);
+    assert.match(sitemap, /hreflang="pt"/);
+    assert.match(sitemap, /hreflang="en"/);
+    assert.ok(!result.exists(`${language === "pt" ? "" : "en/"}tags/index.html`));
+    assert.match(result.page(`${language === "pt" ? "" : "en/"}404.html`), /name=robots content="noindex, nofollow"/);
+  }
+  const robots = result.page("robots.txt");
+  assert.match(robots, /User-agent: \*/);
+  assert.match(robots, /Sitemap: https:\/\/example.com\/dojo\/sitemap.xml/);
+});
+
+test("homepage markup describes the verified dojo without invented business claims", (t) => {
+  const result = build(t);
+  assert.equal(result.status, 0, result.output);
+  for (const prefix of ["", "en/"]) {
+    const html = result.page(`${prefix}index.html`);
+    const json = html.match(/<script type=["']?application\/ld\+json["']?>(.*?)<\/script>/)?.[1];
+    assert.ok(json, `Missing dojo structured data on ${prefix}`);
+    const schema = JSON.parse(json);
+    assert.equal(schema["@type"], "SportsActivityLocation");
+    assert.equal(schema["@id"], "https://budokaizen.pt/#dojo");
+    assert.equal(schema.url, "https://budokaizen.pt/");
+    assert.match(schema.address, /4470-231 Maia/);
+    assert.equal(schema.telephone, "+351919376632");
+    assert.deepEqual(schema.sameAs, ["https://www.instagram.com/dojobudokaizenluisfilipe"]);
+    assert.deepEqual(Object.keys(schema).sort(), [
+      "@context", "@id", "@type", "address", "description", "email", "image", "name", "sameAs", "telephone", "url",
+    ].sort());
+    assert.match(html, /href=tel:\+351919376632/);
+    assert.ok(html.includes(`href=/${prefix}contact/`));
+    assert.ok(html.includes(`href=/${prefix}schedule/`));
+    assert.match(result.page(`${prefix}contact/index.html`), /href=tel:\+351919376632/);
+  }
+});
+
+test("missing dojo data preserves the visible fallback without producing empty structured data", (t) => {
+  const directory = mkdtempSync(join(tmpdir(), "dojo-seo-empty-data-"));
+  t.after(() => rmSync(directory, { recursive: true, force: true }));
+  const result = build(t, `dataDir = "${directory}"\n`);
+  assert.equal(result.status, 0, result.output);
+  assert.doesNotMatch(result.page(), /application\/ld\+json/);
+  assert.match(result.page(), /<h1[^>]*>Dojo Budôkaizen<\/h1>/);
 });

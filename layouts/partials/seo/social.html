@@ -1,0 +1,18 @@
+{{- $title := partial "seo/title.html" . -}}
+{{- $description := .Description | default .Summary | default .Site.Params.description -}}
+{{- $url := .Params.canonicalUrl | default .Permalink -}}
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="website">
+{{- with .Site.Params.social_locale }}
+<meta property="og:locale" content="{{ . }}">
+{{- end }}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with .Params.featured_image | default .Site.Params.featured_image }}
+<meta property="og:image" content="{{ strings.TrimPrefix "/" . | absURL }}">
+<meta name="twitter:image" content="{{ strings.TrimPrefix "/" . | absURL }}">
+{{- end }}

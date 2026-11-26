@@ -9,3 +9,14 @@ figure.center img {
     max-width: 100%;
     height: auto;
 }
+
+/* Preserve appearance while correcting the instructor heading hierarchy. */
+.instructors-page h1 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+.instructors-page h2 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
