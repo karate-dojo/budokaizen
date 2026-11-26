@@ -102,3 +102,18 @@ The GitHub Pages workflow runs these checks before building and deploying the si
 ### Banner missing in Safari or another browser
 
 A saved acceptance or rejection hides the banner by design; use the footer's **Cookie preferences** control to reopen it. To check a fresh visit, use a private window or clear the site's stored consent. Content blockers may block GA4 even when the site-hosted banner works; temporarily disable them to diagnose, not to bypass a visitor's choice. If the footer control is also absent, check that JavaScript is enabled and the consent script loaded without browser-console errors. Analytics is intentionally absent under `hugo server`.
+
+### Realtime visitors or counts seem wrong
+
+A visit without acceptance is intentionally not measured, including your own visit after a saved rejection. GA4 counts are therefore not a count of everyone visiting the site. Users, sessions and page views are different metrics, and browser blockers can further reduce collection.
+
+After explicitly accepting in **Cookie preferences**, inspect the browser's Network panel:
+
+1. Expect one `https://www.googletagmanager.com/gtag/js?id=G-KZY69RG00X` tag per document, not another tag-manager integration.
+2. Expect a request to Google's `/g/collect` endpoint with `tid=G-KZY69RG00X` and `en=page_view`. Existing sessions can batch collection, so allow several seconds after navigation. A successful HTTP 204 shows transport succeeded, not that a specific property report contains the event.
+3. Navigate to another page and check for one page view for that URL. Reopening and accepting preferences again on the same page must not create another tag or page view.
+4. Withdraw using **Reject**. The reload and subsequent navigation must not load Google's tag or create new collection requests.
+
+If collection succeeds but Realtime remains empty, the property owner should confirm that **Admin → Data streams** contains the matching web stream and Measurement ID, and inspect active internal-traffic/developer-traffic filters and any stream/property configuration. Do not disable privacy controls or change the public ID merely to make a report populate. Use Realtime/DebugView for diagnosis and allow normal report-processing delays (standard reports can take 24–48 hours). A network response alone cannot establish property access, filter effects, ingestion or reconcile historical counts.
+
+On 26 November 2026, an isolated Chromium check of the deployed site verified no Google requests before consent or after rejection/withdrawal, a tag response of HTTP 200, collection HTTP 204, and one page view per observed page load with the configured ID. Two short synthetic browser sessions were used (three observed page-view requests across the Portuguese homepage and English schedule, plus an automatic scroll event); these may affect reports if retained by GA4. This check did not access the private GA4 property. The tracking code was preserved because no collection defect was found.

@@ -1,7 +1,7 @@
-# Dynamic baseURL - automatically set by hosting platform
-# For GitHub Pages: uses repository URL automatically 
-# For custom domains: will be overridden by hosting
-baseURL = "/"
+# Public canonical origin; GitHub Pages can still override this at build time.
+baseURL = "https://budokaizen.pt/"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 languageCode = "en-us"
 title = "Budôkaizen Dojo"
 theme = "ananke"
@@ -27,12 +27,16 @@ defaultContentLanguageInSubdir = false
 [languages]
   [languages.pt]
     title = "Dojo Budôkaizen"  
+    languageCode = "pt"
+    params.social_locale = "pt_PT"
     weight = 1
     contentDir = "content/pt"
     languageName = "Português"
 
   [languages.en]
     title = "Dojo Budôkaizen"
+    languageCode = "en"
+    params.social_locale = "en_US"
     weight = 2
     contentDir = "content/en"
     languageName = "English"

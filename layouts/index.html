@@ -31,8 +31,8 @@ Data Sources:
       - Fallback to site title if no logo
       */}}
       <div class="mb4">
-        <img src="{{ .Site.BaseURL }}images/logo.png" alt="IOGKF Logo" class="center db"
-          style="max-height: 120px; max-width: 300px;">
+        <img src="{{ .Site.BaseURL }}images/logo.png" alt="{{ .Site.Title }}" class="center db"
+          width="128" height="128" style="width: 120px; height: auto; max-width: 100%;">
       </div>
 
       {{/*
@@ -41,9 +41,9 @@ Data Sources:
       - Fallback: hugo.toml -> title
       */}}
       {{ if $dojo.dojo_name }}
-      <div class="f2 f1-l fw6 white-90 mb0 lh-title">{{ $dojo.dojo_name }}</div>
+      <h1 class="f2 f1-l fw6 white-90 mt0 mb0 lh-title">{{ $dojo.dojo_name }}</h1>
       {{ else }}
-      <div class="f2 f1-l fw6 white-90 mb0 lh-title">{{ .Site.Title }}</div>
+      <h1 class="f2 f1-l fw6 white-90 mt0 mb0 lh-title">{{ .Site.Title }}</h1>
       {{ end }}
 
       {{/*
@@ -65,9 +65,9 @@ Data Sources:
       - Text from i18n translation files
       */}}
       <div class="mt4">
-        <a href="{{ "contact" | relLangURL }}" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-red mr3">{{ i18n
+        <a href="{{ "contact/" | relLangURL }}" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-red mr3">{{ i18n
           "contact_us" }}</a>
-        <a href="{{ "schedule" | relLangURL }}"
+        <a href="{{ "schedule/" | relLangURL }}"
           class="f6 link dim br3 ph3 pv2 mb2 dib black bg-light-gray ba b--gray">{{ i18n "view_schedule" }}</a>
       </div>
     </div>
@@ -104,7 +104,7 @@ Main Content Section
       {{ if $dojo.phone }}
       <div class="fl w-100 w-third-ns ph3-ns mb3">
         <h4 class="f5 fw6 mb2 black">📞 {{ i18n "phone" }}</h4>
-        <p class="f6 ma0"><a href="tel:{{ $dojo.phone }}" class="link red hover-dark-red">{{ $dojo.phone }}</a></p>
+        <p class="f6 ma0"><a href="tel:{{ $dojo.phone | replaceRE "[^0-9+]" "" }}" class="link red hover-dark-red">{{ $dojo.phone }}</a></p>
       </div>
       {{ end }}
 

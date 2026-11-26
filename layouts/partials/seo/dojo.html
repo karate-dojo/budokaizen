@@ -1,0 +1,36 @@
+{{- if .IsHome -}}
+  {{- $dojo := index .Site.Data .Site.Language.Lang "dojo" -}}
+  {{- if and $dojo $dojo.dojo_name $dojo.address -}}
+    {{- $home := (index .Sites 0).Home -}}
+    {{- $schema := dict
+      "@context" "https://schema.org"
+      "@type" "SportsActivityLocation"
+      "@id" (printf "%s#dojo" $home.Permalink)
+      "url" $home.Permalink
+      "name" $dojo.dojo_name
+      "address" (strings.TrimSpace $dojo.address)
+    -}}
+    {{- with $dojo.description -}}
+      {{- $schema = merge $schema (dict "description" .) -}}
+    {{- end -}}
+    {{- with $dojo.phone -}}
+      {{- $schema = merge $schema (dict "telephone" (replaceRE "[^0-9+]" "" .)) -}}
+    {{- end -}}
+    {{- with $dojo.email -}}
+      {{- $schema = merge $schema (dict "email" .) -}}
+    {{- end -}}
+    {{- with .Site.Params.featured_image -}}
+      {{- $schema = merge $schema (dict "image" (strings.TrimPrefix "/" . | absURL)) -}}
+    {{- end -}}
+    {{- $profiles := slice -}}
+    {{- range .Site.Data.social.social_media -}}
+      {{- if and .enabled .url -}}
+        {{- $profiles = $profiles | append .url -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $profiles -}}
+      {{- $schema = merge $schema (dict "sameAs" .) -}}
+    {{- end -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}
